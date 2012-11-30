@@ -1,0 +1,1088 @@
+//MARKETING SITE
+
+@import "compass";
+
+// @import url(//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif)
+
+@import "compass/reset";
+
+$base-gray: #777777;
+$gray-interval: #1e1e1e;
+$light-gray: $base-gray + $gray-interval * 1;
+$lighter-gray: $base-gray + $gray-interval * 3.5;
+
+$hypothered: #bd1c2b;
+$hypothered-desat: #bd5862;
+
+@mixin smallshadow($a: 2px, $b: 2px, $c: 0.1) {
+  @include box-shadow($a $b 3px hsla(0, 0%, 0%, $c));
+}
+
+@mixin inset-smallshadow($a: 2px, $b: 2px, $c: 0.1) {
+  @include box-shadow(inset $a $b 3px hsla(0, 0%, 0%, $c));
+}
+
+@mixin minimalheader {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "myriad-pro", sans-serif;
+    line-height: 1.2em;
+    margin: 0em 0 0.4em;
+    padding: 0 0 0.1em;
+  }
+}
+
+body {
+  font-size: 16px;
+  color: $base-gray;
+  font-family: "Merriweather", sans-serif;
+  line-height: 1.7em;
+}
+
+ol, ul {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.clearfix {
+  @include pie-clearfix;
+}
+
+.list {
+  list-style-type: circle;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+input {
+  font-family: "myriad-pro", sans-serif;
+  font-size: 1em;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 6px;
+  margin-bottom: 9px;
+  color: $base-gray;
+  background-color: white !important;
+  border: 1px solid $lighter-gray;
+  border-radius: 3px;
+  @include single-transition("box-shadow,-moz-box-shadow,-webkit-box-shadow", 0.6s, ease);
+  &:focus {
+    outline: 0;
+    border: 1px solid $light-gray;
+    @include box-shadow(inset 1px 1px 6px -2px $light-gray);
+  }
+  &.error {
+    background-image: url("../images/delete_4.png");
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border: 1px solid $hypothered-desat;
+  }
+}
+
+label {
+  &.error {
+    display: block;
+    background: rgba(200, 34, 12, 0.1);
+    border-radius: 4px;
+    color: $hypothered-desat;
+    font-size: 0.9em;
+    margin: {
+      top: 0em;
+      bottom: 0.5em;
+    };
+    padding: {
+      top: 0em;
+      bottom: 0em;
+      left: 0.25em;
+      right: 0.25em;
+    };
+    padding-bottom: 0 !important;
+  }
+}
+
+textarea {
+  @extend input;
+}
+
+select {
+  @extend input;
+  padding: 4px 8px;
+}
+
+br {
+  margin: 0;
+}
+
+q {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+code {
+  background-color: #f4f4f4;
+  font-family: Menlo, "Panic Sans", monospace;
+  font-size: 0.875em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em, .em {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "myriad-pro", sans-serif;
+  line-height: 1.2em;
+  margin: 1em 0 0.4em;
+  padding: 0 0 0.1em;
+  color: $base-gray;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.7em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.25em;
+  margin: 0 0 0.1em;
+}
+
+h5, h6 {
+  font-size: 1em;
+  margin: 0 0 0.1em;
+}
+
+//LINKS
+a {
+  color: $hypothered-desat;
+  @include transition(color 0.2s ease-in 0.2s);
+  text-decoration: underline;
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    color: $hypothered;
+  }
+  &.no_ul {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.mn {
+  margin: 0;
+}
+
+.mt {
+  margin-top: 1em;
+}
+
+.mb {
+  margin-bottom: 1em;
+}
+
+hr {
+  border: none;
+  margin: 0;
+  position: relative;
+  background-color: $lighter-gray;
+  height: 1px;
+  &.big {
+    border: none;
+    margin: 0;
+    height: 3px;
+  }
+  &.blank {
+    background-color: transparent;
+    height: 0.5em;
+  }
+  &.spaced {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.spacer {
+  height: 3em;
+}
+
+//PULLQUOTES
+.paper {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  @include box-shadow(1px 3px 10px #dddddd);
+  blockquote {
+    position: relative;
+    font-family: "Merriweather";
+    font-size: 1em;
+    margin-left: 1em;
+    margin-right: 0.5em;
+  }
+  blockquote > p:last-child {
+    margin-bottom: 0;
+  }
+  blockquote:before {
+    color: #eeeeee;
+    content: "\201C";
+    font-family: "PT Serif";
+    font-size: 6em;
+    position: absolute;
+    top: 0.3em;
+    left: -0.45em;
+  }
+}
+
+//GRIDMASTER PRO
+$wholewidth: 600px;
+$marginwidth: 20px;
+
+#pagetainer {
+  width: $wholewidth;
+  margin-left: 170px;
+  height: 100%;
+  background: white;
+}
+
+
+.row {
+  clear: both;
+  position: relative;
+  @include pie-clearfix;
+}
+
+.vertspace {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@mixin grid_presets {
+  float: left;
+  height: auto;
+  margin-right: 20px;
+  &.last {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  &.right_float {
+    margin-left: $marginwidth;
+    margin-right: 0;
+    float: right;
+    clear: none;
+  }
+}
+
+.one_whole {
+  width: $wholewidth;
+  @include grid_presets;
+  margin-right: 0;
+}
+
+.one_half {
+  width: ($wholewidth - $marginwidth * 1) / 2 * 1 + $marginwidth * 0;
+  @include grid_presets;
+}
+
+.one_third {
+  width: ($wholewidth - $marginwidth * 2) / 3 * 1 + $marginwidth * 0;
+  @include grid_presets;
+}
+
+.two_thirds {
+  width: ($wholewidth - $marginwidth * 2) / 3 * 2 + $marginwidth * 1;
+  @include grid_presets;
+}
+
+.one_fourth {
+  width: ($wholewidth - $marginwidth * 3) / 4 * 1 + $marginwidth * 0;
+  @include grid_presets;
+}
+
+.two_fourths {
+  width: ($wholewidth - $marginwidth * 3) / 4 * 2 + $marginwidth * 1;
+  @include grid_presets;
+}
+
+.three_fourths {
+  width: ($wholewidth - $marginwidth * 3) / 4 * 3 + $marginwidth * 2;
+  @include grid_presets;
+}
+
+.one_fifth {
+  width: ($wholewidth - $marginwidth * 4) / 5 * 1 + $marginwidth * 0;
+  @include grid_presets;
+}
+
+.two_fifths {
+  width: ($wholewidth - $marginwidth * 4) / 5 * 2 + $marginwidth * 1;
+  @include grid_presets;
+}
+
+.three_fifths {
+  width: ($wholewidth - $marginwidth * 4) / 5 * 3 + $marginwidth * 2;
+  @include grid_presets;
+}
+
+.four_fifths {
+  width: ($wholewidth - $marginwidth * 4) / 5 * 4 + $marginwidth * 3;
+  @include grid_presets;
+}
+
+
+.two_across {
+  @extend .row;
+  & > * {
+    width: ($wholewidth - $marginwidth * 1) / 2 * 1 + $marginwidth * 0;
+    @include grid_presets;
+    &:nth-child(2n) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.three_across {
+  @extend .row;
+  & > * {
+    width: ($wholewidth - $marginwidth * 2) / 3 * 1 + $marginwidth * 0;
+    @include grid_presets;
+    &:nth-child(3n) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.four_across {
+  @extend .row;
+  & > * {
+    width: ($wholewidth - $marginwidth * 3) / 4 * 1 + $marginwidth * 0;
+    @include grid_presets;
+    &:nth-child(4n) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.five_across {
+  @extend .row;
+  & > * {
+    width: ($wholewidth - $marginwidth * 4) / 5 * 1 + $marginwidth * 0;
+    @include grid_presets;
+    &:nth-child(5n) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+.redbotbor {
+  border-bottom: 3px solid $hypothered;
+  @include box-shadow(5px 5px 40px -7px rgba(0, 0, 0, 0.1));
+}
+
+.redtext {
+  color: $hypothered;
+}
+
+.well {
+  display: inline-block;
+  min-height: 20px;
+  padding: 1em;
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 10px rgba(0, 0, 0, 0.05));
+  &.last {
+    padding: 1em;
+  }
+}
+
+.sharebtn {
+  img {
+    float: left;
+    margin-right: 1em;
+  }
+  h2 {
+    color: $hypothered-desat;
+    @include transition(color 0.2s ease-in 0.2s);
+    text-decoration: underline;
+    &:active {
+      text-decoration: none;
+    }
+    &:hover {
+      color: $hypothered;
+    }
+    &.no_ul {
+      text-decoration: none;
+    }
+  }
+}
+
+#navtainer {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 127px;
+  padding: 20px;
+  padding-left: 0;
+  background: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  img {
+    width: 100px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $lighter-gray;
+  }
+}
+
+#navlist {
+  font-family: "myriad-pro";
+  font-weight: 400;
+  list-style-type: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  li {
+    margin: 0;
+    margin-bottom: 0.7em;
+    padding: 0;
+    line-height: 1em;
+  }
+  ul {
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    border-right: 1px dotted $lighter-gray;
+  }
+  a {
+    text-decoration: none;
+    color: $base-gray;
+    &:hover {
+      color: $hypothered;
+    }
+    &.hover {
+      color: $hypothered;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.topspacer {
+  height: 161px;
+}
+
+.sectitle {
+  margin: 0 0 20px;
+  border-bottom: 1px solid $lighter-gray;
+}
+
+.pic_placeholder {
+  background: black;
+  height: 435px;
+}
+
+.picunitimg {
+  @include box-shadow(5px 5px 40px -10px rgba(0, 0, 0, 0.2));
+}
+
+//PICTURES
+.picunit {
+  padding-bottom: 1em;
+  margin-right: 0;
+  padding-right: $marginwidth;
+  img {
+    border-bottom: 3px solid $hypothered;
+    width: 100%;
+    @include box-shadow(5px 5px 40px -10px rgba(0, 0, 0, 0.1));
+  }
+  .caption {
+    font-family: "myriad-pro";
+    font-size: 0.7em;
+    line-height: 1em;
+    margin-top: 0.4em;
+  }
+  .hovertext {
+    font-family: "myriad-pro";
+    font-size: 0.9em;
+    line-height: 1em;
+    margin-top: 0.4em;
+  }
+}
+
+//SLIDESHOW
+#slideshow {
+  height: 320px;
+  position: relative;
+  &:hover {
+    .arrowleft {
+      opacity: 0.3;
+    }
+    .arrowright {
+      opacity: 0.3;
+    }
+  }
+  .counterbox {
+    float: right;
+    margin-right: -5px;
+  }
+  .counter {
+    @include border-radius(100px);
+    @include box-shadow(inset 1px 1px 6px -1px $light-gray);
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    float: left;
+    &.active {
+      background: $lighter-gray;
+      @include box-shadow(inset 1px 1px 6px $light-gray);
+    }
+    &:hover {
+      @include box-shadow(inset 1px 1px 6px $light-gray);
+    }
+  }
+  .arrowleft {
+    height: 100px;
+    width: 50px;
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    background: url("../images/largearrowleft.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    opacity: 0;
+    &:hover {
+      opacity: 0.4;
+    }
+    &:active {
+      opacity: 0.5;
+      top: 41px;
+    }
+  }
+  .arrowright {
+    height: 100px;
+    width: 50px;
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    right: -10px;
+    background: url("../images/largearrowright.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    opacity: 0;
+    &:hover {
+      opacity: 0.4;
+    }
+    &:active {
+      opacity: 0.5;
+      top: 41px;
+    }
+  }
+}
+
+//TIPS
+.tipper {
+  cursor: pointer;
+}
+
+.tip {
+  z-index: 1;
+  overflow: hidden;
+  p {
+    font-size: 0.9em;
+  }
+  p.reg-message {
+    font-size: 1em;
+  }
+}
+
+//PRINCIPLES
+.principle {
+  @include minimalheader;
+  @include pie-clearfix;
+  border-bottom: 1px solid $lighter-gray;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  height: 100%;
+  .number {
+    float: left;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    h2 {
+      color: $hypothered;
+    }
+  }
+  .text {
+    float: left;
+    width: 90%;
+    .collapsee {
+      font-size: 0.9em;
+    }
+    div {
+      color: $light-gray;
+      overflow: hidden;
+    }
+  }
+  &:hover {
+    .text {
+      div {
+        @include transition(color 0.5s);
+        color: $base-gray;
+      }
+    }
+  }
+}
+
+.specunit {
+  @include minimalheader;
+  @include pie-clearfix;
+  height: 100%;
+  .number {
+    float: left;
+    min-width: 60px;
+    margin-top: -0.3em;
+    text-align: center;
+    h1 {
+      color: $hypothered;
+      font-size: 3em;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .text {
+    div {
+      color: $light-gray;
+      overflow: hidden;
+    }
+  }
+  &:hover {
+    .text {
+      div {
+        @include transition(color 0.5s);
+        color: $base-gray;
+      }
+    }
+  }
+}
+
+.faqunit {
+  @extend .principle;
+  .triangle {
+    cursor: pointer;
+    float: left;
+    width: 60px;
+    text-align: center;
+    .img {
+      height: 35px;
+      width: 35px;
+      margin: {
+        left: auto;
+        right: auto;
+      };
+      &:before {
+        font-size: 28px;
+        color: $hypothered-desat;
+        content: "\25BA";
+      }
+    }
+  }
+  .text {
+    h4 {
+      cursor: pointer;
+    }
+  }
+  &.expanded {
+    .triangle {
+      .img {
+        &:before {
+          color: $hypothered;
+          content: "\25BC";
+        }
+      }
+    }
+  }
+}
+
+.pressunit {
+  @include minimalheader;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  border-bottom: 1px solid $lighter-gray;
+  h3 {
+    margin-top: -0.4em;
+  }
+  .picunit {
+    margin-bottom: 0;
+  }
+  &.last {
+    border-bottom: none;
+  }
+  .one-fourth {
+    margin-bottom: 0;
+  }
+  .text {
+    font-size: 0.9em;
+    line-height: 1.3em;
+    div {
+      margin-top: 0.4em;
+    }
+  }
+}
+
+.realvid {
+  margin-bottom: 40px;
+}
+
+.frontpage-top {
+  padding-bottom: 0;
+}
+
+//  text-align: center
+
+.twitbird {
+  margin: -10px;
+  width: 60px;
+  background-image: url("../images/twitbird_gray.png");
+  height: 60px;
+  background-size: 100% 100%;
+  &:hover {
+    background-image: url("../images/twitbird_red.png");
+  }
+}
+
+.frontpage-bottom {
+  .well {
+    height: 380px;
+    margin-top: 20px;
+  }
+}
+
+//TWEETS
+.tweet-list {
+  font-family: sans-serif;
+  padding-left: 0;
+  margin-top: 0;
+  line-height: 1.3em;
+  font-size: 0.9em;
+  li {
+    @include pie-clearfix;
+    clear: none;
+    position: relative;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid $lighter-gray;
+    &.first {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+}
+
+.morelink {
+  font-family: "myriad-pro";
+  font-size: 0.9em;
+  float: right;
+}
+
+.tweet-odd, .tweet-even {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+//  border-top: 1px solid #aaa
+
+.tweet-first {
+  margin-top: 0;
+  border-top: none;
+}
+
+.tweet-avatar {
+  margin-right: 10px;
+}
+
+.tweet-time {
+  color: $hypothered;
+  font-size: 0.8em;
+}
+
+.tweet-text {
+  display: block;
+}
+
+.tweet-avacase {
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+.tweet-content {
+  float: left;
+  width: 85%;
+}
+
+//FORMS
+
+form {
+  font-family: "myriad-pro", sans-serif;
+}
+
+.contact-form {
+  #note_message {
+    height: 200px;
+    width: 100%;
+  }
+  #submit_btn {
+    clear: both;
+    float: right;
+  }
+  .identification {
+    width: 40%;
+    float: right;
+    clear: left;
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@mixin linkbutton {
+  font-size: 2.5em;
+  font-family: "myriad-pro", sans-serif;
+  padding-left: 1.3em;
+  background-size: 0.9em 0.9em;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@mixin graphicbutton {
+  width: 5.5em;
+  height: 5.5em;
+  background-size: 5.5em 5.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chromebutton {
+  @include graphicbutton;
+  float: left;
+  background-image: url("../images/chrome-logo-gray.png");
+  position: relative;
+  &:hover {
+    &:after {
+      content: "Coming Soon";
+      position: absolute;
+      right: 0;
+      bottom: 12%;
+      font-family: "myriad-pro", sans-serif;
+      font-size: 0.8em;
+      padding: 0.1em 0.1em;
+      border-radius: 2px;
+      background: white;
+      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+      line-height: 1;
+    }
+  }
+}
+
+.firefoxbutton {
+  @include graphicbutton;
+  float: right;
+  clear: none;
+  background-image: url("../images/firefox-logo-gray.png");
+  position: relative;
+  &:hover {
+    &:after {
+      content: "Coming Soon";
+      position: absolute;
+      right: 0;
+      bottom: 12%;
+      font-family: "myriad-pro", sans-serif;
+      font-size: 0.8em;
+      padding: 0.1em 0.1em;
+      border-radius: 2px;
+      background: white;
+      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+      line-height: 1;
+    }
+  }
+}
+
+.firefoxbig {
+  background-image: url("../images/firefox-logo-gray.png");
+}
+
+#bookmarklet {
+  @include box-shadow(0px 3px 5px -3px rgba(0, 0, 0, 0.1));
+  @include background-image(linear-gradient(top, white 0%, #f9f9f9 100%));
+  color: transparent;
+  text-decoration: none;
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  padding-left: 0.5em;
+  cursor: move;
+  display: block;
+  border: 1px solid $light-gray;
+  border-right: none;
+  &:before {
+    content: "Bookmarklet";
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+    position: absolute;
+    color: #777777;
+  }
+  &:after {
+    @include rotate(-45deg);
+    @include box-shadow(inset 0px 3px 5px -2px rgba(0, 0, 0, 0.1));
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -18px;
+    width: 31px;
+    height: 31px;
+    background: white;
+    border: 1px solid $light-gray;
+  }
+  &:hover {
+    @include box-shadow(0px 5px 5px -3px rgba(0, 0, 0, 0.1));
+    @include background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%));
+    &:after {
+      @include box-shadow(inset 0px 5px 5px -2px rgba(0, 0, 0, 0.1));
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  postion: relative;
+  line-height: 1.1em;
+  @include background-image(linear-gradient(top, white 0%, #f9f9f9 100%));
+  cursor: pointer;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: {
+    top: 0.4em;
+    bottom: 0.5em;
+    left: 0.9em;
+    right: 0.9em;
+  };
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+  border: 1px solid $lighter-gray;
+  border-radius: 4px;
+  color: black !important;
+  box-sizing: border-box;
+  box-shadow: none;
+  &:hover {
+    @include background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%));
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45);
+  }
+  &:active {
+    @include background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%));
+    @include box-shadow(inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0));
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25);
+  }
+  &:focus {
+    outline: 0;
+    border: 1px solid $light-gray;
+    @include box-shadow(inset 1px 1px 6px -2px $light-gray);
+  }
+}
+
+#register_form {
+  label {
+    padding-bottom: 0.5em;
+  }
+  input {
+    display: block;
+    width: 100%;
+  }
+  .button {
+    @include transition(none);
+    width: auto;
+  }
+}
+
+input, textarea {
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+  @include transition(border linear 0.2s, box-shadow linear 0.2s);
+}
+
+.donateform {
+  border: none;
+  outline: none;
+}
+
+.buttonwrap {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-device-width: 800px) {
+  #navtainer {
+    position: absolute !important;
+  }
+}
