@@ -18,7 +18,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <div class="accordion">
-  <h1 class="sectitle"><?php the_title(); ?></h1>
+  <div class="topspacer"></div>
   <?php the_content(); ?>
 </div>
 <?php endwhile; ?>

@@ -10,8 +10,7 @@ $(document).ready(function(){
     var path_parts = location.pathname.split('/');
     page = path_parts[path_parts.length-1];
   }
-  $('#navlist a
-    [href!="' + page + '"]').removeClass("hover")
+  $('#navlist a[href!="' + page + '"]').removeClass("hover")
   $('#navlist a[href="' + page +  '"]').addClass("hover")
 });
 
@@ -70,6 +69,7 @@ $(function() {
   $('#tweets').miniFeed({
     username: 'hypothes_is',
     limit: 4,
+    avatarSize: 32,
     template: '<div class="tweet-avacase">{avatar}</div><div class="tweet-content">{tweet}{time}</div>'
   });
 });

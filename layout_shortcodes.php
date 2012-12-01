@@ -80,7 +80,7 @@
         <div class="two_thirds last">
           <div class="specunit">
             <div class="number">
-              <h1>'.$number.'</h1>
+              <h1 class="noborder">'.$number.'</h1>
             </div>
             <span class="text">
               <h3>'.$title.'</h3>
@@ -110,7 +110,7 @@
       '<div class="one_whole">
         <div class="principle">
           <div class="number">
-            <h2>'.$number.'</h2>
+            <h2 class="noborder">'.$number.'</h2>
           </div>
           <div class="text">
             <h3>'.$title.'</h3>
@@ -148,4 +148,4 @@
         </div>
       </div>');
   }
-  add_shortcode('expand-list', 'expandList');
+  add_shortcode('exp-list', 'expandList');

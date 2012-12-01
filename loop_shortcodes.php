@@ -37,7 +37,7 @@
       extract( shortcode_atts( array(
           'type' => 'press',
       ), $atts ) );
-      $output = '<div class="clear"></div><div class="childs grid_12">';
+      $output = '';
       $args = array(
           // 'post_parent' => $parent,
           'post_type' => $type,
@@ -65,73 +65,142 @@
           </div>';
       endwhile;
       wp_reset_query();
-      $output .= '</div>';
       return $output;
   }
   add_shortcode('press-loop', 'pressLoop');
 
 
-function prev_related($atts, $content = null) {
-  extract(shortcode_atts(array(
-    "num" => '6',
-    "category" => 'test'
-  ), $atts));
+  function loopDeLoop($atts, $content = null) {
+    extract(shortcode_atts(array(
+      "category" => '',
+      "type" => 'test',
+      'per_row' => '5',
+      'width' => ''
+    ), $atts));
 
-  //Extract ID from category name
-  $theCatId = get_term_by( 'slug', $category, 'category' );
-  $theCatId = $theCatId->term_id;
+    //Extract ID from category name
+    $theCatId = get_term_by( 'slug', $category, 'category' );
+    $theCatId = $theCatId->term_id;
 
-  //Establish global post var
-  global $post;
 
-  //Open markup
-  $output = '<ol>';
 
-  //set args for WP_Query
-  $argsQ = array(
-    'post_type' => 'typetest',
-    'cat' => $theCatId
-    );
+    //Establish global post var
+    global $post;
 
-  //make new WP_Query
-  $yo_quiery = new WP_Query($argsQ);
-  $total = $yo_quiery->found_posts;
+    //Open markup
+    $output = '';
 
-  //Start counter
-  $i = 0;
+    //set args for WP_Query
+    $argsQ = array(
+      'post_type' => $type,
+      'cat' => $theCatId
+      );
 
-  //While counter is less than 
-  while($i < $total) :
-  
-    //Set up args for get_posts
-    $argsG2 = array(
-      'numberposts' => $num,
-      'offset' => $i,
-      'category' => $theCatId,
-      'post_type' => 'typetest'
-    );
+    //make new WP_Query
+    $yo_quiery = new WP_Query($argsQ);
+    $total = $yo_quiery->found_posts;
 
-    //Get the posts
-    $myposts = get_posts($argsG2);
+    //Start counter
+    $i = 0;
 
-    //First row
-    foreach($myposts as $post) : setup_postdata($post);
-      $output .='<li style="background: blue;"><a href="'.get_permalink().'">'.the_title("","",false).'</a></li>';
-    endforeach;
+    //While counter is less than 
+    while($i < $total) :
+    
+      //Set up args for get_posts
+      $argsG2 = array(
+        'numberposts' => $per_row,
+        'offset' => $i,
+        'category' => $theCatId,
+        'post_type' => $type,
+      );
 
-    //Second row
-    foreach($myposts as $post) :
-      $output .='<li style="background: red;"><a href="'.get_permalink().'">'.the_title("","",false).'</a></li>';
-    endforeach;
+      //Get the posts
+      $myposts = get_posts($argsG2);
 
-    //Increment counter
-    $i += $num;
 
-  endwhile;
+      $output .= '<div class="row">';
 
-  //Close and return markup
-  $output .= $total.'</ol>';
-  return $output;
-}
-add_shortcode('related', 'prev_related');
+      foreach($myposts as $post) : setup_postdata($post);
+        $output .='<div class="picunit tipper '.$width.'" id="'.get_the_ID().'">
+            '.get_the_post_thumbnail().'
+            <div class="caption" style="display: block;">
+              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</strong></a>
+            </div>
+            <div class="caption" style="display: block;">'.get_post_meta( get_the_ID(), 'tagline', true ).'</div>
+            <div class="hovertext" style="display: none;">Click for bio<span class="redtext">.</span></div>
+          </div>';
+      endforeach;
 
+      //Second row
+
+      $output .= '</div><div class="row">';
+
+      foreach($myposts as $post) : setup_postdata($post);
+        
+        $output .='
+          <div class="one_whole tip '.get_the_ID().'">
+            <h3>
+              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
+            </h3>
+            <h4>'.get_post_meta( get_the_ID(), 'tagline', true ).'</h4>
+            <h4>
+              <a href="https://twitter.com/#!/'.substr(get_post_meta( get_the_ID(), 'twitter', true ), 1).'">'.get_post_meta( get_the_ID(), 'twitter', true ).'</a>
+            </h4>
+            <p>'.get_post_meta( get_the_ID(), 'bio', true ).'</p>
+          </div>';
+      endforeach;
+
+      $output .= '</div>';
+
+      //Increment counter
+      $i += $per_row;
+
+    endwhile;
+
+    //Close and return markup
+    return $output;
+  }
+  add_shortcode('loop-de-loop', 'loopDeLoop');
+
+
+  function recentPosts( $atts ) {
+      extract( shortcode_atts( array(
+          'type' => 'post',
+      ), $atts ) );
+
+      function get_excerpt($count){
+        $permalink = get_permalink($post->ID);
+        $excerpt = get_the_content();
+        $excerpt = strip_tags($excerpt);
+        $excerpt = substr($excerpt, 0, $count);
+        $excerpt = $excerpt.'...';
+        return $excerpt;
+      }
+
+      $args = array(
+          // 'post_parent' => $parent,
+          'post_type' => $type,
+          'posts_per_page' => 4,
+          'orderby' => 'rand',
+          'sort_column'   => 'menu_order'
+      );
+
+      $output = '<ul class="newposts">';
+
+      $yo_quiery = new WP_Query( $args );
+      while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
+          $output .= 
+              '
+              
+              <li class="post">
+                <a href="'.get_post_meta( get_the_ID(), 'article_link', true ).'"><h4>'.get_the_title().'</h4></a>
+                <div>'.get_excerpt(100).'</div>
+              </li>
+
+              ';
+      endwhile;
+      wp_reset_query();
+      $output .= '</ul><a class="morelink" href="https://blog.hypothes.is">More…</a>';
+      return $output;
+  }
+  add_shortcode('recent-posts', 'recentPosts');

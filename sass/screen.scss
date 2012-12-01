@@ -2,7 +2,7 @@
 
 @import "compass";
 
-// @import url(//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif)
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif");
 
 @import "compass/reset";
 
@@ -174,15 +174,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
+  // margin: 0 0 20px;
+  border-bottom: 1px solid $lighter-gray;
 }
 
 h2 {
   font-size: 2em;
+  // margin: 0 0 20px;
+  border-bottom: 1px solid $lighter-gray;
 }
 
 h3 {
   font-size: 1.7em;
   margin: 0;
+  border-bottom: 1px solid $lighter-gray;
 }
 
 h4 {
@@ -205,9 +210,15 @@ a {
   }
   &:hover {
     color: $hypothered;
+    & > * {
+      color: $hypothered;
+    }
   }
   &.no_ul {
     text-decoration: none;
+  }
+  & > * {
+    color: $hypothered-desat;
   }
 }
 
@@ -225,6 +236,10 @@ img {
 
 .mb {
   margin-bottom: 1em;
+}
+
+.noborder {
+  border: none;
 }
 
 hr {
@@ -294,6 +309,10 @@ $marginwidth: 20px;
   clear: both;
   position: relative;
   @include pie-clearfix;
+  & > *:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
 }
 
 .vertspace {
@@ -523,7 +542,7 @@ $marginwidth: 20px;
 }
 
 .topspacer {
-  height: 161px;
+  height: 93px;
 }
 
 .sectitle {
@@ -763,7 +782,7 @@ $marginwidth: 20px;
 
 .pressunit {
   @include minimalheader;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   margin-top: 2em;
   border-bottom: 1px solid $lighter-gray;
   h3 {
@@ -812,6 +831,31 @@ $marginwidth: 20px;
   .well {
     height: 380px;
     margin-top: 20px;
+  }
+}
+
+//BLOG POSTS ON FRONTPAGE
+.newposts {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  & > li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid $lighter-gray;
+    &:first-child {
+      border-top: none;
+    }
+    div {
+      font-size: .9em;
+      line-height: 1.3em;
+    }
+    h4 {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
