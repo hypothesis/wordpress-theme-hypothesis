@@ -1,37 +1,5 @@
 <?php
 
-  function andrew_loop_shortcode( $atts ) {
-      extract( shortcode_atts( array(
-          'parent' => 8,
-          'type' => 'person',
-          'perpage' => 4
-      ), $atts ) );
-      $output = '<div class="clear"></div><div class="childs grid_12">';
-      $args = array(
-          // 'post_parent' => $parent,
-          'post_type' => $type,
-          'posts_per_page' => $perpage,
-          'sort_column'   => 'menu_order'
-      );
-      $yo_quiery = new WP_Query( $args );
-      while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
-          $output .= '<div id="service-hp">'.
-                     get_the_post_thumbnail().
-                     '<h2 style="margin-bottom:5px">'.
-                     get_the_title().
-                     '</h2>'.
-                     get_the_excerpt().get_post_meta( get_the_ID(), 'twitter', true ).
-                     '<a class="read-more" href="'.
-                     get_permalink().
-                     '">en savoir plus <img src="'.
-                     get_bloginfo( 'template_url' ).
-                     '/images/read-more.png"></a></div><!--  ends here -->';
-      endwhile;
-      wp_reset_query();
-      $output .= '</div>';
-      return $output;
-  }
-  add_shortcode('andrewloop', 'andrew_loop_shortcode');
 
   function pressLoop( $atts ) {
       extract( shortcode_atts( array(
@@ -49,17 +17,17 @@
           '<div class="pressunit">
             <div class="row">
               <div class="picunit one_fourth">
-                <a href="'.get_post_meta( get_the_ID(), 'article_link', true ).'">
+                <a href="'.get_post_meta( get_the_ID(), 'link', true ).'">
                   '.get_the_post_thumbnail().'
                 </a>
                 <div class="caption">
-                  <span>'.get_post_meta( get_the_ID(), 'article_date', true ).'</span>
+                  <span>'.get_post_meta( get_the_ID(), 'date', true ).'</span>
                 </div>
               </div>
               <div class="text three_fourths last">
                 <h3>'.get_post_meta( get_the_ID(), 'outlet', true ).'</h3>
-                <a class="strong" href="'.get_post_meta( get_the_ID(), 'article_link', true ).'">'.get_the_title().'</a>
-                <div class="em">"'.get_the_excerpt().'" <a href="'.get_post_meta( get_the_ID(), 'arch_file', true ).'">[Archival '.get_post_meta( get_the_ID(), 'arch_file_type', true ).']</a></div>
+                <a class="strong" href="'.get_post_meta( get_the_ID(), 'link', true ).'">'.get_the_title().'</a>
+                <div class="em">"'.get_post_meta( get_the_ID(), 'excerpt', true ).'" <a href="'.get_post_meta( get_the_ID(), 'arch_file', true ).'">[Archival '.get_post_meta( get_the_ID(), 'arch_filetype', true ).']</a></div>
               </div>
             </div>
           </div>';
@@ -70,10 +38,10 @@
   add_shortcode('press-loop', 'pressLoop');
 
 
-  function loopDeLoop($atts, $content = null) {
+  function peopleLoop($atts, $content = null) {
     extract(shortcode_atts(array(
       "category" => '',
-      "type" => 'test',
+      "type" => 'people',
       'per_row' => '5',
       'width' => ''
     ), $atts));
@@ -160,7 +128,7 @@
     //Close and return markup
     return $output;
   }
-  add_shortcode('loop-de-loop', 'loopDeLoop');
+  add_shortcode('people-loop', 'peopleLoop');
 
 
   function recentPosts( $atts ) {
