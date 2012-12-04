@@ -535,6 +535,11 @@ $marginwidth: 20px;
       color: $hypothered;
     }
   }
+  .current-menu-item {
+    a {
+      color: $hypothered;
+    }
+  }
 }
 
 .section {
@@ -841,6 +846,7 @@ $marginwidth: 20px;
   padding: 0;
   & > li {
     padding-top: 1em;
+    font-family: sans-serif;
     padding-bottom: 1em;
     border-top: 1px solid $lighter-gray;
     &:first-child {

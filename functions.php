@@ -134,8 +134,8 @@
 	 * @return void
 	 */
 
-	if (!function_exists('load_my_scripts')) {  
-	    function load_my_scripts() {  
+	if (!function_exists('script_enqueuer')) {  
+	    function script_enqueuer() {  
 	        if (!is_admin()) {  
 	        wp_deregister_script( 'jquery' );
 
@@ -175,5 +175,5 @@
 	        }  
 	    }  
 	}  
-	add_action('init', 'load_my_scripts');
+
 

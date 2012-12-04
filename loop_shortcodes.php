@@ -162,7 +162,7 @@
               
               <li class="post">
                 <a href="'.get_post_meta( get_the_ID(), 'article_link', true ).'"><h4>'.get_the_title().'</h4></a>
-                <div>'.get_excerpt(100).'</div>
+                <div>'.get_excerpt(115).'</div>
               </li>
 
               ';

@@ -67,7 +67,7 @@
   Ordered List with Images
   
   ======================================================================================================================== */
-
+ 
   function imgList($atts, $content=null) {
     extract(shortcode_atts(array(
       'number' => '',
@@ -113,7 +113,7 @@
             <h2 class="noborder">'.$number.'</h2>
           </div>
           <div class="text">
-            <h3>'.$title.'</h3>
+            <h3 class="noborder">'.$title.'</h3>
             <div>'.$content.'</div>
           </div>
         </div>
@@ -149,3 +149,67 @@
       </div>');
   }
   add_shortcode('exp-list', 'expandList');
+
+
+
+  /* ========================================================================================================================
+  
+  Register form and link
+  
+  ======================================================================================================================== */
+
+  function register($atts) {
+    return '
+      <p>
+        <a class="tipper" id="us_re">Reserve your username.</a>
+      </p>
+      <form class="two_thirds us_re tip" id="register_form" style="display: none;">
+        <div id="availability_status"></div>
+        <label for="username" style="display: none;">Choose a Username.</label>
+        <input class="clearFocus" id="username" name="username" placeholder="Choose a Username" type="text">
+        <label for="email" style="display: none;">Enter your email.</label>
+        <input id="email" name="email" placeholder="Enter your email- (No Spam)" type="text">
+        <label for="email2" style="display: none;">Confirm your email.</label>
+        <input id="email2" name="email2" placeholder="Confirm your email." type="text">
+        <input class="button" name="button" type="submit" value="Save my username">
+      </form>
+    ';
+  }
+  add_shortcode('register', 'register');
+
+
+  function contact($atts) {
+    return '
+      <p style="font-size: .7em">This form accepts plain text, and will strip html out of your submission.</p>
+      <form action="" id="note_form" method="post" name="note_form" style="display: block; ">
+        <div class="contact-form">
+          <div class="message">
+            <label for="note_message" style="display: none; ">Message</label>
+            <label class="error" for="note_message" id="note_message_error" style="display: none;">This field is required.</label>
+            <textarea class="text-input" id="note_message" name="note_message" placeholder="Leave us a message" value=""></textarea>
+          </div>
+          <div class="identification">
+            <label for="note_name" style="display: none; ">Your name</label>
+            <label class="error" for="note_name" id="note_name_error" style="display: none;">This field is required.</label>
+            <input class="text-input" id="note_name" name="note_name" placeholder="Enter your name" type="text" value="" style="background-color: rgb(255, 255, 255);">
+            <label for="note_email" style="display: none; ">Your email</label>
+            <label class="error" for="note_email" id="note_email_error" style="display: none;">This field is required.</label>
+            <input class="text-input" id="note_email" name="note_email" placeholder="Enter your email- (No Spam)" type="text" value="" style="background-color: rgb(255, 255, 255);">
+          </div>
+          <div class="note_type">
+            <select name="cars">
+              <option value="general">General message</option>
+              <option value="code">I’d like to code.</option>
+              <option value="design">I’d like to design.</option>
+              <option value="other">I’d like to help in other ways.</option>
+              <option value="partner">I’d like to partner.</option>
+              <option value="talk">I’d like to talk to you.</option>
+              <option value="question">I have a question.</option>
+            </select>
+          </div>
+          <input class="button" id="submit_btn" name="note_submit" type="submit" value="Send">
+        </div>
+      </form>
+    ';
+  }
+  add_shortcode('contact', 'contact');

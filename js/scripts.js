@@ -1,17 +1,10 @@
-// LOADING EFFECTS- FADEIN AND MENU CHANGING
+// LOADING EFFECTS- FADEIN
 $(function(){
   $(".accordion").hide();
 });
 
 $(document).ready(function(){
   $(".accordion").fadeIn("slow");
-  var page = "index.html"
-  if (document.location.pathname.length) {
-    var path_parts = location.pathname.split('/');
-    page = path_parts[path_parts.length-1];
-  }
-  $('#navlist a[href!="' + page + '"]').removeClass("hover")
-  $('#navlist a[href="' + page +  '"]').addClass("hover")
 });
 
 //SLIDESHOW
