@@ -226,18 +226,6 @@ img {
   max-width: 100%;
 }
 
-.mn {
-  margin: 0;
-}
-
-.mt {
-  margin-top: 1em;
-}
-
-.mb {
-  margin-bottom: 1em;
-}
-
 .noborder {
   border: none;
 }
@@ -248,19 +236,6 @@ hr {
   position: relative;
   background-color: $lighter-gray;
   height: 1px;
-  &.big {
-    border: none;
-    margin: 0;
-    height: 3px;
-  }
-  &.blank {
-    background-color: transparent;
-    height: 0.5em;
-  }
-  &.spaced {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
 }
 
 .spacer {
@@ -271,27 +246,61 @@ hr {
 .paper {
   padding: 0.5em;
   margin-bottom: 1em;
-  @include box-shadow(1px 3px 10px #dddddd);
-  blockquote {
+  -webkit-box-shadow: 1px 3px 10px #dddddd;
+  -moz-box-shadow: 1px 3px 10px #dddddd;
+  box-shadow: 1px 3px 10px #dddddd; }
+
+  .paper blockquote {
     position: relative;
     font-family: "Merriweather";
     font-size: 1em;
     margin-left: 1em;
     margin-right: 0.5em;
-  }
-  blockquote > p:last-child {
     margin-bottom: 0;
-  }
-  blockquote:before {
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+  .paper blockquote > p:last-child {
+    margin-bottom: 0; }
+
+  .paper blockquote:before {
     color: #eeeeee;
     content: "\201C";
     font-family: "PT Serif";
     font-size: 6em;
     position: absolute;
     top: 0.3em;
-    left: -0.45em;
-  }
-}
+    left: -0.45em; }
+
+
+blockquote {
+  position: relative;
+  font-family: "Merriweather";
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1em;
+  padding-left: 1.5em;
+  -webkit-box-shadow: 1px 3px 10px #dddddd;
+  -moz-box-shadow: 1px 3px 10px #dddddd;
+  box-shadow: 1px 3px 10px #dddddd; }
+
+
+blockquote > p:last-child {
+  margin-bottom: 0; }
+
+
+blockquote:before {
+  color: #eeeeee;
+  content: "\201C";
+  font-family: "PT Serif";
+  font-size: 6em;
+  position: absolute;
+  top: 0.35em;
+  left: -0.2em; }
 
 //GRIDMASTER PRO
 $wholewidth: 600px;
@@ -451,38 +460,6 @@ $marginwidth: 20px;
   color: $hypothered;
 }
 
-.well {
-  display: inline-block;
-  min-height: 20px;
-  padding: 1em;
-  @include border-radius(4px);
-  @include box-shadow(inset 0 1px 10px rgba(0, 0, 0, 0.05));
-  &.last {
-    padding: 1em;
-  }
-}
-
-.sharebtn {
-  img {
-    float: left;
-    margin-right: 1em;
-  }
-  h2 {
-    color: $hypothered-desat;
-    @include transition(color 0.2s ease-in 0.2s);
-    text-decoration: underline;
-    &:active {
-      text-decoration: none;
-    }
-    &:hover {
-      color: $hypothered;
-    }
-    &.no_ul {
-      text-decoration: none;
-    }
-  }
-}
-
 #navtainer {
   position: fixed;
   top: 50px;
@@ -507,7 +484,7 @@ $marginwidth: 20px;
   font-weight: 400;
   list-style-type: none;
   text-align: right;
-  margin: 0;
+  margin: 0; 
   padding: 0;
   font-size: 1em;
   li {
@@ -542,17 +519,8 @@ $marginwidth: 20px;
   }
 }
 
-.section {
-  margin-bottom: 2em;
-}
-
-.topspacer {
-  height: 93px;
-}
-
-.sectitle {
-  margin: 0 0 20px;
-  border-bottom: 1px solid $lighter-gray;
+article {
+  margin-top: 161px;
 }
 
 .pic_placeholder {
@@ -832,13 +800,6 @@ $marginwidth: 20px;
   }
 }
 
-.frontpage-bottom {
-  .well {
-    height: 380px;
-    margin-top: 20px;
-  }
-}
-
 //BLOG POSTS ON FRONTPAGE
 .newposts {
   list-style-type: none;
@@ -865,7 +826,7 @@ $marginwidth: 20px;
   }
 }
 
-//TWEETS
+//TWEETS ON FRONTPAGE
 .tweet-list {
   font-family: sans-serif;
   padding-left: 0;
@@ -951,15 +912,6 @@ form {
       width: 100%;
     }
   }
-}
-
-@mixin linkbutton {
-  font-size: 2.5em;
-  font-family: "myriad-pro", sans-serif;
-  padding-left: 1.3em;
-  background-size: 0.9em 0.9em;
-  background-repeat: no-repeat;
-  background-position: left center;
 }
 
 @mixin graphicbutton {

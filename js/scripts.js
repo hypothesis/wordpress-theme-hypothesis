@@ -1,10 +1,10 @@
 // LOADING EFFECTS- FADEIN
 $(function(){
-  $(".accordion").hide();
+  $("article").hide();
 });
 
 $(document).ready(function(){
-  $(".accordion").fadeIn("slow");
+  $("article").fadeIn("slow");
 });
 
 //SLIDESHOW
@@ -72,8 +72,8 @@ $(function() {
 $(document).ready(function() {
   $(".collapsee").hide();
   $(".collapser").click(function() {
-    $(this).parents(".accordion").find(".collapser").not(this).find(".collapsee").slideUp();
-    $(this).parents(".accordion").find(".collapser").not(this).removeClass("expanded");
+    $(this).parents("article").find(".collapser").not(this).find(".collapsee").slideUp();
+    $(this).parents("article").find(".collapser").not(this).removeClass("expanded");
     $(this).find(".collapsee").slideToggle();
     $(this).toggleClass("expanded");
   });
@@ -84,8 +84,8 @@ $(document).ready(function() {
   $(".tip").hide();
   $(".tipper").click(function() {
     var person = "." + $(this).attr("id");
-    $(this).parents(".accordion").find(".tip").not(person).slideUp("slow")
-    $(this).parents(".accordion").find(person).slideToggle("slow");
+    $(this).parents("article").find(".tip").not(person).slideUp("slow")
+    $(this).parents("article").find(person).slideToggle("slow");
   });
 });
 
