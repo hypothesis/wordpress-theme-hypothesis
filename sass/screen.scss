@@ -14,6 +14,9 @@ $lighter-gray: $base-gray + $gray-interval * 3.5;
 $hypothered: #bd1c2b;
 $hypothered-desat: #bd5862;
 
+$sans-serif: "myriad-pro", sans-serif;
+$serif: "Merriweather", serif;
+
 @mixin smallshadow($a: 2px, $b: 2px, $c: 0.1) {
   @include box-shadow($a $b 3px hsla(0, 0%, 0%, $c));
 }
@@ -24,7 +27,7 @@ $hypothered-desat: #bd5862;
 
 @mixin minimalheader {
   h1, h2, h3, h4, h5, h6 {
-    font-family: "myriad-pro", sans-serif;
+    font-family: $sans-serif;
     line-height: 1.2em;
     margin: 0em 0 0.4em;
     padding: 0 0 0.1em;
@@ -34,7 +37,7 @@ $hypothered-desat: #bd5862;
 body {
   font-size: 16px;
   color: $base-gray;
-  font-family: "Merriweather", sans-serif;
+  font-family: $serif;
   line-height: 1.7em;
 }
 
@@ -71,7 +74,7 @@ blockquote {
 }
 
 input {
-  font-family: "myriad-pro", sans-serif;
+  font-family: $sans-serif;
   font-size: 1em;
   display: inline-block;
   box-sizing: border-box;
@@ -165,7 +168,7 @@ em, .em {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: $sans-serif;
   line-height: 1.2em;
   margin: 1em 0 0.4em;
   padding: 0 0 0.1em;
@@ -230,6 +233,10 @@ img {
   border: none;
 }
 
+.shadow {
+  @include box-shadow(1px 3px 10px #DDD);
+}
+
 hr {
   border: none;
   margin: 0;
@@ -252,7 +259,7 @@ hr {
 
   .paper blockquote {
     position: relative;
-    font-family: "Merriweather";
+    font-family: $serif;
     font-size: 1em;
     margin-left: 1em;
     margin-right: 0.5em;
@@ -277,7 +284,7 @@ hr {
 
 blockquote {
   position: relative;
-  font-family: "Merriweather";
+  font-family: $serif;
   font-size: 1em;
   margin-bottom: 1em;
   padding-top: 0.5em;
@@ -322,6 +329,21 @@ $marginwidth: 20px;
     margin-right: 0;
     padding-right: 0;
   }
+}
+
+
+a.nolink, a.nolink * {
+  text-decoration: none;
+  color: $base-gray;
+
+}
+
+article {
+  margin-top: 161px;
+}
+
+time {
+  font-family: $sans-serif;
 }
 
 .vertspace {
@@ -480,7 +502,7 @@ $marginwidth: 20px;
 }
 
 #navlist {
-  font-family: "myriad-pro";
+  font-family: $sans-serif;
   font-weight: 400;
   list-style-type: none;
   text-align: right;
@@ -519,9 +541,6 @@ $marginwidth: 20px;
   }
 }
 
-article {
-  margin-top: 161px;
-}
 
 .pic_placeholder {
   background: black;
@@ -543,13 +562,13 @@ article {
     @include box-shadow(5px 5px 40px -10px rgba(0, 0, 0, 0.1));
   }
   .caption {
-    font-family: "myriad-pro";
+    font-family: $sans-serif;
     font-size: 0.7em;
     line-height: 1em;
     margin-top: 0.4em;
   }
   .hovertext {
-    font-family: "myriad-pro";
+    font-family: $sans-serif;
     font-size: 0.9em;
     line-height: 1em;
     margin-top: 0.4em;
@@ -807,7 +826,7 @@ article {
   padding: 0;
   & > li {
     padding-top: 1em;
-    font-family: sans-serif;
+    font-family: $sans-serif;
     padding-bottom: 1em;
     border-top: 1px solid $lighter-gray;
     &:first-child {
@@ -828,7 +847,7 @@ article {
 
 //TWEETS ON FRONTPAGE
 .tweet-list {
-  font-family: sans-serif;
+  font-family: $sans-serif;
   padding-left: 0;
   margin-top: 0;
   line-height: 1.3em;
@@ -848,7 +867,7 @@ article {
 }
 
 .morelink {
-  font-family: "myriad-pro";
+  font-family: $sans-serif;
   font-size: 0.9em;
   float: right;
 }
@@ -892,7 +911,7 @@ article {
 //FORMS
 
 form {
-  font-family: "myriad-pro", sans-serif;
+  font-family: $sans-serif;
 }
 
 .contact-form {
@@ -933,7 +952,7 @@ form {
       position: absolute;
       right: 0;
       bottom: 12%;
-      font-family: "myriad-pro", sans-serif;
+      font-family: $sans-serif;
       font-size: 0.8em;
       padding: 0.1em 0.1em;
       border-radius: 2px;
@@ -956,7 +975,7 @@ form {
       position: absolute;
       right: 0;
       bottom: 12%;
-      font-family: "myriad-pro", sans-serif;
+      font-family: $sans-serif;
       font-size: 0.8em;
       padding: 0.1em 0.1em;
       border-radius: 2px;
@@ -982,7 +1001,7 @@ form {
   margin-bottom: 1em;
   position: relative;
   overflow: hidden;
-  font-family: "myriad-pro", sans-serif;
+  font-family: $sans-serif;
   font-size: 1.5em;
   line-height: 40px;
   padding-left: 0.5em;
@@ -1023,7 +1042,7 @@ form {
   line-height: 1.1em;
   @include background-image(linear-gradient(top, white 0%, #f9f9f9 100%));
   cursor: pointer;
-  font-family: "myriad-pro", sans-serif;
+  font-family: $sans-serif;
   font-size: 1em;
   text-decoration: none;
   padding: {

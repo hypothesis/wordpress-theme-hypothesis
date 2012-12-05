@@ -1,11 +1,4 @@
-// LOADING EFFECTS- FADEIN
-$(function(){
-  $("article").hide();
-});
 
-$(document).ready(function(){
-  $("article").fadeIn("slow");
-});
 
 //SLIDESHOW
 $(function() {

@@ -37,7 +37,7 @@ $(function() {
 		
 		$.ajax({
       type: "POST",
-      url: "bin/process.php",
+      url: "/bin/process.php",
       data: dataString,
       success: function(response) {
         $('#contact_form').html("<div id='response'></div>");
@@ -79,7 +79,7 @@ $(function() {
 		
 		$.ajax({
       type: "POST",
-      url: "bin/process.php",
+      url: "/bin/process.php",
       data: dataString,
       success: function(response) {
         $('#note_form').html("<div id='response'></div>");

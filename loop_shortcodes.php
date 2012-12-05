@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="text three_fourths last">
-                <h3>'.get_post_meta( get_the_ID(), 'outlet', true ).'</h3>
+                <h3 class="noborder">'.get_post_meta( get_the_ID(), 'outlet', true ).'</h3>
                 <a class="strong" href="'.get_post_meta( get_the_ID(), 'link', true ).'">'.get_the_title().'</a>
                 <div class="em">"'.get_post_meta( get_the_ID(), 'excerpt', true ).'" <a href="'.get_post_meta( get_the_ID(), 'arch_file', true ).'">[Archival '.get_post_meta( get_the_ID(), 'arch_filetype', true ).']</a></div>
               </div>
@@ -80,6 +80,7 @@
         'offset' => $i,
         'category' => $theCatId,
         'post_type' => $type,
+        'orderby' => 'menu_order'
       );
 
       //Get the posts
@@ -136,15 +137,6 @@
           'type' => 'post',
       ), $atts ) );
 
-      function get_excerpt($count){
-        $permalink = get_permalink($post->ID);
-        $excerpt = get_the_content();
-        $excerpt = strip_tags($excerpt);
-        $excerpt = substr($excerpt, 0, $count);
-        $excerpt = $excerpt.'...';
-        return $excerpt;
-      }
-
       $args = array(
           // 'post_parent' => $parent,
           'post_type' => $type,
@@ -162,7 +154,7 @@
               
               <li class="post">
                 <a href="'.get_post_meta( get_the_ID(), 'article_link', true ).'"><h4>'.get_the_title().'</h4></a>
-                <div>'.get_excerpt(115).'</div>
+                <div>'.get_excerpt(130).'</div>
               </li>
 
               ';
