@@ -6,6 +6,7 @@
 
 @import "compass/reset";
 
+
 $base-gray: #777777;
 $gray-interval: #1e1e1e;
 $light-gray: $base-gray + $gray-interval * 1;
@@ -340,6 +341,10 @@ a.nolink, a.nolink * {
 
 article {
   margin-top: 161px;
+}
+
+.bigspacer {
+  height: 91px;
 }
 
 time {
@@ -1106,4 +1111,52 @@ input, textarea {
   #navtainer {
     position: absolute !important;
   }
+}
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+  border: none;
+}
+p img {
+  margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+.wp-caption {
+  max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+  height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+  margin-right: 1em;
+  float: left;
+}
+img.alignright {
+  margin-left: 1em;
+  float: right;
+}
+.wp-caption {
+  padding: .5em;
+  text-align: center;
+}
+.wp-caption img {
+  margin: .25em;
+}
+.wp-caption .wp-caption-text {
+  margin: .5em;
+}
+.gallery-caption {
+}
+.wp-smiley {
+  margin: 0;
 }

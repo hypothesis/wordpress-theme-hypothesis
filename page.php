@@ -20,6 +20,7 @@
 <article>
   <?php the_content(); ?>
 </article>
+<div class="bigspacer"></div>
 <?php endwhile; ?>
 
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

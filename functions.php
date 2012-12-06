@@ -53,27 +53,6 @@
 
 	/* ========================================================================================================================
 	
-	Scripts
-	
-	======================================================================================================================== */
-
-	/**
-	 * Add scripts via wp_head()
-	 *
-	 * @return void
-	 * @author Keir Whitaker
-	 */
-
-	// function script_enqueuer() {
-	// 	wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
-	// 	wp_enqueue_script( 'site' );
-
-	// 	wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
- //    wp_enqueue_style( 'screen' );
-	// }	
-
-	/* ========================================================================================================================
-	
 	Comments
 	
 	======================================================================================================================== */
@@ -105,7 +84,7 @@
 	======================================================================================================================== */
 
 	/**
-	 * Remove stupid-ass hardcoded width and height on thumbnails
+	 * Remove hardcoded width and height on thumbnails
 	 *
 	 * @return void
 	 */
@@ -144,8 +123,6 @@
 	  return $excerpt;
 	}
 
-	include 'layout_shortcodes.php';
-	include 'loop_shortcodes.php';
 
 
 
@@ -180,10 +157,6 @@
 
 	        wp_enqueue_script('tweeter', get_template_directory_uri().'/js/tweeter.js','','',false);
 
-	        wp_enqueue_script('hypo-user-check', get_template_directory_uri().'/js/hypo-user-check.js','','',true);
-
-	        wp_enqueue_script('mailer', get_template_directory_uri().'/js/mailer.js','','',true);
-
 	        wp_enqueue_script('plugins', get_template_directory_uri().'/js/plugins.js','','',true);
 
 	        wp_enqueue_script('scripts', get_template_directory_uri().'/js/scripts.js','','',false);
@@ -196,4 +169,8 @@
 	    }  
 	}  
 
+	include 'people.php';
+	include 'press.php';
 
+	include 'layout_shortcodes.php';
+	include 'loop_shortcodes.php';

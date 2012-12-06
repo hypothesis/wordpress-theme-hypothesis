@@ -107,7 +107,7 @@
       foreach($myposts as $post) : setup_postdata($post);
         
         $output .='
-          <div class="one_whole tip '.get_the_ID().'">
+          <div class="one_whole tip '.get_the_ID().'" style="display: none">
             <h3>
               <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
             </h3>
@@ -141,8 +141,6 @@
           // 'post_parent' => $parent,
           'post_type' => $type,
           'posts_per_page' => 4,
-          'orderby' => 'rand',
-          'sort_column'   => 'menu_order'
       );
 
       $output = '<ul class="newposts">';
@@ -153,7 +151,7 @@
               '
               
               <li class="post">
-                <a href="'.get_post_meta( get_the_ID(), 'article_link', true ).'"><h4>'.get_the_title().'</h4></a>
+                <a href="'.get_permalink(get_the_ID()).'"><h4>'.get_the_title().'</h4></a>
                 <div>'.get_excerpt(130).'</div>
               </li>
 

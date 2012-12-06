@@ -24,5 +24,6 @@
 	<?php endif; ?>
 </article>
 <?php endwhile; ?>
+<div class="bigspacer"></div>
 
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
