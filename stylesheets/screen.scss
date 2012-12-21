@@ -190,7 +190,6 @@ h2 {
 
 h3 {
   font-size: 1.7em;
-  margin: 0;
   border-bottom: 1px solid $lighter-gray;
 }
 
@@ -349,6 +348,8 @@ article {
 
 time {
   font-family: $sans-serif;
+  display: block;
+  margin-bottom: 1em;
 }
 
 .vertspace {
