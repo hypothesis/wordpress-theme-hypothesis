@@ -15,7 +15,7 @@
 
 <article>
 	<h1><?php the_title(); ?></h1>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted by <srong><?php the_author_posts_link(); ?>,</strong> <?php the_time('F jS, Y'); ?></time>
+	<time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted by <strong><?php the_author_posts_link(); ?>,</strong> <?php the_time('F jS, Y'); ?></time>
 	<?php the_content(); ?>
 
 	<?php if ( get_the_author_meta( 'description' ) ) : ?>
