@@ -1602,21 +1602,19 @@ img.alignright {
 
 /* line 1149, screen.scss */
 .wp-caption {
-  padding: .5em;
-  text-align: center;
+  -webkit-box-shadow: 1px 3px 10px #dddddd;
+  -moz-box-shadow: 1px 3px 10px #dddddd;
+  box-shadow: 1px 3px 10px #dddddd;
 }
-
-/* line 1153, screen.scss */
-.wp-caption img {
-  margin: .25em;
-}
-
-/* line 1156, screen.scss */
+/* line 1151, screen.scss */
 .wp-caption .wp-caption-text {
-  margin: .5em;
+  font-family: "myriad-pro", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0 .5em;
 }
 
-/* line 1161, screen.scss */
+/* line 1162, screen.scss */
 .wp-smiley {
   margin: 0;
 }

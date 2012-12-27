@@ -159,9 +159,14 @@
   ======================================================================================================================== */
 
   function register($atts) {
+    
+    extract(shortcode_atts(array(
+      'text' => 'Reserve your username.'
+    ), $atts));
+
     return '
       <p>
-        <a class="tipper" id="us_re">Reserve your username.</a>
+        <a class="tipper" id="us_re">'.$text.'</a>
       </p>
       <form class="two_thirds us_re tip" id="register_form" style="display: none;">
         <div id="availability_status"></div>
@@ -213,52 +218,3 @@
     ';
   }
   add_shortcode('contact', 'contact');
-
-
-  /* ========================================================================================================================
-  
-  The Caption Shortcode
-  
-  ======================================================================================================================== */
-
-  add_shortcode('wp_caption', 'my_img_caption_shortcode');
-  add_shortcode('caption', 'my_img_caption_shortcode');
-
-  /**
-   * The Caption shortcode.
-   *
-   * Allows a plugin to replace the content that would otherwise be returned. The
-   * filter is 'img_caption_shortcode' and passes an empty string, the attr
-   * parameter and the content parameter values.
-   *
-   * The supported attributes for the shortcode are 'id', 'align', 'width', and
-   * 'caption'.
-   *
-   * @since 2.6.0
-   *
-   * @param array $attr Attributes attributed to the shortcode.
-   * @param string $content Optional. Shortcode content.
-   * @return string
-   */
-  function my_img_caption_shortcode($attr, $content = null) {
-
-    // Allow plugins/themes to override the default caption template.
-    $output = apply_filters('img_caption_shortcode', '', $attr, $content);
-    if ( $output != '' )
-      return $output;
-
-    extract(shortcode_atts(array(
-      'id'  => '',
-      'align' => 'alignnone',
-      'width' => '',
-      'caption' => ''
-    ), $attr));
-
-    if ( 1 > (int) $width || empty($caption) )
-      return $content;
-
-    if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
-
-    return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" >'
-    . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
-  }

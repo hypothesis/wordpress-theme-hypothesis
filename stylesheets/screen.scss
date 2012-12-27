@@ -1147,17 +1147,18 @@ img.alignright {
   float: right;
 }
 .wp-caption {
-  padding: .5em;
-  text-align: center;
+  @include box-shadow(1px 3px 10px #DDD);
+  & .wp-caption-text {
+    font-family: $sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0 .5em;
+  }
 }
-.wp-caption img {
-  margin: .25em;
-}
-.wp-caption .wp-caption-text {
-  margin: .5em;
-}
+
 .gallery-caption {
 }
+
 .wp-smiley {
   margin: 0;
 }
