@@ -224,15 +224,15 @@
   
   ======================================================================================================================== */
 
-  function hypEmbed($atts) {
+  function hypEmbedSource($atts) {
     extract(shortcode_atts(array(
       'domain' => '',
       'title' => '',
       'link' => '',
       'excerpt' => '',
-      'user' => '',
-      'time' => '',
-      'annotation' => ''
+      'child_user' => '',
+      'child_time' => '',
+      'child_annotation' => ''
     ), $atts));
 
     return do_shortcode('
@@ -246,9 +246,9 @@
           <div class="hyp-body">'.$excerpt.'</div>
         </div>
         <div class="hyp-annotation">
-          <div class="hyp-time">'.$time.'</div>
-          <div class="hyp-user">'.$user.'</div>
-          <div class="hyp-body">'.$annotation.'</div>
+          <div class="hyp-time">'.$child_time.'</div>
+          <div class="hyp-user">'.$child_user.'</div>
+          <div class="hyp-body">'.$child_annotation.'</div>
           <div class="hyp-bottombar">
             <div class="hyp-store">Annotation from:&nbsp;&nbsp;<span>test.hypothes.is</span></div>
           </div>
@@ -256,5 +256,52 @@
       </div>
     ');
   }
-  add_shortcode('hyp-embed', 'hypEmbed');
+  add_shortcode('hyp-embed-source', 'hypEmbedSource');
+
+
+  /* ========================================================================================================================
+  
+  Fake Hypothesis embed
+  
+  ======================================================================================================================== */
+
+  function hypEmbedReply($atts) {
+    extract(shortcode_atts(array(
+      'domain' => '',
+      'title' => '',
+      'link' => '',
+      'excerpt' => '',
+      'child_user' => '',
+      'child_time' => '',
+      'child_annotation' => '',
+      'parent_user' => '',
+      'parent_time' => '',
+      'parent_annotation' => ''
+    ), $atts));
+
+    return do_shortcode('
+      <div class="hyp-embed">
+        <div class="hyp-topbar">
+          <span>'.$domain.'</span>
+          <span>/</span>
+          <a href="'.$link.'">'.$title.'</a>
+        </div>
+        <div class="hyp-parent">
+          <div class="hyp-time">'.$parent_time.'</div>
+          <div class="hyp-user">'.$parent_user.'</div>
+          <div class="hyp-body">'.$parent_annotation.'</div>
+        </div>
+        <div class="hyp-child">
+          <div class="hyp-threadexp"></div>
+          <div class="hyp-time">'.$child_time.'</div>
+          <div class="hyp-user">'.$child_user.'</div>
+          <div class="hyp-body">'.$child_annotation.'</div>
+          <div class="hyp-bottombar">
+            <div class="hyp-store">Annotation from:&nbsp;&nbsp;<span>test.hypothes.is</span></div>
+          </div>
+        </div>
+      </div>
+    ');
+  }
+  add_shortcode('hyp-embed-reply', 'hypEmbedReply');
 
