@@ -93,7 +93,7 @@
         $output .='<div class="picunit tipper '.$width.'" id="'.get_the_ID().'">
             '.get_the_post_thumbnail().'
             <div class="caption" style="display: block;">
-              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</strong></a>
+              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
             </div>
             <div class="caption" style="display: block;">'.get_post_meta( get_the_ID(), 'tagline', true ).'</div>
             <div class="hovertext" style="display: none;">Click for bio<span class="redtext">.</span></div>
