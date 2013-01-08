@@ -159,15 +159,13 @@
   ======================================================================================================================== */
 
   function register($atts) {
-    
+
     extract(shortcode_atts(array(
       'text' => 'Reserve your username.'
     ), $atts));
 
     return '
-      <p>
-        <a class="tipper" id="us_re">'.$text.'</a>
-      </p>
+      <a class="tipper" id="us_re">'.$text.'</a>
       <form class="two_thirds us_re tip" id="register_form" style="display: none;">
         <div id="availability_status"></div>
         <label for="username" style="display: none;">Choose a Username.</label>
@@ -218,3 +216,45 @@
     ';
   }
   add_shortcode('contact', 'contact');
+
+
+  /* ========================================================================================================================
+  
+  Fake Hypothesis embed
+  
+  ======================================================================================================================== */
+
+  function hypEmbed($atts) {
+    extract(shortcode_atts(array(
+      'domain' => '',
+      'title' => '',
+      'link' => '',
+      'excerpt' => '',
+      'user' => '',
+      'time' => '',
+      'annotation' => ''
+    ), $atts));
+
+    return do_shortcode('
+      <div class="hyp-embed">
+        <div class="hyp-topbar">
+          <span>'.$domain.'</span>
+          <span>/</span>
+          <a href="'.$link.'">'.$title.'</a>
+        </div>
+        <div class="hyp-quote">
+          <div class="hyp-body">'.$excerpt.'</div>
+        </div>
+        <div class="hyp-annotation">
+          <div class="hyp-time">'.$time.'</div>
+          <div class="hyp-user">'.$user.'</div>
+          <div class="hyp-body">'.$annotation.'</div>
+          <div class="hyp-bottombar">
+            <div class="hyp-store">Annotation from:&nbsp;&nbsp;<span>test.hypothes.is</span></div>
+          </div>
+        </div>
+      </div>
+    ');
+  }
+  add_shortcode('hyp-embed', 'hypEmbed');
+

@@ -2,7 +2,19 @@
 
 @import "compass";
 
-@import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif");
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif|Source+Sans+Pro");
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../images/icomoon.woff');
+  src:url('../images/icomoon.eot');
+  src:url('../images/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../images/icomoon.svg#icomoon') format('svg'),
+    url('../images/icomoon.woff') format('woff'),
+    url('../images/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @import "compass/reset";
 
@@ -250,38 +262,6 @@ hr {
 }
 
 //PULLQUOTES
-.paper {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  -webkit-box-shadow: 1px 3px 10px #dddddd;
-  -moz-box-shadow: 1px 3px 10px #dddddd;
-  box-shadow: 1px 3px 10px #dddddd; }
-
-  .paper blockquote {
-    position: relative;
-    font-family: $serif;
-    font-size: 1em;
-    margin-left: 1em;
-    margin-right: 0.5em;
-    margin-bottom: 0;
-    padding: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-
-  .paper blockquote > p:last-child {
-    margin-bottom: 0; }
-
-  .paper blockquote:before {
-    color: #eeeeee;
-    content: "\201C";
-    font-family: "PT Serif";
-    font-size: 6em;
-    position: absolute;
-    top: 0.3em;
-    left: -0.45em; }
-
-
 blockquote {
   position: relative;
   font-family: $serif;
@@ -291,9 +271,8 @@ blockquote {
   padding-bottom: 0.5em;
   padding-right: 1em;
   padding-left: 1.5em;
-  -webkit-box-shadow: 1px 3px 10px #dddddd;
-  -moz-box-shadow: 1px 3px 10px #dddddd;
-  box-shadow: 1px 3px 10px #dddddd; }
+  @include box-shadow(1px 1px 6px hsla(0, 0%, 0%, .3));
+  }
 
 
 blockquote > p:last-child {
@@ -302,8 +281,8 @@ blockquote > p:last-child {
 
 blockquote:before {
   color: #eeeeee;
-  content: "\201C";
-  font-family: "PT Serif";
+  content: "\0023";
+  font-family: "icomoon";
   font-size: 6em;
   position: absolute;
   top: 0.35em;
@@ -1161,4 +1140,96 @@ img.alignright {
 
 .wp-smiley {
   margin: 0;
+}
+
+
+//FAKE EMBED CODE///////////////////////////////////////////////////
+.hyp-embed {
+  @include box-shadow(1px 1px 6px hsla(0, 0%, 0%, .3));
+  @include border-radius(2px);
+  @include pie-clearfix;
+  line-height: 1.3;
+  background: white;
+  font-size: 14px;
+  padding: 1em;
+  margin: 1em 0;
+  a {
+    color: #BD5862;
+    &:hover {
+      color: #BD1C2B;
+    }
+  }
+}
+
+.hyp-ico {
+  font-size: 1.2em;
+  font-family: "icomoon";
+  vertical-align: top;
+}
+
+.hyp-quote {
+  position: relative;
+  font-family: "Merriweather";
+  color: #888;
+  padding: 0 1em;
+  &:before {
+    color: #eeeeee;
+    content: "\0023";
+    font-family: "icomoon";
+    font-size: 6em;
+    position: absolute;
+    top: -0.3em;
+    left: -0.3em; }
+}
+
+.hyp-annotation {
+  font-family: "Source Sans Pro";
+  color: #666;
+}
+
+.hyp-body {
+  margin-bottom: 1em;
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+}
+  
+.hyp-topbar {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hyp-bottombar {
+}
+
+.hyp-replycount {
+  clear: none;
+}
+
+.hyp-store {
+  float: right;
+  clear: none;
+  font-style: italic;
+  span {
+    font-style: normal;
+    color: #888;
+  }
+}
+
+.hyp-user {
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: .25em;
+}
+
+.hyp-time {
+  font-size: .8em;
+  float: right;
 }
