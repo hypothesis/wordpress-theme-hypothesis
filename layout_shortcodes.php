@@ -83,7 +83,7 @@
               <h1 class="noborder">'.$number.'</h1>
             </div>
             <span class="text">
-              <h3>'.$title.'</h3>
+              <h3 class="noborder">'.$title.'</h3>
               <div>'.$content.'</div>
             </span>
           </div>
