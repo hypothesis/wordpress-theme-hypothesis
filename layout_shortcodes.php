@@ -250,7 +250,7 @@
           <div class="hyp-user">'.$child_user.'</div>
           <div class="hyp-body">'.$child_annotation.'</div>
           <div class="hyp-bottombar">
-            <div class="hyp-store"><a href="'.$link.'">View Annotation</a> from:&nbsp;&nbsp;<span>test.hypothes.is</span></div>
+            <div class="hyp-store"><a href="'.$link.'">View Annotation</a> from:&nbsp;&nbsp;<span>hypothes.is</span></div>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
           <div class="hyp-user">'.$child_user.'</div>
           <div class="hyp-body">'.$child_annotation.'</div>
           <div class="hyp-bottombar">
-            <div class="hyp-store"><a href="'.$link.'">View Annotation</a> from:&nbsp;&nbsp;<span>test.hypothes.is</span></div>
+            <div class="hyp-store"><a href="'.$link.'">View Annotation</a> from:&nbsp;&nbsp;<span>hypothes.is</span></div>
           </div>
         </div>
       </div>
