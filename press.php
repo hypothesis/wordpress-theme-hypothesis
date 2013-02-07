@@ -83,8 +83,7 @@ function display_article_meta_box( $article ) {
 
     <tr>
       <td style="width: 100%">Archival File</td>
-      <td><input placeholder="/wp-content/uploads/2012/12/example.pdf" type="text" size="80" name="article_arch_file" value="<?php echo $arch_file; ?>" />
-      <div>Click <a title="Upload Media" href="http://info.hypothes.is/wp-admin/media-upload.php?post_id=<?php get_the_ID(); ?>&amp;type=image&amp;TB_iframe=1&amp;width=437&amp;height=554" id="set-post-thumbnail" class="thickbox">Upload Media</a> to upload the archival file, then copy the part of its URL starting with /wp-content/uploads to the text input above.</div></td>
+      <td><input placeholder="/wp-content/uploads/2012/12/example.pdf" type="text" size="80" name="article_arch_file" value="<?php echo $arch_file; ?>" /></td>
     </tr>
     
     <tr>
