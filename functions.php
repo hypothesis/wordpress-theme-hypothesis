@@ -155,8 +155,6 @@
 
 	        wp_enqueue_script('runonload', get_template_directory_uri().'/js/runonload.js','','',false);
 
-	        wp_enqueue_script('tweeter', get_template_directory_uri().'/js/tweeter.js','','',false);
-
 	        wp_enqueue_script('plugins', get_template_directory_uri().'/js/plugins.js','','',true);
 
 	        wp_enqueue_script('scripts', get_template_directory_uri().'/js/scripts.js','','',false);

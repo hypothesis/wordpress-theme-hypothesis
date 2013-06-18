@@ -50,17 +50,6 @@ $(function() {
     });
 });
 
-//MINIFEED SETUP CODE
-$(function() {
-  $('#tweets').miniFeed({
-    username: 'hypothes_is',
-    limit: 4,
-    avatarSize: 32,
-    template: '<div class="tweet-avacase">{avatar}</div><div class="tweet-content">{tweet}{time}</div>'
-  });
-});
-
-
 //COLLAPSING ITEMS
 $(document).ready(function() {
   $(".collapsee").hide();
