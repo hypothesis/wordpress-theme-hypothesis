@@ -160,8 +160,8 @@
 	        wp_enqueue_script('scripts', get_template_directory_uri().'/js/scripts.js','','',true);
 
       		wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
-          wp_enqueue_style( 'screen','','','',true);
 
+                wp_enqueue_style( 'screen','','','',true);
 
 	        }  
 	    }  
