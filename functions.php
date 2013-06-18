@@ -145,7 +145,7 @@
 	        if (!is_admin()) {  
 	        wp_deregister_script( 'jquery' );
 
-	        wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','','',false);
+	        wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','','',true);
 
 	        wp_enqueue_script('jqvalidate', 'https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.js','','',true);
 
@@ -157,7 +157,7 @@
 
 	        wp_enqueue_script('plugins', get_template_directory_uri().'/js/plugins.js','','',true);
 
-	        wp_enqueue_script('scripts', get_template_directory_uri().'/js/scripts.js','','',false);
+	        wp_enqueue_script('scripts', get_template_directory_uri().'/js/scripts.js','','',true);
 
       		wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
           wp_enqueue_style( 'screen','','','',true);
