@@ -853,6 +853,41 @@ time {
       border-top: none;
     }
   }
+  ul {
+    padding: 0;
+  }
+  .entry-meta {
+    display: block;
+    font-size:80%;
+  }
+  .intent-meta a {
+    background: url(../images/everything-spritev2.png); /** from Twitter ressources */
+    display: inline-block;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+    & + a {
+      margin-left: 10px;
+    }
+  }
+  .intent-meta a.in-reply-to {
+    background-position: 0 center;
+  }
+  .intent-meta a:hover.in-reply-to {
+    background-position: -16px center;
+  }
+  .intent-meta a.favorite {
+    background-position: -32px center;
+  }
+  .intent-meta a:hover.favorite {
+    background-position: -48px center;
+  }
+  .intent-meta a.retweet {
+    background-position: -80px center;
+  }
+  .intent-meta a:hover.retweet {
+    background-position: -96px center;
+  }
 }
 
 .morelink {
