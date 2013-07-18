@@ -848,7 +848,7 @@ time {
     margin-top: 1.5em;
     padding-top: 1.5em;
     border-top: 1px solid $lighter-gray;
-    &.first {
+    &:first-child {
       margin-top: 0;
       border-top: none;
     }
