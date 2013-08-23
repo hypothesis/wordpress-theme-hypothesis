@@ -972,6 +972,7 @@ form {
   position: relative;
   &:hover {
     &:after {
+      content: "Install extension";
       position: absolute;
       right: 0;
       bottom: 12%;
