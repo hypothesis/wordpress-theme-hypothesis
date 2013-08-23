@@ -970,21 +970,20 @@ form {
   float: left;
   background-image: url("../images/chrome-logo.png");
   position: relative;
-  // &:hover {
-  //   &:after {
-  //     content: "Coming Soon";
-  //     position: absolute;
-  //     right: 0;
-  //     bottom: 12%;
-  //     font-family: $sans-serif;
-  //     font-size: 0.8em;
-  //     padding: 0.1em 0.1em;
-  //     border-radius: 2px;
-  //     background: white;
-  //     @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
-  //     line-height: 1;
-  //   }
-  // }
+  &:hover {
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 12%;
+      font-family: $sans-serif;
+      font-size: 0.8em;
+      padding: 0.1em 0.1em;
+      border-radius: 2px;
+      background: white;
+      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+      line-height: 1;
+    }
+  }
 }
 
 .firefoxbutton {
