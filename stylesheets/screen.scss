@@ -1,7 +1,5 @@
 //MARKETING SITE
 
-@import "compass";
-
 @import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif|Source+Sans+Pro");
 
 @font-face {
@@ -9,15 +7,69 @@
   src: url('../images/icomoon.woff');
   src:url('../images/icomoon.eot');
   src:url('../images/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('../images/icomoon.svg#icomoon') format('svg'),
-    url('../images/icomoon.woff') format('woff'),
-    url('../images/icomoon.ttf') format('truetype');
+  url('../images/icomoon.svg#icomoon') format('svg'),
+  url('../images/icomoon.woff') format('woff'),
+  url('../images/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@import "compass/reset";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
 
 $base-gray: #777777;
 $gray-interval: #1e1e1e;
@@ -31,11 +83,11 @@ $sans-serif: "myriad-pro", sans-serif;
 $serif: "Merriweather", serif;
 
 @mixin smallshadow($a: 2px, $b: 2px, $c: 0.1) {
-  @include box-shadow($a $b 3px hsla(0, 0%, 0%, $c));
+  box-shadow: $a $b 3px hsla(0, 0%, 0%, $c);
 }
 
 @mixin inset-smallshadow($a: 2px, $b: 2px, $c: 0.1) {
-  @include box-shadow(inset $a $b 3px hsla(0, 0%, 0%, $c));
+  box-shadow: inset $a $b 3px hsla(0, 0%, 0%, $c);
 }
 
 @mixin minimalheader {
@@ -45,6 +97,39 @@ $serif: "Merriweather", serif;
     margin: 0em 0 0.4em;
     padding: 0 0 0.1em;
   }
+}
+
+@mixin pie-clearfix {
+  *zoom: 1;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// NOTE: Only supports one image.
+@mixin background-image($value) {
+  // http://css-tricks.com/css3-gradients/
+  background-image: -webkit-#{$value};
+  background-image: -moz-#{$value};
+  background-image: -o-#{$value};
+  background-image: $value;
 }
 
 body {
@@ -97,11 +182,11 @@ input {
   background-color: white !important;
   border: 1px solid $lighter-gray;
   border-radius: 3px;
-  @include single-transition("box-shadow,-moz-box-shadow,-webkit-box-shadow", 0.6s, ease);
+  @include transition(box-shadow 0.6s ease);
   &:focus {
     outline: 0;
     border: 1px solid $light-gray;
-    @include box-shadow(inset 1px 1px 6px -2px $light-gray);
+    box-shadow: inset 1px 1px 6px -2px $light-gray;
   }
   &.error {
     background-image: url("../images/delete_4.png");
@@ -249,7 +334,7 @@ img {
 }
 
 .shadow {
-  @include box-shadow(1px 3px 10px #DDD);
+  box-shadow: 1px 3px 10px #DDD;
 }
 
 hr {
@@ -275,7 +360,7 @@ blockquote {
   padding-bottom: 0.5em;
   padding-right: 1em;
   padding-left: 1.5em;
-  @include box-shadow(1px 1px 6px hsla(0, 0%, 0%, .3));
+  box-shadow: 1px 1px 6px hsla(0, 0%, 0%, .3);
   }
 
 
@@ -302,7 +387,6 @@ $marginwidth: 20px;
   height: 100%;
   background: white;
 }
-
 
 .row {
   clear: both;
@@ -464,7 +548,7 @@ time {
 
 .redbotbor {
   border-bottom: 3px solid $hypothered;
-  @include box-shadow(5px 5px 40px -7px rgba(0, 0, 0, 0.1));
+  box-shadow: 5px 5px 40px -7px rgba(0, 0, 0, 0.1);
 }
 
 .redtext {
@@ -495,7 +579,7 @@ time {
   font-weight: 400;
   list-style-type: none;
   text-align: right;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   font-size: 1em;
   li {
@@ -537,7 +621,7 @@ time {
 }
 
 .picunitimg {
-  @include box-shadow(5px 5px 40px -10px rgba(0, 0, 0, 0.2));
+  box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.2);
 }
 
 //PICTURES
@@ -548,7 +632,7 @@ time {
   img {
     border-bottom: 3px solid $hypothered;
     width: 100%;
-    @include box-shadow(5px 5px 40px -10px rgba(0, 0, 0, 0.1));
+    box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1);
   }
   .caption {
     font-family: $sans-serif;
@@ -581,18 +665,18 @@ time {
     margin-right: -5px;
   }
   .counter {
-    @include border-radius(100px);
-    @include box-shadow(inset 1px 1px 6px -1px $light-gray);
+    box-shadow: inset 1px 1px 6px -1px $light-gray;
+    border-radius: 100px;
     height: 20px;
     width: 20px;
     margin-right: 5px;
     float: left;
     &.active {
       background: $lighter-gray;
-      @include box-shadow(inset 1px 1px 6px $light-gray);
+      box-shadow: inset 1px 1px 6px $light-gray;
     }
     &:hover {
-      @include box-shadow(inset 1px 1px 6px $light-gray);
+      box-shadow: inset 1px 1px 6px $light-gray;
     }
   }
   .arrowleft {
@@ -981,7 +1065,7 @@ form {
       padding: 0.1em 0.1em;
       border-radius: 2px;
       background: white;
-      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       line-height: 1;
     }
   }
@@ -1004,7 +1088,7 @@ form {
       padding: 0.1em 0.1em;
       border-radius: 2px;
       background: white;
-      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       line-height: 1;
     }
   }
@@ -1015,8 +1099,8 @@ form {
 }
 
 #bookmarklet {
-  @include box-shadow(0px 3px 5px -3px rgba(0, 0, 0, 0.1));
   @include background-image(linear-gradient(top, white 0%, #f9f9f9 100%));
+  box-shadow: 0px 3px 5px -3px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   height: 40px;
   border-top-left-radius: 5px;
@@ -1038,8 +1122,8 @@ form {
     color: #777777;
   }
   &:after {
-    @include rotate(-45deg);
-    @include box-shadow(inset 0px 3px 5px -2px rgba(0, 0, 0, 0.1));
+    @include transform(rotate(-45deg));
+    box-shadow: inset 0px 3px 5px -2px rgba(0, 0, 0, 0.1);
     content: "";
     position: absolute;
     top: 4px;
@@ -1050,10 +1134,10 @@ form {
     border: 1px solid $light-gray;
   }
   &:hover {
-    @include box-shadow(0px 5px 5px -3px rgba(0, 0, 0, 0.1));
     @include background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%));
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
     &:after {
-      @include box-shadow(inset 0px 5px 5px -2px rgba(0, 0, 0, 0.1));
+      box-shadow: inset 0px 5px 5px -2px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -1085,13 +1169,13 @@ form {
   }
   &:active {
     @include background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%));
-    @include box-shadow(inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0));
+    box-shadow: inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25);
   }
   &:focus {
     outline: 0;
     border: 1px solid $light-gray;
-    @include box-shadow(inset 1px 1px 6px -2px $light-gray);
+    box-shadow: inset 1px 1px 6px -2px $light-gray;
   }
 }
 
@@ -1110,7 +1194,7 @@ form {
 }
 
 input, textarea {
-  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   @include transition(border linear 0.2s, box-shadow linear 0.2s);
 }
 
@@ -1163,7 +1247,7 @@ img.alignright {
   float: right;
 }
 .wp-caption {
-  @include box-shadow(1px 3px 10px #DDD);
+  box-shadow: 1px 3px 10px #DDD;
   & .wp-caption-text {
     font-family: $sans-serif;
     font-style: italic;
@@ -1182,9 +1266,9 @@ img.alignright {
 
 //FAKE EMBED CODE///////////////////////////////////////////////////
 .hyp-embed {
-  @include box-shadow(1px 1px 6px hsla(0, 0%, 0%, .3));
-  @include border-radius(2px);
+  box-shadow: 1px 1px 6px hsla(0, 0%, 0%, .3);
   @include pie-clearfix;
+  border-radius: 2px;
   font-family: "Source Sans Pro";
   color: #666;
   line-height: 1.3;
@@ -1247,7 +1331,7 @@ img.alignright {
     margin-top: 0;
   }
 }
-  
+
 .hyp-topbar {
   font-weight: 700;
   margin-bottom: 1em;

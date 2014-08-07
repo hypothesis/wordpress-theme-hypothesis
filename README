@@ -1,0 +1,39 @@
+Hypothesis Wordpress Theme
+==========================
+
+Our own shiny custom theme.
+
+Installation
+------------
+
+This is just a wordpress theme, so first you'll need to actully get Wordpress
+up and running. You'll need MySQL, PHP 5.4.x and latest Nodejs. Download the
+latest Wordpress bundle from:
+
+http://wordpress.org/download/
+
+Unzip the bundle into a directory then cd into the theme directory.
+
+    $ cd wp-content/themes
+
+Clone the repo:
+
+    $ git@github.com:hypothesis/hypothetheme.git
+
+Compile the SCSS assets (this will install node-sass locally):
+
+    $ make build
+
+Then to run Wordpress ensure MySQL is running and cd back into the root
+directory. Use the following instructions to allow Wordpress to be run using
+the built in PHP server.
+
+http://ripeworks.com/run-wordpress-locally-using-phps-buily-in-web-server/
+
+Then starting the server should be as simple as:
+
+    $ php -S localhost:9393 -t /path/to/wordpress router.php
+
+Visit http://localhost:9393 in your browser and follow the installation
+instructions. Once Wordpress is installed, you just need to change your theme
+in the admin panel to use the hypothetheme.
