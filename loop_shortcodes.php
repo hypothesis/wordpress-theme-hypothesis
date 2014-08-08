@@ -1,5 +1,6 @@
 <?php
 
+  add_shortcode('theme-uri', 'get_template_directory_uri');
 
   function pressLoop( $atts ) {
       extract( shortcode_atts( array(
@@ -13,7 +14,7 @@
       );
       $yo_quiery = new WP_Query( $args );
       while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
-          $output .= 
+          $output .=
           '<div class="pressunit">
             <div class="row">
               <div class="picunit one_fourth">
@@ -71,9 +72,9 @@
     //Start counter
     $i = 0;
 
-    //While counter is less than 
+    //While counter is less than
     while($i < $total) :
-    
+
       //Set up args for get_posts
       $argsG2 = array(
         'numberposts' => $per_row,
@@ -105,7 +106,7 @@
       $output .= '</div><div class="row">';
 
       foreach($myposts as $post) : setup_postdata($post);
-        
+
         $output .='
           <div class="one_whole tip '.get_the_ID().'" style="display: none">
             <h3>
@@ -147,9 +148,9 @@
 
       $yo_quiery = new WP_Query( $args );
       while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
-          $output .= 
+          $output .=
               '
-              
+
               <li class="post">
                 <a href="'.get_permalink(get_the_ID()).'"><h4>'.get_the_title().'</h4></a>
                 <div>'.get_excerpt(130).'</div>
@@ -162,3 +163,39 @@
       return $output;
   }
   add_shortcode('recent-posts', 'recentPosts');
+
+  function recentBlogPosts( $atts ) {
+      extract( shortcode_atts( array(
+          'type' => 'post',
+      ), $atts ) );
+
+      $args = array(
+          // 'post_parent' => $parent,
+          'post_type' => $type,
+          'posts_per_page' => 4,
+      );
+
+      $output = '<ul class="simple-list">';
+
+      $yo_quiery = new WP_Query( $args );
+      while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
+          $output .=
+              '
+
+              <li>
+                <h3 class="simple-list__heading">
+                  <a href="'.get_permalink(get_the_ID()).'">'.get_the_title().'</a>
+                </h3>
+                <p class="simple-list__extract">'.get_excerpt(160).'</p>
+                <p>
+                  <a href="'.get_permalink(get_the_ID()).'">Read more…</a>
+                </p>
+              </li>
+
+              ';
+      endwhile;
+      wp_reset_query();
+      $output .= '</ul>';
+      return $output;
+  }
+  add_shortcode('blog-posts', 'recentBlogPosts');
