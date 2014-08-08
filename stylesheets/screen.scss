@@ -1,5 +1,6 @@
 //MARKETING SITE
 
+@import "lib/common";
 @import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif|Source+Sans+Pro");
 
 @font-face {
@@ -69,67 +70,6 @@ a img {
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
-}
-
-$base-gray: #777777;
-$gray-interval: #1e1e1e;
-$light-gray: $base-gray + $gray-interval * 1;
-$lighter-gray: $base-gray + $gray-interval * 3.5;
-
-$hypothered: #bd1c2b;
-$hypothered-desat: #bd5862;
-
-$sans-serif: "myriad-pro", sans-serif;
-$serif: "Merriweather", serif;
-
-@mixin smallshadow($a: 2px, $b: 2px, $c: 0.1) {
-  box-shadow: $a $b 3px hsla(0, 0%, 0%, $c);
-}
-
-@mixin inset-smallshadow($a: 2px, $b: 2px, $c: 0.1) {
-  box-shadow: inset $a $b 3px hsla(0, 0%, 0%, $c);
-}
-
-@mixin minimalheader {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $sans-serif;
-    line-height: 1.2em;
-    margin: 0em 0 0.4em;
-    padding: 0 0 0.1em;
-  }
-}
-
-@mixin pie-clearfix {
-  *zoom: 1;
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
-@mixin transform($args...) {
-  -webkit-transform: $args;
-  -moz-transform: $args;
-  -o-transform: $args;
-  transform: $args;
-}
-
-// NOTE: Only supports one image.
-@mixin background-image($value) {
-  // http://css-tricks.com/css3-gradients/
-  background-image: -webkit-#{$value};
-  background-image: -moz-#{$value};
-  background-image: -o-#{$value};
-  background-image: $value;
 }
 
 body {
@@ -348,6 +288,11 @@ hr {
 
 .spacer {
   height: 3em;
+}
+
+.small-text {
+  font-size: 0.875em;
+  line-height: 1.4;
 }
 
 //PULLQUOTES
