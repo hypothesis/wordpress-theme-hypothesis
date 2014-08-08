@@ -1,19 +1,7 @@
 //MARKETING SITE
 
 @import "lib/common";
-@import url("//fonts.googleapis.com/css?family=Merriweather:400,900|PT+Serif|Source+Sans+Pro");
-
-@font-face {
-  font-family: 'icomoon';
-  src: url('../images/icomoon.woff');
-  src:url('../images/icomoon.eot');
-  src:url('../images/icomoon.eot?#iefix') format('embedded-opentype'),
-  url('../images/icomoon.svg#icomoon') format('svg'),
-  url('../images/icomoon.woff') format('woff'),
-  url('../images/icomoon.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,900");
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -315,8 +303,8 @@ blockquote > p:last-child {
 
 blockquote:before {
   color: #eeeeee;
-  content: "\0023";
-  font-family: "icomoon";
+  content: "“";
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 6em;
   position: absolute;
   top: 0.35em;
@@ -1236,8 +1224,8 @@ img.alignright {
   padding: 0 1em;
   &:before {
     color: #eeeeee;
-    content: "\0023";
-    font-family: "icomoon";
+    content: "“";
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 6em;
     position: absolute;
     top: -0.3em;
