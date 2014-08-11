@@ -37,3 +37,16 @@ Then starting the server should be as simple as:
 Visit http://localhost:9393 in your browser and follow the installation
 instructions. Once Wordpress is installed, you just need to change your theme
 in the admin panel to use the hypothetheme.
+
+IcoMoon Fonts
+-------------
+
+The homepage.scss uses fonts from IcoMoon directly embedded in the stylesheet.
+If additonal icons need to be added then visit https://icomoon.io/app/.
+
+And select the projects icon in the top right (it looks like a stack of paper).
+From here select "Import project" and choose the icomoon-selection.json file.
+
+Once new icons have been added, update the stylesheet with the new font and
+update the icomoon-selection.json file (it will be called selection.json in
+the downloaded font bundle).
