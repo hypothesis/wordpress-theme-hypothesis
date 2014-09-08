@@ -42,10 +42,13 @@
     return onHashChange;
   })();
 
+  if (!document.querySelectorAll) {
+    return;
+  }
+
   // Show the bookmarklet hint when dragging.
-  var draggable = document.querySelectorAll('.icon-move');
-  [].forEach.call(draggable, function (el) {
-    var button = el.parentNode;
+  var buttons = document.querySelectorAll('[data-bookmarklet-button]');
+  [].forEach.call(buttons, function (button) {
     button.draggable = true;
     button.ondragstart = function (event) {
       root.className += ' js-show-bookmark-hint';
