@@ -4,7 +4,7 @@ stylein := $(wildcard stylesheets/*.scss)
 styleout := $(patsubst %.scss, %.css, $(stylein))
 
 # Build all the scss files.
-.PHONY: build
+.PHONY: build clean
 build: $(styleout)
 
 $(styleout): $(stylein)
@@ -14,3 +14,6 @@ $(styleout): $(stylein)
 
 $(scssbin):
 	npm install
+
+clean:
+	find stylesheets/ -iname \*.css -delete
