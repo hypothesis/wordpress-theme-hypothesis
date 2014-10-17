@@ -1,0 +1,9 @@
+1.0.0 (2014-10-17)
+==================
+
+- Add 'clean' and 'zip' targets to Makefile.
+- Put version number from package.json into the theme name and version
+  number. It seems best to have it in the name so that multiple versions
+  can be uploaded side by side.
+- Start release numbering and change logging.
+
