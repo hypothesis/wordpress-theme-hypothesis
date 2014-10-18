@@ -24,7 +24,7 @@ clean:
 	find stylesheets/ -iname \*.css -delete
 
 zip: build
-	rm -f hypothetheme-$(shell json version < package.json).zip
-	zip -r hypothetheme-$(shell json version < package.json).zip . -x \
+	rm -f hypothesis-$(shell json version < package.json).zip
+	zip -r hypothesis-$(shell json version < package.json).zip . -x \
 		\*.scss \*.rb \*.json .\* _style.css \
 		node_modules\*

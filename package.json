@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "hypothetheme",
+  "name": "wordpress-theme-hypothesis",
   "version": "0.0.0",
   "description": "The Hypothesis Wordpress Theme",
   "devDependencies": {
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hypothesis/hypothetheme.git"
+    "url": "https://github.com/hypothesis/wordpress-theme-hypothesis.git"
   },
   "license": "NONE",
   "bugs": {
-    "url": "https://github.com/hypothesis/hypothetheme/issues"
+    "url": "https://github.com/hypothesis/wordpress-theme-hypothesis/issues"
   },
-  "homepage": "https://github.com/hypothesis/hypothetheme"
+  "homepage": "https://github.com/hypothesis/wordpress-theme-hypothesis"
 }
