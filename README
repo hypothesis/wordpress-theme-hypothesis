@@ -18,9 +18,13 @@ Unzip the bundle into a directory then cd into the theme directory.
 
 Clone the repo:
 
-    $ git@github.com:hypothesis/hypothetheme.git
+    $ git@github.com:hypothesis/wordpress-theme-hypothesis.git
 
-Compile the SCSS assets (this will install node-sass locally):
+Install the required dependencies:
+
+    $ npm install
+
+Build the assets:
 
     $ make build
 
@@ -37,6 +41,12 @@ Then starting the server should be as simple as:
 Visit http://localhost:9393 in your browser and follow the installation
 instructions. Once Wordpress is installed, you just need to change your theme
 in the admin panel to use the hypothetheme.
+
+To upload to WordPress, first build a zip file:
+
+    $ make zip
+
+Then upload the zip file to WordPress as usual.
 
 IcoMoon Fonts
 -------------
