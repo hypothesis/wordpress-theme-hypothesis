@@ -4,6 +4,19 @@
      return ua.indexOf(string.toLowerCase()) > -1;
   }
 
+  function addListener(element, type, callback) {
+    if (element.addEventListener) {
+      element.addEventListener(type, callback, false);
+    } else if (element.attachEvent) {
+      element.attachEvent('on' + type, callback);
+    }
+  }
+
+  function trackEvent(category, action, label, value) {
+    if (typeof ga !== 'function') { return; }
+    ga('send', 'event', category, action, label, value);
+  }
+
   // Add class to the document for the current browser.
   var detect = {
     safari: has('Safari') && !has('Chrome') && !has('Chromium'),
@@ -25,7 +38,7 @@
   }
 
   // Update the installation panel when the hash changes.
-  window.onhashchange = (function onHashChange(event) {
+  addListener(window, 'hashchange', function onHashChange(event) {
     var hash = location.hash.slice(1);
     if (detect.hasOwnProperty(hash)) {
       root.className = className + ' nav-browser-' + hash;
@@ -38,9 +51,23 @@
     if (event) {
       event.preventDefault();
     }
+  });
 
-    return onHashChange;
-  })();
+  function addBookmarkHint() {
+    root.className += ' js-show-bookmark-hint';
+  }
+
+  function removeBookmarkHint() {
+    root.className = root.className.replace(' js-show-bookmark-hint', '');
+  }
+
+  function trackBookmarkletInstall() {
+    trackEvent('install', 'bookmarklet');
+  }
+
+  function trackChromeExtInstall() {
+    trackEvent('install', 'chromeext');
+  }
 
   if (!document.querySelectorAll) {
     return;
@@ -49,11 +76,16 @@
   // Show the bookmarklet hint when dragging.
   var buttons = document.querySelectorAll('[data-bookmarklet-button]');
   [].forEach.call(buttons, function (button) {
-    button.onmouseenter = button.onfocus = function () {
-      root.className += ' js-show-bookmark-hint';
-    };
-    button.onmouseleave = button.onblur = function () {
-      root.className = root.className.replace(' js-show-bookmark-hint', '');
-    };
+    addListener(button, 'mouseenter', addBookmarkHint);
+    addListener(button, 'focus', addBookmarkHint);
+    addListener(button, 'mouseleave', removeBookmarkHint);
+    addListener(button, 'blur', removeBookmarkHint);
+    addListener(button, 'dragstart', trackBookmarkletInstall);
   });
+
+  var chromeButtons = document.querySelectorAll('[data-chromeext-button]');
+  [].forEach.call(chromeButtons, function (button) {
+    addListener(button, 'click', trackChromeExtInstall);
+  });
+
 })();
