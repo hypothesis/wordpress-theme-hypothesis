@@ -2,7 +2,7 @@ npmbin := $(shell npm bin)
 scssbin := $(npmbin)/node-sass
 stylein := $(wildcard stylesheets/*.scss)
 styleout := $(patsubst %.scss, %.css, $(stylein))
-version := $(shell node -pe "require('package.json').version")
+version := $(shell node -pe "require('./package.json').version")
 
 # Build all the scss files.
 .PHONY: build clean zip
