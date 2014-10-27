@@ -2,6 +2,7 @@ npmbin := $(shell npm bin)
 scssbin := $(npmbin)/node-sass
 stylein := $(wildcard stylesheets/*.scss)
 styleout := $(patsubst %.scss, %.css, $(stylein))
+version := $(shell node -pe "require('package.json').version")
 
 # Build all the scss files.
 .PHONY: build clean zip
@@ -16,7 +17,7 @@ $(scssbin):
 	npm install
 
 style.css: _style.css
-	sed -e s/VERSION/$(shell json version < package.json)/ \
+	sed -e s/VERSION/$(version)/ \
 		_style.css > style.css
 
 clean:
@@ -24,7 +25,7 @@ clean:
 	find stylesheets/ -iname \*.css -delete
 
 zip: build
-	rm -f hypothesis-$(shell json version < package.json).zip
-	zip -r hypothesis-$(shell json version < package.json).zip . -x \
+	rm -f hypothesis-$(version).zip
+	zip -r hypothesis-$(version).zip . -x \
 		\*.scss \*.rb \*.json .\* _style.css \
 		node_modules\*
