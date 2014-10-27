@@ -16,7 +16,7 @@ $(styleout): $(stylein)
 $(scssbin):
 	npm install
 
-style.css: _style.css
+style.css: _style.css package.json
 	sed -e s/VERSION/$(version)/ \
 		_style.css > style.css
 
