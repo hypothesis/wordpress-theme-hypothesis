@@ -289,7 +289,7 @@ a.installer__button--draggable {
   right: 0;
   padding: 8 / 14 * 1em;
   border-bottom: 1px solid #e0e0e0;
-  transition: top 300ms ease-in;
+  transition: top 300ms 300ms ease-in-out;
   text-align: center;
   background: white;
   outline: 1px solid #efefef;

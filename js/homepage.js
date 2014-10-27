@@ -49,14 +49,10 @@
   // Show the bookmarklet hint when dragging.
   var buttons = document.querySelectorAll('[data-bookmarklet-button]');
   [].forEach.call(buttons, function (button) {
-    button.draggable = true;
-    button.ondragstart = function (event) {
+    button.onmouseenter = button.onfocus = function () {
       root.className += ' js-show-bookmark-hint';
-      var dt = event.dataTransfer;
-      dt.setData("text/uri-list", this.href);
-      dt.setData("text/plain", "Hypothesis");
     };
-    button.ondragend = function () {
+    button.onmouseleave = button.onblur = function () {
       root.className = root.className.replace(' js-show-bookmark-hint', '');
     };
   });
