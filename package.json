@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "wordpress-theme-hypothesis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Hypothesis Wordpress Theme",
   "devDependencies": {
     "node-sass": "^0.9.3"
