@@ -9,6 +9,8 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
+		<link rel="alternate" type="application/rss+xml" title="Hypothes.is Blog (RSS)" href="<?php bloginfo('rss2_url'); ?>" />
+		<link rel="alternate" type="application/atom+xml" title="Hypothes.is Blog (Atom)" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 		<?php wp_head(); ?>
