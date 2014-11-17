@@ -199,3 +199,39 @@
       return $output;
   }
   add_shortcode('blog-posts', 'recentBlogPosts');
+
+function recentEventsPosts( $atts ) {
+      extract( shortcode_atts( array(
+          'type' => 'post',
+	  'category_name' => 'events',
+      ), $atts ) );
+
+      $args = array(
+          // 'post_parent' => $parent,
+          'post_type' => $type,
+          'posts_per_page' => 4,
+	  'category_name' => $category_name
+      );
+
+      $output = '<div class="post">';
+
+      $yo_quiery = new WP_Query( $args );
+      while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
+          $output .=
+              '
+
+                <h3 class="simple-list__heading">
+                  <a href="'.get_permalink(get_the_ID()).'">'.get_the_title().'</a>
+                </h3>
+                <p class="simple-list__extract">'.get_excerpt(390).'</p>
+                <p>
+                  <a href="'.get_permalink(get_the_ID()).'">Read more…</a>
+                </p>
+
+              ';
+      endwhile;
+      wp_reset_query();
+      $output .= '</div>';
+      return $output;
+  }
+  add_shortcode('events-posts', 'recentEventsPosts');
