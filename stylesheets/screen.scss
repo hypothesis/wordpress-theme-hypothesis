@@ -812,19 +812,6 @@ time {
   padding-bottom: 0;
 }
 
-//  text-align: center
-
-.twitbird {
-  margin: -10px;
-  width: 60px;
-  background-image: url("../images/twitbird_gray.png");
-  height: 60px;
-  background-size: 100% 100%;
-  &:hover {
-    background-image: url("../images/twitbird_red.png");
-  }
-}
-
 //BLOG POSTS ON FRONTPAGE
 .newposts {
   list-style-type: none;
