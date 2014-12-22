@@ -63,6 +63,7 @@
 .installer__info {
   font-size: 0.875;
   line-height: 1.3;
+  margin: 1em;
 }
 
 .installer__info--small {
@@ -162,6 +163,7 @@ a.installer__button--draggable {
 }
 
 /* Hide all panels aside from the bookmarklet (for undetected browsers) */
+.installer__section--safari,
 .installer__section--chrome,
 .installer__section--firefox,
 .installer__section--overview {
@@ -169,11 +171,13 @@ a.installer__button--draggable {
 }
 
 /* Hide the bookmarklet section if nav is Chrome/Firefox */
+.nav-browser-safari .installer__section--bookmarklet,
 .nav-browser-chrome .installer__section--bookmarklet,
 .nav-browser-firefox .installer__section--bookmarklet {
   display: none;
 }
 
+.nav-browser-safari .installer__section--safari,
 .nav-browser-chrome .installer__section--chrome,
 .nav-browser-firefox .installer__section--firefox {
   display:block;
