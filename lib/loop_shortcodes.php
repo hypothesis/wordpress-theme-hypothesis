@@ -89,7 +89,7 @@
       $output .= '<div class="row">';
 
       foreach($myposts as $post) : setup_postdata($post);
-        $output .='<div class="picunit tipper '.$width.'" id="'.get_the_ID().'">
+        $output .='<div class="picunit tipper '.$width.'" data-toggle="modal" data-target="#'.get_the_ID().'">
             '.get_the_post_thumbnail().'
             <div class="caption" style="display: block;">
               <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
@@ -106,15 +106,23 @@
       foreach($myposts as $post) : setup_postdata($post);
 
         $output .='
-          <div class="one_whole tip '.get_the_ID().'" style="display: none">
-            <h3>
-              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
-            </h3>
-            <h4>'.get_post_meta( get_the_ID(), 'tagline', true ).'</h4>
-            <h4>
-              <a href="https://twitter.com/#!/'.substr(get_post_meta( get_the_ID(), 'twitter', true ), 1).'">'.get_post_meta( get_the_ID(), 'twitter', true ).'</a>
-            </h4>
-            <p>'.get_post_meta( get_the_ID(), 'bio', true ).'</p>
+          <div class="modal fade" id="'.get_the_ID().'"tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel"><a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a></h3>
+                </div>
+                <div class="modal-body">
+                  '.get_the_post_thumbnail().'
+                  <h5>'.get_post_meta( get_the_ID(), 'tagline', true ).'</h5>
+                  <h5>
+                    <a href="https://twitter.com/#!/'.substr(get_post_meta( get_the_ID(), 'twitter', true ), 1).'">'.get_post_meta( get_the_ID(), 'twitter', true ).'</a>
+                  </h5>
+                  <p>'.get_post_meta( get_the_ID(), 'bio', true ).'</p>
+                </div>
+              </div>
+            </div>
           </div>';
       endforeach;
 
