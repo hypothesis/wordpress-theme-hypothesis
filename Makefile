@@ -1,3 +1,7 @@
+# This file no longer works but it would be good to put a script
+# like this together for the new theme... so not deleting it for
+# now.
+
 npmbin := $(shell npm bin)
 scssbin := $(npmbin)/node-sass
 stylein := $(wildcard stylesheets/*.scss)
