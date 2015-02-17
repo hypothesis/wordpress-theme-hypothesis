@@ -1,0 +1,176 @@
+/* Custom stylings for the Hypothes.is theme.*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic);
+
+html, body {
+	font-family: "lato", sans-serif;
+}
+
+.primary-color {
+	color: @brand-primary;
+}
+
+.hypo-small {
+  font-size: .7em !important;
+}
+
+// Navbar /////////////////////////////////
+
+.hypo-nav {
+	background-color: transparent;
+	border: none;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.navbar-header {
+	padding-left: 1em;
+}
+
+.hypo-social-media {
+	padding-top: 7px;
+	font-size: 1.4em;
+}
+
+
+// Hompepage //////////////////////////////
+
+.hypo-tron {
+  background-color: transparent;
+  border: none;
+  
+  .btn {
+    img {
+      width: 19px;
+      margin-right: 0.3em;
+      float: left;
+    }
+  }
+}
+
+.hypo-space {
+  margin-bottom: 12em;
+  margin-top: 12em;
+  padding: 1.5em;
+}
+
+.or {
+	margin: .7em;
+}
+
+.via {
+  width: 16em;
+}
+
+// Press section //////////////////////////////
+.presspic {
+  img {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 2em;
+  }
+}
+
+// Team section ///////////////////////////////
+.pic_placeholder {
+  background: black;
+  height: 435px; }
+
+.picunitimg {
+  box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.2); }
+
+.picunit {
+  padding-bottom: 1em;
+  margin-right: 0;
+  padding-right: 20px; }
+  .picunit img {
+    border-bottom: 3px solid #bd1c2b;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); }
+  .picunit .caption {
+    font-family: "myriad-pro", sans-serif;
+    font-size: 0.7em;
+    line-height: 1em;
+    margin-top: 0.4em; }
+  .picunit .hovertext {
+    font-family: "myriad-pro", sans-serif;
+    font-size: 0.9em;
+    line-height: 1em;
+    margin-top: 0.4em; }
+ 
+// Blog //////////////////////////////////////
+
+// Spacing between articles on blog page.
+.blog {
+  article {
+    padding-bottom: 60px;
+  }
+}
+
+
+//////////////////////////////////////////////
+// Install Extension buttons and bookmarklets 
+.installer {
+  display: inline-flex;
+}
+
+a.installer__button--draggable {
+  cursor: move;
+  border-style: dotted;
+}
+
+/* Hide the bookmarklet section if the hash is #install */
+.nav-install .installer__section--bookmarklet {
+  display: none;
+}
+.nav-install .installer__section--overview {
+  display: block;
+}
+
+/* Hide all the logos in the bookmarklet section */
+.installer__section--bookmarklet .installer__browser-logo--safari,
+.installer__section--bookmarklet .installer__browser-logo--ie,
+.installer__section--bookmarklet .installer__browser-logo--chrome,
+.installer__section--bookmarklet .installer__browser-logo--firefox,
+.installer__section--bookmarklet .installer__browser-logo--opera {
+  display: none;
+}
+
+/* Hide all panels aside from the bookmarklet (for undetected browsers) */
+.installer__section--safari,
+.installer__section--chrome,
+.installer__section--firefox,
+.installer__section--overview {
+  display: none;
+}
+
+/* Hide the bookmarklet section if nav is Chrome/Firefox */
+.nav-browser-safari .installer__section--bookmarklet,
+.nav-browser-chrome .installer__section--bookmarklet,
+.nav-browser-firefox .installer__section--bookmarklet {
+  display: none;
+}
+
+.nav-browser-safari .installer__section--safari,
+.nav-browser-chrome .installer__section--chrome,
+.nav-browser-firefox .installer__section--firefox {
+  display:block;
+}
+
+/* Hide the default browser in the bookmarklet section if we have enforced a browser */
+[class^="nav-browser-"]  .installer__browser-logo--default,
+[class*=" nav-browser-"] .installer__browser-logo--default {
+  display: none;
+}
+
+/* Reveal the correct logo if we have enforced a browser */
+.installer__section--bookmarklet {
+  .nav-browser-safari & .installer__browser-logo--safari,
+  .nav-browser-ie & .installer__browser-logo--ie,
+  .nav-browser-opera & .installer__browser-logo--opera,
+  .nav-browser-chrome & .installer__browser-logo--chrome,
+  .nav-browser-firefox & .installer__browser-logo--firefox {
+    display: block;
+  }
+}

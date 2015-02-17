@@ -1,7 +1,7 @@
 Hypothesis Wordpress Theme
 ==========================
 
-Our own shiny custom theme.
+Our own shiny custom theme, based on [roots.io](http://roots.io/). Be sure to check there for more detailed documentation about the template theme.
 
 Installation
 ------------
@@ -12,9 +12,11 @@ latest Wordpress bundle from:
 
 http://wordpress.org/download/
 
-Unzip the bundle into a directory then cd into the theme directory.
+There are tons of good OS-specific instructions for getting started with local development and wordpress.
 
-    $ cd wp-content/themes
+Once wordpress is setup and running locally, cd into the theme directory.
+
+    $ cd path-to/wp-content/themes
 
 Clone the repo:
 
@@ -26,7 +28,7 @@ Install the required dependencies:
 
 Build the assets:
 
-    $ make build
+    $ grunt dev
 
 Then to run Wordpress ensure MySQL is running and cd back into the root
 directory. Use the following instructions to allow Wordpress to be run using
@@ -47,16 +49,3 @@ To upload to WordPress, first build a zip file:
     $ make zip
 
 Then upload the zip file to WordPress as usual.
-
-IcoMoon Fonts
--------------
-
-The homepage.scss uses fonts from IcoMoon directly embedded in the stylesheet.
-If additonal icons need to be added then visit https://icomoon.io/app/.
-
-And select the projects icon in the top right (it looks like a stack of paper).
-From here select "Import project" and choose the icomoon-selection.json file.
-
-Once new icons have been added, update the stylesheet with the new font and
-update the icomoon-selection.json file (it will be called selection.json in
-the downloaded font bundle).
