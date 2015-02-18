@@ -14,7 +14,7 @@ Template Name: Homepage
 			</div>
 			<div class="col-sm-6 col-md-6">
 				<h2>Annotate with anyone, anywhere</h2>
-				<p>Discuss, add additional information, organize your research, or leave personal notes on web pages and PDFs.</p>
+				<p>A new layer is coming to the web. Discuss, add additional information, organize your research, or make personal notes.</p>
 				<section class="installer">
 
 					<!-- Chrome -->
@@ -98,13 +98,12 @@ Template Name: Homepage
   <div class="container">
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot3.jpg" 
-			  	   class="img-rounded"
-			  	   width="300px"
+			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot5.jpg" 
+			  	   class="img-rounded hypo-screenshot"
 			  	   alt="..." />
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-				<div class="caption">
+				<div class="hypo-caption">
 				  <h3>Select</h3>
 				  <p>Select text in PDFs and web pages.</p>
 				</div>
@@ -113,13 +112,12 @@ Template Name: Homepage
 
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/Selection_012.jpg" 
-			  	   class="img-rounded"
-			  	   width="300px"
+			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot4.jpg" 
+			  	   class="img-rounded hypo-screenshot"
 			  	   alt="..." />
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-				<div class="caption">
+				<div class="hypo-caption">
 				  <h3>Annotate</h3>
 				  <p>Make highlights or leave notes.</p>
 				</div>
@@ -128,30 +126,17 @@ Template Name: Homepage
 
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot2.jpg"
-			  		 width="300px" 
+			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot6.jpg"
+			  		 class="img-rounded hypo-screenshot" 
 			  	   alt="..." />
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-				<div class="caption">
+				<div class="hypo-caption">
 				  <h3>Reply</h3>
 				  <p>Have threaded conversations and get notifications when people reply.</p>
 				</div>
 		  </div>
 		</div>
-
-<!-- 		<div class="row hypo-space">
-		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2012/11/placehold.gif" 
-			  	   alt="..." />
-		  </div>
-		  <div class="col-sm-6 col-md-6">
-				<div class="caption">
-				  <h3>Stream</h3>
-				  Control the visibility of annotations, and share annotations with friends, fellow researchers, study buddies, etc...
-				</div>
-		  </div>
-		</div> -->
   </div><!-- / .container -->
 </section><!-- / #features -->
 </div><!-- /.hypo-tron -->
