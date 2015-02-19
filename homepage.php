@@ -44,7 +44,7 @@ Template Name: Homepage
 				  <em class="or">Or...</em>
 				  
 				  <!-- Via Widget -->
-				  <form class="via" onsubmit="url = document.getElementById('search').value; if (url != '') { document.location.href = '/h/' + url; } return false;">
+				  <form class="via" onsubmit="url = document.getElementById('search').value; if (url != '') { window.location.href = 'https://via.hypothes.is/h/' + url; } return false;">
 		        <div class="input-group" title="Insert a URL to annotate that page.">
 		        	<input id="search" 
 		                 class="form-control" 
