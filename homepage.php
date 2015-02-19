@@ -98,7 +98,7 @@ Template Name: Homepage
   <div class="container">
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot5.jpg" 
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_001.png" 
 			  	   class="img-rounded hypo-screenshot"
 			  	   alt="..." />
 		  </div>
@@ -112,7 +112,7 @@ Template Name: Homepage
 
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot4.jpg" 
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_004.png" 
 			  	   class="img-rounded hypo-screenshot"
 			  	   alt="..." />
 		  </div>
@@ -126,7 +126,7 @@ Template Name: Homepage
 
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="http://127.0.1.1/Hypothesis/wp-content/uploads/2015/02/screenshot6.jpg"
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_003.png"
 			  		 class="img-rounded hypo-screenshot" 
 			  	   alt="..." />
 		  </div>
