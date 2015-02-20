@@ -15,7 +15,7 @@
       $yo_quiery = new WP_Query( $args );
       while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
           $output .=
-          '<div class="row">
+          '<div class="row hypo-press">
               <div class="col-lg-4">
                 <a class="presspic" href="'.get_post_meta( get_the_ID(), 'link', true ).'">
                   '.get_the_post_thumbnail().'
