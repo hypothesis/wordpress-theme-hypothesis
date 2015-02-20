@@ -19,29 +19,28 @@ Template Name: Homepage
 
 					<!-- Chrome -->
 			    <span class="installer__section--chrome">
-			      <a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" onclick="chrome.webstore.install();return false;" data-chromeext-button="">
+			      <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" onclick="chrome.webstore.install();return false;" data-chromeext-button="">
 			        <img class="installer__browser-logo--chrome" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
 			        Install
 			      </a>
-
 			    </span>
 			    
 			    <!-- Safari -->
 			    <span class="installer__section--safari">
-			      <a class="installer__button installer__button--large" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
+			      <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
 			        <img class="installer__browser-logo--chrome" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
 			        Install Chrome Extension
 			      </a>
 			    </span>
 
 			    <!-- Firefox -->
-			    <span class="installer__section--firefox">
-			      <a class="btn btn-primary" href="#" data-bookmarklet-button="">
+			    <span class="installer__section--firefox hidden-xs">
+			      <a class="btn btn-primary hidden-xs" href="#">
 			      	<img class="installer__browser-logo--firefox" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-firefox-64x64.png" alt="">
 			      	Install</a>
 			    </span>
 
-				  <em class="or">Or...</em>
+				  <em class="or hidden-xs">Or...</em>
 				  
 				  <!-- Via Widget -->
 				  <form class="via" onsubmit="url = document.getElementById('search').value; if (url != '') { window.location.href = 'https://via.hypothes.is/h/' + url; } return false;">

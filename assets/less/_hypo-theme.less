@@ -44,7 +44,8 @@ html, body {
 
 // Hompepage //////////////////////////////
 
-.hypo-tron {
+// Override bootstrap jumbotron class.
+.jumbotron {
   background-color: transparent;
   border: none;
   
@@ -67,19 +68,95 @@ html, body {
 	margin: .7em;
 }
 
-.via {
-  width: 16em;
-}
-
 .hypo-screenshot {
   width: 90%;
   height: auto;
   float: center;
 }
 
-.hypo-caption {
-  padding: 4em 2em 2em 2em;
+@media (max-width: @screen-xs-max) {
+  .hypo-caption {
+      padding-top: 1em;
+  } 
 }
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .hypo-tron { 
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .hypo-caption {
+      padding-top: 1em;
+    } 
+  }
+
+  .via {
+    width: 13.7em;
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+  .hypo-tron { 
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+
+  .hypo-caption {
+    padding-top: 1em;
+  }
+
+  .via {
+    width: 16em;
+  } 
+}
+
+@media (min-width: @screen-lg-min) {
+  .hypo-tron {
+    p {
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+
+  .hypo-caption {
+    padding: 4em 2em 2em 2em;
+  }
+
+  .via {
+    width: 16em;
+  } 
+}
+
+@media (min-width: 1440px) {
+  .hypo-tron {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    p {
+      font-size: 21px;
+      font-weight: 200;
+    }
+  }
+}
+
 
 // Press section //////////////////////////////
 .hypo-press {
@@ -130,7 +207,6 @@ html, body {
     padding-bottom: 2em;
   }
 }
-
 
 //////////////////////////////////////////////
 // Install Extension buttons and bookmarklets 
