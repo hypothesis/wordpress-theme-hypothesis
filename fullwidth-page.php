@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Press Page
+Template Name: Full Width Page
 */
 ?>
 

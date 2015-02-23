@@ -92,9 +92,9 @@
 
       foreach($myposts as $post) : setup_postdata($post);
         $output .='<div class="picunit tipper '.$width.'" data-toggle="modal" data-target="#'.get_the_ID().'">
-            '.get_the_post_thumbnail().'
+            <a href="#'.get_the_ID().'">'.get_the_post_thumbnail().'</a>
             <div class="caption" style="display: block;">
-              <a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a>
+              <a href="#'.get_the_ID().'">'.get_the_title().'</a>
             </div>
             <div class="caption" style="display: block;">'.get_post_meta( get_the_ID(), 'tagline', true ).'</div>
             <div class="hovertext" style="display: none;">Click for bio<span class="redtext">.</span></div>

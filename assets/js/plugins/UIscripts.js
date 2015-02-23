@@ -8,22 +8,3 @@ $(document).ready(function() {
     $(this).toggleClass("expanded");
   });
 });
-
-//TOOLTIPS
-$(document).ready(function() {
-  $(".tip").hide();
-  $(".tipper").click(function() {
-    var person = "." + $(this).attr("id");
-    $(this).parents("article").find(".tip").not(person).slideUp("slow")
-    $(this).parents("article").find(person).slideToggle("slow");
-  });
-});
-
-//PICUNIT HOVERTEXT
-$(document).ready(function() {
-  $(".hovertext").hide();
-  $(".tipper").hover(function() {
-    $(this).find(".caption").toggle();
-    $(this).find(".hovertext").toggle();
-  });
-});
