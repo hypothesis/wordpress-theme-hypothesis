@@ -16,18 +16,20 @@
       while ( $yo_quiery->have_posts() ) : $yo_quiery->the_post();
           $output .=
           '<div class="row hypo-press">
-              <div class="col-lg-4">
+              <div class="col-lg-10">
+              <div class="media-left hidden-xs">
                 <a class="presspic" href="'.get_post_meta( get_the_ID(), 'link', true ).'">
                   '.get_the_post_thumbnail().'
                 </a>
-                <div class="caption">
+                <div class="caption hypo-small">
                   <span>'.get_post_meta( get_the_ID(), 'date', true ).'</span>
                 </div>
               </div>
-              <div class="col-lg-8">
+              <div class="media-body">
                 <h3 class="noborder">'.get_post_meta( get_the_ID(), 'outlet', true ).'</h3>
                 <a class="strong" href="'.get_post_meta( get_the_ID(), 'link', true ).'">'.get_the_title().'</a>
                 <div class="em">"'.get_post_meta( get_the_ID(), 'excerpt', true ).'</div>
+              </div>
               </div>
             </div>';
       endwhile;

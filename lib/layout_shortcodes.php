@@ -45,12 +45,12 @@
     ), $atts));
 
     return do_shortcode(
-      '<div class="one_whole">
-        <div class="principle">
-          <div class="number">
+      '<div class="container numlist-padding">
+        <div class="row">
+          <div class="numlist-number media-left">
             <h2 class="noborder">'.$number.'</h2>
           </div>
-          <div class="text">
+          <div class="media-body">
             <h3 class="noborder">'.$title.'</h3>
             <div>'.$content.'</div>
           </div>

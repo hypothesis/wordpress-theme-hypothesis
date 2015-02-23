@@ -1,5 +1,7 @@
 /* Custom stylings for the Hypothes.is theme.*/
 
+
+// General ////////////////////////////////
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic);
 
 html, body {
@@ -11,11 +13,15 @@ html, body {
 }
 
 .hypo-small {
-  font-size: .7em !important;
+  font-size: .8em !important;
 }
 
-// Navbar /////////////////////////////////
+.hypo-space-at-bottom {
+  padding-bottom: 40px;
+}
 
+
+// Navbar /////////////////////////////////
 .hypo-nav {
 	background-color: transparent;
 	border: none;
@@ -45,6 +51,10 @@ html, body {
 // Hompepage //////////////////////////////
 
 // Override bootstrap jumbotron class.
+.hypo-header {
+  padding-bottom: 5em;
+}
+
 .jumbotron {
   background-color: transparent;
   border: none;
@@ -59,13 +69,8 @@ html, body {
 }
 
 .hypo-space {
-  margin-bottom: 12em;
-  margin-top: 12em;
+  margin-top: 10em;
   padding: 1.5em;
-}
-
-.or {
-	margin: .7em;
 }
 
 .hypo-screenshot {
@@ -172,18 +177,29 @@ html, body {
 }
 
 
+// Blog //////////////////////////////////////
+
+// Spacing between articles on blog page.
+.blog {
+  article {
+    padding-bottom: 2em;
+  }
+}
+
+
 // Press section //////////////////////////////
 .hypo-press {
-  padding-bottom: 1.7em;
+  margin-bottom: 2em;
 }
 
 .presspic {
   img {
-    width: 100% !important;
+    width: 200px !important;
     height: 100% !important;
-    margin-top: 2em;
+    margin-top: 1.7em;
   }
 }
+
 
 // Team section ///////////////////////////////
 .pic_placeholder {
@@ -196,31 +212,43 @@ html, body {
 .picunit {
   padding-bottom: 1em;
   margin-right: 0;
-  padding-right: 20px; }
-  .picunit img {
+  padding-right: 20px; 
+}
+
+.picunit img {
     border-bottom: 3px solid #bd1c2b;
     width: 100%;
     height: 100%;
-    box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); }
-  .picunit .caption {
+    box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); 
+}
+
+.picunit .caption {
     font-family: "myriad-pro", sans-serif;
     font-size: 0.7em;
     line-height: 1em;
-    margin-top: 0.4em; }
-  .picunit .hovertext {
+    margin-top: 0.4em; 
+}
+
+.picunit .hovertext {
     font-family: "myriad-pro", sans-serif;
     font-size: 0.9em;
     line-height: 1em;
-    margin-top: 0.4em; }
- 
-// Blog //////////////////////////////////////
-
-// Spacing between articles on blog page.
-.blog {
-  article {
-    padding-bottom: 2em;
-  }
+    margin-top: 0.4em; 
 }
+ 
+
+// numlist short code //////////////////////
+.numlist-number {
+  padding-right: 1em;
+  color: @brand-primary;
+  width: 8%;
+  min-width: 55px;
+}
+
+.numlist-padding {
+  padding-bottom: 1em;
+}
+
 
 //////////////////////////////////////////////
 // Install Extension buttons and bookmarklets 
@@ -228,17 +256,16 @@ html, body {
   display: inline-flex;
 }
 
+.installer__section--bookmarklet {
+  p {
+    font-size: 16px;
+  }
+}
+
 a.installer__button--draggable {
   cursor: move;
   border-style: dotted;
-}
-
-/* Hide the bookmarklet section if the hash is #install */
-.nav-install .installer__section--bookmarklet {
-  display: none;
-}
-.nav-install .installer__section--overview {
-  display: block;
+  margin-bottom: 1em;
 }
 
 /* Hide all the logos in the bookmarklet section */
@@ -258,11 +285,19 @@ a.installer__button--draggable {
   display: none;
 }
 
-/* Hide the bookmarklet section if nav is Chrome/Firefox */
+// Uncomment when we launch Firefox extension.
+/* Hide the bookmarklet section if nav is Chrome/Firefox/Safari */
+// .nav-browser-safari .installer__section--bookmarklet,
+// .nav-browser-chrome .installer__section--bookmarklet,
+// .nav-browser-firefox .installer__section--bookmarklet {
+//   display: none;
+// }
+
+/* Hide the bookmarklet section if nav is Chrome/Safari */
 .nav-browser-safari .installer__section--bookmarklet,
-.nav-browser-chrome .installer__section--bookmarklet,
-.nav-browser-firefox .installer__section--bookmarklet {
+.nav-browser-chrome .installer__section--bookmarklet {
   display: none;
+  
 }
 
 .nav-browser-safari .installer__section--safari,
@@ -285,5 +320,18 @@ a.installer__button--draggable {
   .nav-browser-chrome & .installer__browser-logo--chrome,
   .nav-browser-firefox & .installer__browser-logo--firefox {
     display: block;
+  }
+}
+
+/* Shows/hides the "Or" text between extenstion install button and via widget. 
+   If there is no extension to install we hide this text. */
+.or {
+  display: none;
+}
+
+.nav-browser-chrome, .nav-browser-safari {
+  .or {
+    display: inline-block;
+    margin: .7em;
   }
 }
