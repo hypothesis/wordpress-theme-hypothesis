@@ -25,7 +25,7 @@
               <div class="media-body">
                 <h3 class="noborder">'.get_post_meta( get_the_ID(), 'outlet', true ).'</h3>
                 <a class="strong" href="'.get_post_meta( get_the_ID(), 'link', true ).'">'.get_the_title().'</a>
-                <div class="caption hypo-small">
+                <div class="hypo-date hypo-small">
                   <span>'.get_post_meta( get_the_ID(), 'date', true ).'</span>
                 </div>
                 <div class="em">"'.get_post_meta( get_the_ID(), 'excerpt', true ).'</div>
