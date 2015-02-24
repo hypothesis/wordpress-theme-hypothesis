@@ -21,10 +21,10 @@ $roots_includes = array(
   'lib/gallery.php',           // Custom [gallery] modifications
   'lib/scripts.php',           // Scripts and stylesheets
   'lib/extras.php',            // Custom functions
-  'lib/people.php',            // Team Section
-  'lib/press.php',             // Press Section
-  'lib/layout_shortcodes.php', // Hypothes.is Shortcodes
-  'lib/loop_shortcodes.php',   // Hypothes.is Loop Shortcodes
+  'templates/people.php',            // Team Section
+  'templates/press.php',             // Press Section
+  'templates/layout_shortcodes.php', // Hypothes.is Shortcodes
+  'templates/loop_shortcodes.php',   // Hypothes.is Loop Shortcodes
 );
 
 foreach ($roots_includes as $file) {

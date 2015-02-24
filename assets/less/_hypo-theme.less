@@ -358,3 +358,16 @@ a.installer__button--draggable {
     margin: .7em;
   }
 }
+
+/* Show message on mobile devices using Chrome about the Chrome extension.
+   This works in conjunction with Bootstrap's .visible-xs. */
+
+.chrome-mobile-only {
+  display: none !important;
+}
+
+.nav-browser-chrome {
+  .chrome-mobile-only {
+    display: block !important;
+  }
+}
