@@ -61,7 +61,7 @@ Template Name: Homepage
 				<!-- Bookmarklet trigger modal -->
 				<p class="hypo-small installer__section--bookmarklet">Looking for the <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">bookmarklet</a>?</p>
 
-				<p class="hypo-small installer__unsupported">This browser currently isn't supported, for best results use Chrome.</p>
+				<p class="installer__unsupported"><em>This browser currently isn't supported, for best results use Chrome.</em></p>
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

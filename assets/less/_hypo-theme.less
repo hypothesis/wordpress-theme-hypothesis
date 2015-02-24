@@ -277,13 +277,22 @@ a.installer__button--draggable {
 .installer__unsupported {
   display: block;
   padding-top: .3em;
-  font-size: 1em;
 }
 
 /* Hidde unsupported browser message for FireFox and Chrome */
 .nav-browser-chrome .installer__unsupported,
 .nav-browser-firefox .installer__unsupported { 
   display: none; 
+}
+
+/* Via Widget */
+.via {
+  display: none;
+}
+
+.nav-browser-chrome .via,
+.nav-browser-firefox .via {
+  display: block;
 }
 
 /* Hide all panels aside from the bookmarklet (for undetected browsers) */
