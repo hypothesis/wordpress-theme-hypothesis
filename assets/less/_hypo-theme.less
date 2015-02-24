@@ -273,20 +273,23 @@ a.installer__button--draggable {
   margin-bottom: 1em;
 }
 
-/* Hide all the logos in the bookmarklet section */
-.installer__section--bookmarklet .installer__browser-logo--safari,
-.installer__section--bookmarklet .installer__browser-logo--ie,
-.installer__section--bookmarklet .installer__browser-logo--chrome,
-.installer__section--bookmarklet .installer__browser-logo--firefox,
-.installer__section--bookmarklet .installer__browser-logo--opera {
-  display: none;
+/* Unsupported browser message */
+.installer__unsupported {
+  display: block;
+  padding-top: .3em;
+  font-size: 1em;
+}
+
+/* Hidde unsupported browser message for FireFox and Chrome */
+.nav-browser-chrome .installer__unsupported,
+.nav-browser-firefox .installer__unsupported { 
+  display: none; 
 }
 
 /* Hide all panels aside from the bookmarklet (for undetected browsers) */
 .installer__section--safari,
 .installer__section--chrome,
-.installer__section--firefox,
-.installer__section--overview {
+.installer__section--firefox {
   display: none;
 }
 
@@ -298,11 +301,15 @@ a.installer__button--draggable {
 //   display: none;
 // }
 
-/* Hide the bookmarklet section if nav is Chrome/Safari */
-.nav-browser-safari .installer__section--bookmarklet,
-.nav-browser-chrome .installer__section--bookmarklet {
+/* Hide the bookmarklet section */
+.installer__section--bookmarklet {
   display: none;
-  
+}
+
+/* Show bookmarklet for firefox */
+.nav-browser-firefox .installer__section--bookmarklet {
+  display: block;
+  padding-top: .3em;
 }
 
 .nav-browser-safari .installer__section--safari,
@@ -334,7 +341,7 @@ a.installer__button--draggable {
   display: none;
 }
 
-.nav-browser-chrome, .nav-browser-safari {
+.nav-browser-chrome {
   .or {
     display: inline-block;
     margin: .7em;

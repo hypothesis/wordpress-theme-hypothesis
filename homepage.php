@@ -25,12 +25,12 @@ Template Name: Homepage
 				    </span>
 				    
 				    <!-- Safari -->
-				    <span class="installer__section--safari">
+					<!-- <span class="installer__section--safari">
 				      <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
 				        <img class="installer__browser-logo--chrome" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
 				        Install Chrome Extension
 				      </a>
-				    </span>
+				    </span> -->
 
 				    <!-- Firefox -->
 				    <!-- Uncomment this when the firefox extension is ready -->
@@ -60,6 +60,8 @@ Template Name: Homepage
 				
 				<!-- Bookmarklet trigger modal -->
 				<p class="hypo-small installer__section--bookmarklet">Looking for the <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">bookmarklet</a>?</p>
+
+				<p class="hypo-small installer__unsupported">This browser currently isn't supported, for best results use Chrome.</p>
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
