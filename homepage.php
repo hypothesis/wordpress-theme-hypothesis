@@ -59,9 +59,11 @@ Template Name: Homepage
       			</section>
 				
 				<!-- Bookmarklet trigger modal -->
-				<p class="hypo-small installer__section--bookmarklet">Looking for the <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">bookmarklet</a>?</p>
+				<p class="installer__section--bookmarklet">
+				There's also a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
+				bookmarklet</a> and a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.</p>
 
-				<p class="installer__unsupported"><em>This browser currently isn't supported, for best results use Chrome.</em></p>
+				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -81,7 +83,7 @@ Template Name: Homepage
 				      		<p><i class="fa fa-arrows"></i> Drag the button into your bookmarks bar then click it to launch the Hypothes.is application. 
 				      		Alternatively, right click and select "bookmark this link."</p>
 				      		<p>To load Hypothes.is on a webpage or PDF, simply click on the bookmarklet in your bookmarks.</p>
-				      		<p class="hypo-small">Are you a Chrome user? We have an <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">extension for you</a>.</p>
+				      		<p class="hypo-small">Are you a Chrome user?  We have an <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">extension for you</a>.</p>
 				    		</div><!-- /.installer__sectionbookmarklet -->
 				    	</div><!-- /.modal-body -->
 				    </div><!-- /.modal-content -->

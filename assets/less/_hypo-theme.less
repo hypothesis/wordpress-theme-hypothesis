@@ -13,7 +13,7 @@ html, body {
 }
 
 .hypo-small {
-  font-size: .8em !important;
+  font-size: .9em !important;
 }
 
 .hypo-space-at-bottom {
@@ -279,20 +279,20 @@ a.installer__button--draggable {
   padding-top: .3em;
 }
 
+.safari-only {
+  display: none;
+}
+
+.nav-browser-safari .safari-only {
+  display: block;
+  padding-top: .3em;
+  font-size: .9em !important;
+}
+
 /* Hidde unsupported browser message for FireFox and Chrome */
 .nav-browser-chrome .installer__unsupported,
 .nav-browser-firefox .installer__unsupported { 
   display: none; 
-}
-
-/* Via Widget */
-.via {
-  display: none;
-}
-
-.nav-browser-chrome .via,
-.nav-browser-firefox .via {
-  display: block;
 }
 
 /* Hide all panels aside from the bookmarklet (for undetected browsers) */
@@ -310,15 +310,17 @@ a.installer__button--draggable {
 //   display: none;
 // }
 
-/* Hide the bookmarklet section */
-.installer__section--bookmarklet {
+/* Hide the bookmarklet section for Chrome and Safari */
+.nav-browser-safari .installer__section--bookmarklet,
+.nav-browser-chrome .installer__section--bookmarklet {
   display: none;
 }
 
-/* Show bookmarklet for firefox */
-.nav-browser-firefox .installer__section--bookmarklet {
+/* Show bookmarklet for all browsers */
+.installer__section--bookmarklet {
   display: block;
   padding-top: .3em;
+  font-size: .9em !important;
 }
 
 .nav-browser-safari .installer__section--safari,
