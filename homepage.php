@@ -60,8 +60,8 @@ Template Name: Homepage
 				
 				<!-- Bookmarklet trigger modal -->
 				<p class="installer__section--bookmarklet">
-				There's also a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
-				bookmarklet</a> and a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.</p>
+				There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
+				bookmarklet</a>.</p>
 
 				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.
 
@@ -106,7 +106,7 @@ Template Name: Homepage
 			</div>
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-			  <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates1.jpg" 
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/screenshot5.jpg" 
 			  	   class="img-rounded hypo-screenshot socrates"
 			  	   alt="..." />
 		  </div>
