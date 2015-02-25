@@ -69,14 +69,23 @@ html, body {
 }
 
 .hypo-space {
-  margin-top: 10em;
+  margin-top: 9em;
   padding: 1.5em;
 }
 
 .hypo-screenshot {
-  width: 90%;
+  width: 80%;
   height: auto;
   float: center;
+  border: 1px solid #DDD;
+
+  &.socrates {
+    border: none;
+    padding-top: 3em;
+    position: relative;
+    left: -9px;
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: @screen-xs-max) {

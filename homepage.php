@@ -100,25 +100,31 @@ Template Name: Homepage
   <div class="container">
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_001.png" 
-			  	   class="img-rounded hypo-screenshot"
-			  	   alt="..." />
+			<div class="hypo-caption">
+			  <h3>Select</h3>
+			  <p>Select text in PDFs and web pages.</p>
+			</div>
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-				<div class="hypo-caption">
-				  <h3>Select</h3>
-				  <p>Select text in PDFs and web pages.</p>
-				</div>
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates1.jpg" 
+			  	   class="img-rounded hypo-screenshot socrates"
+			  	   alt="..." />
 		  </div>
 		</div>
 
 		<div class="row hypo-space">
+		  <div class="col-sm-6 col-md-6 visible-xs-block">
+			<div class="hypo-caption">
+			  <h3>Annotate</h3>
+			  <p>Make highlights or leave notes.</p>
+			</div>
+		  </div>
 		  <div class="col-sm-6 col-md-6">
-			<img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_004.png" 
+			<img src="https://hypothes.is/wp-content/uploads/2015/02/socrates2.jpg" 
 			  	 class="img-rounded hypo-screenshot"
 			  	 alt="..." />
 		  </div>
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hidden-xs">
 			<div class="hypo-caption">
 			  <h3>Annotate</h3>
 			  <p>Make highlights or leave notes.</p>
@@ -128,15 +134,15 @@ Template Name: Homepage
 
 		<div class="row hypo-space">
 		  <div class="col-sm-6 col-md-6">
-			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Selection_003.png"
-			  		 class="img-rounded hypo-screenshot" 
-			  	   alt="..." />
-		  </div>
-		  <div class="col-sm-6 col-md-6">
 				<div class="hypo-caption">
 				  <h3>Reply</h3>
 				  <p>Have threaded conversations and get notifications when people reply.</p>
 				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-6">
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates3.jpg"
+			  		 class="img-rounded hypo-screenshot" 
+			  	   alt="..." />
 		  </div>
 		</div>
   </div><!-- / .container -->
