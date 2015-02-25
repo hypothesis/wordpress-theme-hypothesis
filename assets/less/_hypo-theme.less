@@ -21,7 +21,7 @@ html, body {
 }
 
 
-// Navbar /////////////////////////////////
+// Menus /////////////////////////////////
 .hypo-nav {
 	background-color: transparent;
 	border: none;
@@ -42,11 +42,20 @@ html, body {
     padding: 3px;
 
     &:hover {
-      color: #555;
+      color: #333;
     }
   }
 }
 
+#menu-footer {
+  a {
+    color: #777;
+
+    &:hover {
+      color: #333
+    }
+  }
+}
 
 // Hompepage //////////////////////////////
 
@@ -375,8 +384,12 @@ a.installer__button--draggable {
   display: none !important;
 }
 
-.nav-browser-chrome {
-  .chrome-mobile-only {
-    display: block !important;
+@media (max-width: @screen-xs-max) {
+  .nav-browser-chrome {
+    .chrome-mobile-only {
+      display: block !important;
+      padding-top: 0.3em;
+      font-size: 0.9em !important;
+    }
   }
 }
