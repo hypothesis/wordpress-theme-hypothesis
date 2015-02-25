@@ -1,0 +1,65 @@
+/* Custom stylings for the Hypothes.is website */
+
+// General ////////////////////////////////
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic);
+
+html, body {
+  font-family: "lato", sans-serif;
+}
+
+.primary-color {
+  color: @brand-primary;
+}
+
+/* This old .redtext class appears in some pages and posts, so I've copied it
+over for now. Since this class is used on things like buttons, I've changed the 
+name to .primary-color */
+.redtext {
+  color: @brand-primary;
+}
+
+.hypo-small {
+  font-size: .9em !important;
+}
+
+/* Provides space at the bottom of the page */
+.hypo-space-at-bottom {
+  padding-bottom: 40px;
+}
+
+
+// Menus /////////////////////////////////
+.hypo-nav {
+  background-color: transparent;
+  border: none;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.navbar-header {
+  padding-left: 1em;
+}
+
+.hypo-social-media {
+  padding-top: 7px;
+  font-size: 1.4em;
+
+  a {
+    color: #777;
+    padding: 3px;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+#menu-footer {
+  a {
+    color: #777;
+
+    &:hover {
+      color: #333
+    }
+  }
+}

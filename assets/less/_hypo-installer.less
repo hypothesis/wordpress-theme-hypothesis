@@ -1,0 +1,124 @@
+/* Install Extension buttons and bookmarklets. The CS in this file
+controlls the intaller section which changes based on browser. For
+example, Chrome has an install extension button, but IE does not. It's
+all controlled here. */
+
+.installer {
+  display: inline-flex;
+}
+
+.installer__section--bookmarklet {
+  p {
+    font-size: 16px;
+  }
+}
+
+a.installer__button--draggable {
+  cursor: move;
+  border-style: dotted;
+  margin-bottom: 1em;
+}
+
+/* Positions browser icon on install button */
+.btn {
+  img {
+    width: 19px;
+    margin-right: 0.3em;
+    float: left;
+  }
+}
+
+/* Unsupported browser message */
+.installer__unsupported {
+  display: block;
+  padding-top: .3em;
+}
+
+.safari-only {
+  display: none;
+}
+
+.nav-browser-safari .safari-only {
+  display: block;
+  padding-top: .3em;
+  font-size: .9em !important;
+}
+
+/* Hidde unsupported browser message for FireFox and Chrome */
+.nav-browser-chrome .installer__unsupported,
+.nav-browser-firefox .installer__unsupported { 
+  display: none; 
+}
+
+/* Hide all panels aside from the bookmarklet (for undetected browsers) */
+.installer__section--safari,
+.installer__section--chrome,
+.installer__section--firefox {
+  display: none;
+}
+
+/* Hide the bookmarklet section for Chrome and Safari */
+.nav-browser-safari .installer__section--bookmarklet,
+.nav-browser-chrome .installer__section--bookmarklet {
+  display: none;
+}
+
+/* Show bookmarklet for all browsers */
+.installer__section--bookmarklet {
+  display: block;
+  padding-top: .3em;
+  font-size: .9em !important;
+}
+
+.nav-browser-safari .installer__section--safari,
+.nav-browser-chrome .installer__section--chrome,
+.nav-browser-firefox .installer__section--firefox {
+  display:block;
+}
+
+/* Hide the default browser in the bookmarklet section if we have enforced a browser */
+[class^="nav-browser-"]  .installer__browser-logo--default,
+[class*=" nav-browser-"] .installer__browser-logo--default {
+  display: none;
+}
+
+/* Reveal the correct logo if we have enforced a browser */
+.installer__section--bookmarklet {
+  .nav-browser-safari & .installer__browser-logo--safari,
+  .nav-browser-ie & .installer__browser-logo--ie,
+  .nav-browser-opera & .installer__browser-logo--opera,
+  .nav-browser-chrome & .installer__browser-logo--chrome,
+  .nav-browser-firefox & .installer__browser-logo--firefox {
+    display: block;
+  }
+}
+
+/* Shows/hides the "Or" text between extenstion install button and via widget. 
+   If there is no extension to install we hide this text. */
+.or {
+  display: none;
+}
+
+.nav-browser-chrome {
+  .or {
+    display: inline-block;
+    margin: .7em;
+  }
+}
+
+/* Show message on mobile devices using Chrome about the Chrome extension.
+   This works in conjunction with Bootstrap's .visible-xs. */
+
+.chrome-mobile-only {
+  display: none !important;
+}
+
+@media (max-width: @screen-xs-max) {
+  .nav-browser-chrome {
+    .chrome-mobile-only {
+      display: block !important;
+      padding-top: 0.3em;
+      font-size: 0.9em !important;
+    }
+  }
+}

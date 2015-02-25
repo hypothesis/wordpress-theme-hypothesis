@@ -1,203 +1,10 @@
-/* Custom stylings for the Hypothes.is theme.*/
-
-
-// General ////////////////////////////////
-@import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic);
-
-html, body {
-	font-family: "lato", sans-serif;
-}
-
-.primary-color {
-	color: @brand-primary;
-}
-
-.hypo-small {
-  font-size: .9em !important;
-}
-
-.hypo-space-at-bottom {
-  padding-bottom: 40px;
-}
-
-
-// Menus /////////////////////////////////
-.hypo-nav {
-	background-color: transparent;
-	border: none;
-	padding-top: 2em;
-	padding-bottom: 2em;
-}
-
-.navbar-header {
-	padding-left: 1em;
-}
-
-.hypo-social-media {
-	padding-top: 7px;
-	font-size: 1.4em;
-
-  a {
-    color: #777;
-    padding: 3px;
-
-    &:hover {
-      color: #333;
-    }
-  }
-}
-
-#menu-footer {
-  a {
-    color: #777;
-
-    &:hover {
-      color: #333
-    }
-  }
-}
-
-// Hompepage //////////////////////////////
-
-// Override bootstrap jumbotron class.
-.hypo-header {
-  padding-bottom: 5em;
-}
-
-.jumbotron {
-  background-color: transparent;
-  border: none;
-  
-  .btn {
-    img {
-      width: 19px;
-      margin-right: 0.3em;
-      float: left;
-    }
-  }
-}
-
-.hypo-space {
-  margin-top: 9em;
-  padding: 1.5em;
-}
-
-.hypo-screenshot {
-  width: 80%;
-  height: auto;
-  float: center;
-  border: 1px solid #DDD;
-
-  &.socrates {
-    border: none;
-    padding-top: 3em;
-    position: relative;
-    left: -9px;
-    opacity: 0.9;
-  }
-}
-
-@media (max-width: @screen-xs-max) {
-  .hypo-tron {
-    h2 {
-      font-size: 26px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-  }
-
-  .hypo-caption {
-      padding-top: 1em;
-  }
-
-  .hypo-nav {
-    padding-bottom: 0em;
-  } 
-}
-
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-  .hypo-tron { 
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-
-    h2 {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 14px;
-      font-weight: 300;
-    }
-
-    .hypo-caption {
-      padding-top: 1em;
-    } 
-  }
-
-  .via {
-    width: 13.7em;
-  }
-}
-
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
-  .hypo-tron { 
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-
-    h2 {
-      font-size: 25px;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 200;
-    }
-  }
-
-  .hypo-caption {
-    padding-top: 1em;
-  }
-
-  .via {
-    width: 16em;
-  } 
-}
-
-@media (min-width: @screen-lg-min) {
-  .hypo-tron {
-    p {
-      font-size: 20px;
-      font-weight: 200;
-    }
-  }
-
-  .hypo-caption {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .via {
-    width: 16em;
-  } 
-}
-
-@media (min-width: 1440px) {
-  .hypo-tron {
-    padding-left: 60px;
-    padding-right: 60px;
-
-    p {
-      font-size: 21px;
-      font-weight: 200;
-    }
-  }
-}
+/* Custom stylings for the specific sections and shortcodes
+   in the Hypothes.is theme.*/
 
 
 // Blog //////////////////////////////////////
 
-// Spacing between articles on blog page.
+/* Spacing between articles on blog page */
 .blog {
   article {
     padding-bottom: 2em;
@@ -206,10 +13,13 @@ html, body {
 
 
 // Press section //////////////////////////////
+
+/* Spacing between press articles */ 
 .hypo-press {
   margin-bottom: 2em;
 }
 
+/* Spacing between the date and excerpt */
 .hypo-date {
   padding-bottom: .5em;
 }
@@ -227,10 +37,12 @@ html, body {
 // Team section ///////////////////////////////
 .pic_placeholder {
   background: black;
-  height: 435px; }
+  height: 435px;
+}
 
 .picunitimg {
-  box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.2);
+}
 
 .picunit {
   padding-bottom: 1em;
@@ -246,19 +58,11 @@ html, body {
 }
 
 .picunit .caption {
-    font-family: "myriad-pro", sans-serif;
     font-size: 0.7em;
     line-height: 1em;
     margin-top: 0.4em; 
 }
 
-.picunit .hovertext {
-    font-family: "myriad-pro", sans-serif;
-    font-size: 0.9em;
-    line-height: 1em;
-    margin-top: 0.4em; 
-}
- 
 
 // numlist short code //////////////////////
 .numlist-number {
@@ -270,126 +74,4 @@ html, body {
 
 .numlist-padding {
   padding-bottom: 1em;
-}
-
-
-//////////////////////////////////////////////
-// Install Extension buttons and bookmarklets 
-.installer {
-  display: inline-flex;
-}
-
-.installer__section--bookmarklet {
-  p {
-    font-size: 16px;
-  }
-}
-
-a.installer__button--draggable {
-  cursor: move;
-  border-style: dotted;
-  margin-bottom: 1em;
-}
-
-/* Unsupported browser message */
-.installer__unsupported {
-  display: block;
-  padding-top: .3em;
-}
-
-.safari-only {
-  display: none;
-}
-
-.nav-browser-safari .safari-only {
-  display: block;
-  padding-top: .3em;
-  font-size: .9em !important;
-}
-
-/* Hidde unsupported browser message for FireFox and Chrome */
-.nav-browser-chrome .installer__unsupported,
-.nav-browser-firefox .installer__unsupported { 
-  display: none; 
-}
-
-/* Hide all panels aside from the bookmarklet (for undetected browsers) */
-.installer__section--safari,
-.installer__section--chrome,
-.installer__section--firefox {
-  display: none;
-}
-
-// Uncomment when we launch Firefox extension.
-/* Hide the bookmarklet section if nav is Chrome/Firefox/Safari */
-// .nav-browser-safari .installer__section--bookmarklet,
-// .nav-browser-chrome .installer__section--bookmarklet,
-// .nav-browser-firefox .installer__section--bookmarklet {
-//   display: none;
-// }
-
-/* Hide the bookmarklet section for Chrome and Safari */
-.nav-browser-safari .installer__section--bookmarklet,
-.nav-browser-chrome .installer__section--bookmarklet {
-  display: none;
-}
-
-/* Show bookmarklet for all browsers */
-.installer__section--bookmarklet {
-  display: block;
-  padding-top: .3em;
-  font-size: .9em !important;
-}
-
-.nav-browser-safari .installer__section--safari,
-.nav-browser-chrome .installer__section--chrome,
-.nav-browser-firefox .installer__section--firefox {
-  display:block;
-}
-
-/* Hide the default browser in the bookmarklet section if we have enforced a browser */
-[class^="nav-browser-"]  .installer__browser-logo--default,
-[class*=" nav-browser-"] .installer__browser-logo--default {
-  display: none;
-}
-
-/* Reveal the correct logo if we have enforced a browser */
-.installer__section--bookmarklet {
-  .nav-browser-safari & .installer__browser-logo--safari,
-  .nav-browser-ie & .installer__browser-logo--ie,
-  .nav-browser-opera & .installer__browser-logo--opera,
-  .nav-browser-chrome & .installer__browser-logo--chrome,
-  .nav-browser-firefox & .installer__browser-logo--firefox {
-    display: block;
-  }
-}
-
-/* Shows/hides the "Or" text between extenstion install button and via widget. 
-   If there is no extension to install we hide this text. */
-.or {
-  display: none;
-}
-
-.nav-browser-chrome {
-  .or {
-    display: inline-block;
-    margin: .7em;
-  }
-}
-
-/* Show message on mobile devices using Chrome about the Chrome extension.
-   This works in conjunction with Bootstrap's .visible-xs. */
-
-.chrome-mobile-only {
-  display: none !important;
-}
-
-@media (max-width: @screen-xs-max) {
-  .nav-browser-chrome {
-    .chrome-mobile-only {
-      display: block !important;
-      padding-top: 0.3em;
-      font-size: 0.9em !important;
-    }
-  }
 }
