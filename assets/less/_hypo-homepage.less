@@ -19,9 +19,15 @@
 .hypo-screenshot {
   width: 100%;
   height: auto;
-  float: center;
   border: 1px solid #DDD;
-  opacity: .9;
+}
+
+/* Provides padding for images and captions */
+.hypo-padding {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-right: 4em;
+  padding-left: 4em;
 }
 
 // Responsive stuff ////////////////////////
@@ -37,13 +43,24 @@
     }
   }
 
+  .hypo-screenshot {
+    width: 80%;
+  }
+
   .hypo-caption {
       padding-bottom: 2em;
   }
 
   .hypo-nav {
-    padding-bottom: 0em;
-  } 
+    padding-bottom: 0;
+  }
+
+  .hypo-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 1em;
+    padding-left: 0;
+  }
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {

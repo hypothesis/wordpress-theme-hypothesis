@@ -85,7 +85,6 @@ Template Name: Homepage
 				      		<p><i class="fa fa-arrows"></i> Drag the button into your bookmarks bar then click it to launch the Hypothes.is application. 
 				      		Alternatively, right click and select "bookmark this link."</p>
 				      		<p>To load Hypothes.is on a webpage or PDF, simply click on the bookmarklet in your bookmarks.</p>
-				      		<p class="hypo-small">Are you a Chrome user?  We have an <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">extension for you</a>.</p>
 				    		</div><!-- /.installer__sectionbookmarklet -->
 				    	</div><!-- /.modal-body -->
 				    </div><!-- /.modal-content -->
@@ -99,13 +98,13 @@ Template Name: Homepage
 <section id="features">
   <div class="container">
 		<div class="row hypo-space">
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hypo-padding">
 			<div class="hypo-caption">
 			  <h3>Select</h3>
 			  <p>Select text in PDFs and web pages.</p>
 			</div>
 		  </div>
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hypo-padding">
 			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Gorgias.jpg" 
 			  	   class="img-rounded hypo-screenshot socrates"
 			  	   alt="..." />
@@ -113,18 +112,18 @@ Template Name: Homepage
 		</div>
 
 		<div class="row hypo-space">
-		  <div class="col-sm-6 col-md-6 visible-xs-block">
+		  <div class="col-sm-6 col-md-6 visible-xs-block hypo-padding">
 			<div class="hypo-caption">
 			  <h3>Annotate</h3>
 			  <p>Make highlights or leave notes.</p>
 			</div>
 		  </div>
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hypo-padding">
 			<img src="https://hypothes.is/wp-content/uploads/2015/02/socrates2.jpg" 
 			  	 class="img-rounded hypo-screenshot"
 			  	 alt="..." />
 		  </div>
-		  <div class="col-sm-6 col-md-6 hidden-xs">
+		  <div class="col-sm-6 col-md-6 hidden-xs hypo-padding">
 			<div class="hypo-caption">
 			  <h3>Annotate</h3>
 			  <p>Make highlights or leave notes.</p>
@@ -133,13 +132,13 @@ Template Name: Homepage
 		</div>
 
 		<div class="row hypo-space">
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hypo-padding">
 				<div class="hypo-caption">
 				  <h3>Reply</h3>
 				  <p>Have threaded conversations and get notifications when people reply.</p>
 				</div>
 		  </div>
-		  <div class="col-sm-6 col-md-6">
+		  <div class="col-sm-6 col-md-6 hypo-padding">
 			  <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates3.jpg"
 			  		 class="img-rounded hypo-screenshot" 
 			  	   alt="..." />

@@ -19,11 +19,6 @@
   margin-bottom: 2em;
 }
 
-/* Spacing between the date and excerpt */
-.hypo-date {
-  padding-bottom: .5em;
-}
-
 .presspic {
   img {
     width: 200px !important;
@@ -57,10 +52,20 @@
     box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); 
 }
 
-.picunit .caption {
-    font-size: 0.7em;
-    line-height: 1em;
-    margin-top: 0.4em; 
+@media (max-width: @screen-xs-max) {
+  .picunit .caption {
+      font-size: .8em;
+      line-height: 1em;
+      margin-top: 0.4em;
+  }
+}
+
+@media (min-width: @screen-xs-max) {
+  .picunit .caption {
+      font-size: 1em;
+      line-height: 1em;
+      margin-top: 0.4em;
+  }
 }
 
 .hypo-responsive-modal-image {
