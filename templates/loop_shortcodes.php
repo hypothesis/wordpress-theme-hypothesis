@@ -116,7 +116,7 @@
                   <h3 class="modal-title" id="myModalLabel"><a href="'.get_post_meta( get_the_ID(), 'website', true ).'">'.get_the_title().'</a></h3>
                 </div>
                 <div class="modal-body">
-                  '.get_the_post_thumbnail().'
+                  <div class="hypo-responsive-modal-image">'.get_the_post_thumbnail().'</div>
                   <h5>'.get_post_meta( get_the_ID(), 'tagline', true ).'</h5>
                   <h5>
                     <a href="https://twitter.com/#!/'.substr(get_post_meta( get_the_ID(), 'twitter', true ), 1).'">'.get_post_meta( get_the_ID(), 'twitter', true ).'</a>
