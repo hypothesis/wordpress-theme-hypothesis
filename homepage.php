@@ -12,7 +12,7 @@ Template Name: Homepage
 					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QCkm0lL-6lc?showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6">
+			<div class="col-sm-6 col-md-6 call-to-action">
 				<h2>Annotate with anyone, anywhere</h2>
 				<p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Discuss, collaborate, organize your research or take personal notes.</p>
 				<section class="installer">
@@ -106,7 +106,7 @@ Template Name: Homepage
 			</div>
 		  </div>
 		  <div class="col-sm-6 col-md-6">
-			  <img src="https://hypothes.is/wp-content/uploads/2015/02/screenshot5.jpg" 
+			  <img src="https://hypothes.is/wp-content/uploads/2015/02/Gorgias.jpg" 
 			  	   class="img-rounded hypo-screenshot socrates"
 			  	   alt="..." />
 		  </div>

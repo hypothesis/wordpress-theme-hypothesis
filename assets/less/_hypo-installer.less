@@ -28,6 +28,39 @@ a.installer__button--draggable {
   }
 }
 
+.via {
+  max-width: 100%;
+}
+
+.nav-browser-chrome {
+  .via {
+    width: 20em;
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  .nav-browser-chrome {
+    .via {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .nav-browser-chrome {
+    .via {
+      width: 13.7em;
+    }
+  }
+
+  /* Account for the fact that the bookmarklet message takes up extra verticle space */
+  .nav-browser-firefox, .nav-browser-safari, .nav-browser-ie, .nav-browser-opera {
+    .call-to-action {
+      margin-top: -10px; 
+    }
+  }
+}
+
 /* Unsupported browser message */
 .installer__unsupported {
   display: block;
