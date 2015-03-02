@@ -7,14 +7,14 @@ Template Name: Homepage
 <div class="jumbotron hypo-tron">
 	<div class="container hypo-header">
 		<div class="row">
-			<div class="col-sm-6 col-md-6">
+			<div class="col-sm-6 col-md-6 hypo-video">
 				<div class="embed-responsive embed-responsive-16by9" id="video">
 					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QCkm0lL-6lc?showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-6 call-to-action">
 				<h2>Annotate with anyone, anywhere</h2>
-				<p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Discuss, collaborate, organize your research or take personal notes.</p>
+				<p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Use it to discuss, collaborate, organize your research, or take personal notes.</p>
 				<section class="installer">
 					<!-- Chrome -->
 				    <span class="installer__section--chrome">
@@ -48,8 +48,7 @@ Template Name: Homepage
 				      	<input id="search" 
 				               class="form-control" 
 			               	   type="text"
-				               placeholder="Paste a link..." 
-				               maxsize="30" 
+				               placeholder="Paste a link..."  
 				               name="search"></input>
 					    <span class="input-group-btn">
 					        <button class="btn btn-primary" type="submit">Annotate!</button>

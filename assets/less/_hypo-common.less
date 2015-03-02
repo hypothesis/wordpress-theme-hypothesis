@@ -90,3 +90,21 @@ name to .primary-color */
     }
   }
 }
+
+@media (max-width: @screen-xs-max) {
+  #menu-footer {
+    &.navbar-nav {
+      margin: 0;
+    }
+
+    /* Keep footer menu items horizontal on mobile. */
+    li {
+      float: left;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }  
+}

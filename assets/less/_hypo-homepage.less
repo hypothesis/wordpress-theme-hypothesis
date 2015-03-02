@@ -11,9 +11,7 @@
 }
 
 .hypo-space {
-  margin-top: 8em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  margin-top: 7em;
 }
 
 .hypo-screenshot {
@@ -26,6 +24,15 @@
 /* Provides padding for images and captions */
 .hypo-padding {
   padding: 1em 4em;
+}
+
+/* Space between call-to-action and video. */
+.call-to-action {
+  padding-left: 25px; 
+}
+
+.hypo-video {
+  padding-right: 25px;
 }
 
 // Responsive stuff ////////////////////////
@@ -59,6 +66,14 @@
     padding-right: 1em;
     padding-left: 0;
   }
+
+  .call-to-action {
+    padding-left: 15px; 
+  }
+
+  .hypo-video {
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
@@ -74,10 +89,15 @@
       font-size: 14px;
       font-weight: 300;
     }
+  }
 
-    // .hypo-caption {
-    //   padding-top: 1em;
-    // } 
+  /* Space between call-to-action and video. */
+  .call-to-action {
+    padding-left: 20px; 
+  }
+
+  .hypo-video {
+    padding-right: 20px;
   }
 }
 
@@ -95,10 +115,6 @@
       font-weight: 200;
     }
   }
-
-  // .hypo-caption {
-  //   padding-top: 1em;
-  // }
 }
 
 @media (min-width: @screen-lg-min) {
@@ -108,10 +124,6 @@
       font-weight: 200;
     }
   }
-
-  // .hypo-caption {
-  //   padding: 4em 2em 2em 2em;
-  // }
 }
 
 @media (min-width: 1440px) {
@@ -125,4 +137,3 @@
     }
   }
 }
-
