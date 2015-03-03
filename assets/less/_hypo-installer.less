@@ -19,6 +19,12 @@ all controlled here. */
   }
 }
 
+.installer__section--addtosite {
+  display: block;
+  padding-top: .3em;
+  font-size: .9em !important;
+}
+
 a.installer__button--draggable {
   cursor: move;
   border-style: dotted;
@@ -155,6 +161,21 @@ a.installer__button--draggable {
 @media (max-width: @screen-xs-max) {
   .nav-browser-chrome {
     .chrome-mobile-only {
+      display: block !important;
+      padding-top: 0.3em;
+      font-size: 0.9em !important;
+    }
+  }
+}
+
+
+.chrome-desktop-only {
+  display: none;
+}
+
+@media (min-width: @screen-xs-max) {
+  .nav-browser-chrome {
+    .chrome-desktop-only {
       display: block !important;
       padding-top: 0.3em;
       font-size: 0.9em !important;

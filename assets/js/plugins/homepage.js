@@ -70,23 +70,41 @@
     trackEvent('install', 'chromeext');
   }
 
+  function trackViaUse() {
+    trackEvent('install', 'via');
+  }
+
+  function trackAddToSite() {
+    trackEvent('install', 'addtosite')
+  }
+
   if (!document.querySelectorAll) {
     return;
   }
 
-  // Show the bookmarklet hint when dragging.
+  // Track bookmarklet installs
   var buttons = document.querySelectorAll('[data-bookmarklet-button]');
   [].forEach.call(buttons, function (button) {
-    addListener(button, 'mouseenter', addBookmarkHint);
-    addListener(button, 'focus', addBookmarkHint);
-    addListener(button, 'mouseleave', removeBookmarkHint);
-    addListener(button, 'blur', removeBookmarkHint);
     addListener(button, 'dragstart', trackBookmarkletInstall);
+    addListener(button, 'contextmenu', trackBookmarkletInstall);
   });
 
+  // Track Chrome extension button clicks
   var chromeButtons = document.querySelectorAll('[data-chromeext-button]');
   [].forEach.call(chromeButtons, function (button) {
     addListener(button, 'click', trackChromeExtInstall);
+  });
+
+  // Track use of via
+  var viaButton = document.querySelectorAll('[data-via-button]');
+  [].forEach.call(viaButton, function (button) {
+    addListener(button, 'click', trackViaUse);
+  });
+
+  // Track click on "add to site."
+  var addtositeButton = document.querySelectorAll('[data-addtosite-button]');
+  [].forEach.call(addtositeButton, function (button) {
+    addListener(button, 'click', trackAddToSite);
   });
 
 })();

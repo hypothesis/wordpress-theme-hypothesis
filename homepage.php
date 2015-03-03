@@ -51,20 +51,21 @@ Template Name: Homepage
 				               placeholder="Paste a link..."  
 				               name="search"></input>
 					    <span class="input-group-btn">
-					        <button class="btn btn-primary" type="submit">Annotate!</button>
+					        <button class="btn btn-primary" type="submit" data-via-button="">Annotate!</button>
 					    </span>
 				      </div>
 		      		</form>
       			</section>
 				
 				<!-- Bookmarklet trigger modal -->
-				<p class="installer__section--bookmarklet">
-				There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
-				bookmarklet</a>.</p>
+				<p class="installer__section--bookmarklet">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
+				bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.</p>
 
-				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.
+				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.
 
-				<p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a>.
+				<p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+
+				<p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -72,7 +73,7 @@ Template Name: Homepage
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">Bookmarklet</h4>
+				        <h4 class="modal-title">Bookmarklet</h4>
 				      </div>
 				      <div class="modal-body">
 				      	<div class="installer__section--bookmarklet">
@@ -87,6 +88,24 @@ Template Name: Homepage
 				    		</div><!-- /.installer__sectionbookmarklet -->
 				    	</div><!-- /.modal-body -->
 				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal-fade -->
+
+				<!-- / Add to your site modal -->
+				<div class="modal fade" id="addtoyoursite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+						<div class="modal-header">
+		  					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						    <h4 class="modal-title">Add Hypothes.is to a web site</h4>
+						</div>
+						<div class="modal-body">
+							<div class="installer__section--addtosite">
+								<textarea rows="1" class="form-control">&lt;script src="//hypothes.is/embed.js"&gt;&lt;/script&gt;</textarea>
+								<p>Add the above script tag to your web site's HTML to load the Hypothes.is sidebar on your site.</p>
+							</div><!-- /.installer__sectionbookmarklet -->
+						</div><!-- /.modal-body -->
+			       </div><!-- /.modal-content -->
 				  </div><!-- /.modal-dialog -->
 				</div><!-- /.modal-fade -->
 		  </div><!-- /.col -->
