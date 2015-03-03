@@ -75,7 +75,7 @@
   }
 
   function trackAddToSite() {
-    trackEvent('install', 'addtosite')
+    trackEvent('install', 'addtosite');
   }
 
   if (!document.querySelectorAll) {

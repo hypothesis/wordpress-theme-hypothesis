@@ -19,7 +19,7 @@ Template Name: Homepage
 					<!-- Chrome -->
 				    <span class="installer__section--chrome">
 				      <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" onclick="chrome.webstore.install();return false;" data-chromeext-button="">
-				        <img class="installer__browser-logo--chrome" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
+				        <img class="installer__browser-logo--chrome" src="https://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
 				        Install
 				      </a>
 				    </span>
@@ -27,7 +27,7 @@ Template Name: Homepage
 				    <!-- Safari -->
 					<!-- <span class="installer__section--safari">
 				      <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
-				        <img class="installer__browser-logo--chrome" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
+				        <img class="installer__browser-logo--chrome" src="https://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-chrome-64x64.png" alt="">
 				        Install Chrome Extension
 				      </a>
 				    </span> -->
@@ -36,7 +36,7 @@ Template Name: Homepage
 				    <!-- Uncomment this when the firefox extension is ready -->
 				    <!-- <span class="installer__section--firefox hidden-xs">
 				      <a class="btn btn-primary hidden-xs" href="#">
-				      	<img class="installer__browser-logo--firefox" src="http://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-firefox-64x64.png" alt="">
+				      	<img class="installer__browser-logo--firefox" src="https://hypothes.is/wp-content/themes/hypothesis-1.0.11/images/browser-firefox-64x64.png" alt="">
 				      	Install</a>
 				    </span> -->
 
@@ -50,8 +50,8 @@ Template Name: Homepage
 			               	   type="text"
 				               placeholder="Paste a link..."  
 				               name="search"></input>
-					    <span class="input-group-btn">
-					        <button class="btn btn-primary" type="submit" data-via-button="">Annotate!</button>
+					    <span class="input-group-btn" data-via-button="">
+					        <button class="btn btn-primary" type="submit">Annotate!</button>
 					    </span>
 				      </div>
 		      		</form>
@@ -59,13 +59,13 @@ Template Name: Homepage
 				
 				<!-- Bookmarklet trigger modal -->
 				<p class="installer__section--bookmarklet">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
-				bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.</p>
+				bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
 
-				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.
+				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
 
 				<p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
 
-				<p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite">add it to your website</a>.
+				<p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
