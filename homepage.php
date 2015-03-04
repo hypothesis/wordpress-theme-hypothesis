@@ -59,13 +59,13 @@ Template Name: Homepage
 				
 				<!-- Bookmarklet trigger modal -->
 				<p class="installer__section--bookmarklet">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
-				bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
+				bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to a website</a>.</p>
 
-				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+				<p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to a website</a>.
 
-				<p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+				<p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to a website</a>.
 
-				<p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+				<p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to a website</a>.
 
 				<!-- Bookmarklet Modal -->
 				<div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
