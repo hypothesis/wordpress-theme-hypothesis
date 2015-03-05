@@ -1,16 +1,18 @@
-<?php
-/**
- * The template for displaying 404 pages (Not Found)
- *
- * Please see /external/starkers-utilities.php for info on get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
-?>
-<?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php get_template_part('templates/page', 'header'); ?>
 
-<h2>Page not found</h2>
+<div class="jumbotron hypo-tron">
+	<div class="container">
+		<div class="row">
+			<div class="alert alert-warning">
+  			<?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
+			</div>
 
-<?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+			<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
+			<ul>
+  			<li><?php _e('a mistyped address', 'roots'); ?></li>
+  			<li><?php _e('an out-of-date link', 'roots'); ?></li>
+			</ul>
+			<p><?php get_search_form(); ?></p>
+		</div>
+	</div>
+</div>

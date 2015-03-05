@@ -1,0 +1,139 @@
+// Hompepage //////////////////////////////
+
+.hypo-header {
+  padding-bottom: 5em;
+}
+
+/* Overrides bootstrap jumbotron class */
+.jumbotron {
+  background-color: transparent;
+  border: none;
+}
+
+.hypo-space {
+  margin-top: 7em;
+}
+
+.hypo-screenshot {
+  width: 100%;
+  height: auto;
+  border: 1px solid #DDD;
+  max-width: 380px;
+}
+
+/* Provides padding for images and captions */
+.hypo-padding {
+  padding: 1em 4em;
+}
+
+/* Space between call-to-action and video. */
+.call-to-action {
+  padding-left: 25px; 
+}
+
+.hypo-video {
+  padding-right: 25px;
+}
+
+// Responsive stuff ////////////////////////
+
+@media (max-width: @screen-xs-max) {
+  .hypo-tron {
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .hypo-screenshot {
+    max-width: 300px;
+  }
+
+  .hypo-caption {
+      padding-bottom: 2em;
+  }
+
+  .hypo-nav {
+    padding-bottom: 0;
+  }
+
+  .hypo-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 1em;
+    padding-left: 0;
+  }
+
+  .call-to-action {
+    padding-left: 15px; 
+  }
+
+  .hypo-video {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .hypo-tron { 
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  /* Space between call-to-action and video. */
+  .call-to-action {
+    padding-left: 20px; 
+  }
+
+  .hypo-video {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+  .hypo-tron { 
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .hypo-tron {
+    p {
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .hypo-tron {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    p {
+      font-size: 21px;
+      font-weight: 200;
+    }
+  }
+}

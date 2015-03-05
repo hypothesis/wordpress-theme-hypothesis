@@ -1,0 +1,88 @@
+/* Custom stylings for the specific sections and shortcodes
+   in the Hypothes.is theme.*/
+
+
+// Blog //////////////////////////////////////
+
+/* Spacing between articles on blog page */
+.blog {
+  article {
+    padding-bottom: 2em;
+  }
+}
+
+
+// Press section //////////////////////////////
+
+/* Spacing between press articles */ 
+.hypo-press {
+  margin-bottom: 2em;
+}
+
+.presspic {
+  img {
+    width: 200px !important;
+    height: auto !important;
+    margin-top: 1.7em;
+    margin-right: 2em;
+  }
+}
+
+
+// Team section ///////////////////////////////
+.pic_placeholder {
+  background: black;
+  height: 435px;
+}
+
+.picunitimg {
+  box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+.picunit {
+  padding-bottom: 1em;
+  margin-right: 0;
+  padding-right: 20px; 
+}
+
+.picunit img {
+    border-bottom: 3px solid #bd1c2b;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: @screen-xs-max) {
+  .picunit .caption {
+      font-size: .8em;
+      line-height: 1em;
+      margin-top: 0.4em;
+  }
+}
+
+@media (min-width: @screen-xs-max) {
+  .picunit .caption {
+      font-size: 1em;
+      line-height: 1em;
+      margin-top: 0.4em;
+  }
+}
+
+.hypo-responsive-modal-image {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// numlist short code //////////////////////
+.numlist-number {
+  padding-right: 1em;
+  color: @brand-primary;
+  width: 8%;
+  min-width: 55px;
+}
+
+.numlist-padding {
+  padding-bottom: 1em;
+}
