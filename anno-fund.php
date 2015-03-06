@@ -70,7 +70,7 @@ Template Name: Anno-fund
     </section>
 
 <!-- Projects Section -->
-    <section id="portfolio" class="hypo-space-at-bottom">
+<!--     <section id="portfolio" class="hypo-space-at-bottom">
         <div class="row hypo-bottom-padding">
             <div class="col-lg-12">
                 <h2 class="section-heading">Projects</h2>
@@ -87,14 +87,14 @@ Template Name: Anno-fund
                     The first award of $7,500 went to the Open Gov Foundation for work by Chris Birk and Bill Hunt for cross-browser support in Annotator.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
 <!-- Timeline Section -->
     <section id="timeline" class="hypo-space-at-bottom">
             <div class="row hypo-bottom-padding">
                 <div class="col-lg-12">
                     <h2 class="section-heading">Timeline</h2>
-                    <h3 class="section-subheading text-muted">a brief history of the Open Annotation Fund</h3>
+                    <h4 class="section-subheading text-muted">A brief history of the Open Annotation Fund:</h4>
                 </div>
             </div>
             <div class="row">
@@ -103,8 +103,7 @@ Template Name: Anno-fund
                         <li>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>April 1, 2014</h4>
-                                    <h4 class="subheading">Fund launched</h4>
+                                    <h4>April 1, 2014 ~ Fund launched</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="">The Open Annotation Fund launched with an announcement on the
@@ -115,10 +114,7 @@ Template Name: Anno-fund
                         <li class="timeline-inverted">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>June 6, 2014</h4>
-                                    <h4 class="subheading">
-                                      <a href="https://hypothes.is/blog/fund-cross-browser-support/">
-                                        Grant: Cross-browser Support
+                                    <h4>June 6, 2014 ~ <a href="https://hypothes.is/blog/fund-cross-browser-support/">Grant: Cross-browser Support
                                       </a>
                                     </h4>
                                 </div>
@@ -138,9 +134,9 @@ Template Name: Anno-fund
         <div class="row hypo-bottom-padding">
             <div class="col-lg-12">
                 <h2 class="section-heading">The Judges</h2>
-                <h3 class="section-subheading">
+                <h4 class="section-subheading text-muted">
                   Our judges were selected from around the open source, knowledge, and annotation communities.
-                </h3>
+                </h4>
             </div>
         </div>
         <div class="row">
