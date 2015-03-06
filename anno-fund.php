@@ -15,7 +15,7 @@ Template Name: Anno-fund
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mobile-bottom-padding">
                 <h4 class="service-heading">The Need</h4>
                 <p>
                 We must take annotation to the boundaries of the web.
@@ -34,7 +34,7 @@ Template Name: Anno-fund
                 cases and integrations with important platforms and
                 libraries.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mobile-bottom-padding">
                 <h4 class="service-heading">The Solution</h4>
                 <p>A grantmaking process that
                 would solicit and receive proposals to expand the existing
@@ -50,7 +50,7 @@ Template Name: Anno-fund
                 source in nature.
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mobile-bottom-padding">
                 <h4 class="service-heading">The Grants</h4>
                 <p>
                 Awards are made on a rolling basis, after review of existing applications.
