@@ -101,7 +101,7 @@ Template Name: Homepage
 						</div>
 						<div class="modal-body">
 							<div class="installer__section--addtosite">
-								<textarea rows="1" class="form-control">&lt;script src="//hypothes.is/embed.js"&gt;&lt;/script&gt;</textarea>
+								<textarea rows="1" class="form-control">&lt;script async defer src="//hypothes.is/embed.js"&gt;&lt;/script&gt;</textarea>
 								<p>Add the above script tag to your web site's HTML to load the Hypothes.is sidebar on your site.</p>
 							</div><!-- /.installer__sectionbookmarklet -->
 						</div><!-- /.modal-body -->
