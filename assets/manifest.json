@@ -2,7 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/plugins/homepage.js"
       ],
       "main": true
     },
