@@ -51,12 +51,8 @@ name to .primary-color */
   padding-bottom: 40px;
 }
 
-.hypo-footer {
-  padding-bottom: 30px;
-}
-
 // Menus /////////////////////////////////
-.hypo-nav {
+header.navbar-default {
   background-color: transparent;
   border: none;
   padding-top: 2em;
@@ -82,18 +78,28 @@ name to .primary-color */
 }
 
 #menu-footer {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 30px;
+
   a {
     color: #777;
+    padding: 10px 15px;
 
     &:hover {
       color: #333
     }
   }
+
+  li {
+    float: left;
+  }
 }
 
 @media (max-width: @screen-xs-max) {
   #menu-footer {
-    &.navbar-nav {
+    li {
       margin: 0;
     }
 
