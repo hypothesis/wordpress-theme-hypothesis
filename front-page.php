@@ -13,7 +13,7 @@
           <!-- Chrome -->
           <span class="installer__section--chrome">
             <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" onclick="chrome.webstore.install();return false;" data-chromeext-button="">
-              <img class="installer__browser-logo--chrome" src="<?php echo (get_theme_root() . '/assets/img/browser-chrome-64x64.png'); ?>" alt="">
+              <img class="installer__browser-logo--chrome" src="<?php bloginfo('template_url'); ?>/dist/images/browser-chrome-64x64.png" alt="">
               Install
             </a>
           </span>
@@ -21,7 +21,7 @@
           <!-- Safari -->
           <!-- <span class="installer__section--safari">
                <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
-                 <img class="installer__browser-logo--chrome" src="<?php echo (get_theme_root() . '/assets/img/browser-chrome-64x64.png'); ?>" alt="">
+                 <img class="installer__browser-logo--chrome" src="<?php bloginfo('template_url'); ?>/dist/images/browser-chrome-64x64.png" alt="">
                  Install Chrome Extension
                </a>
           </span> -->
@@ -30,7 +30,7 @@
           <!-- Uncomment this when the firefox extension is ready -->
           <!-- <span class="installer__section--firefox hidden-xs">
                <a class="btn btn-primary hidden-xs" href="#">
-                 <img class="installer__browser-logo--firefox" src="<?php echo (get_theme_root() . '/assets/img/browser-firefox-64x64.png'); ?>" alt="">
+                 <img class="installer__browser-logo--firefox" src="<?php bloginfo('template_url'); ?>/dist/images/browser-firefox-64x64.png" alt="">
                  Install</a>
           </span> -->
 
