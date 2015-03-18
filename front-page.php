@@ -1,9 +1,3 @@
-<?php
-   /*
-   Template Name: Homepage
-   */
-   ?>
-
 <div class="jumbotron hypo-tron">
   <div class="container hypo-header">
     <div class="row">
