@@ -6,8 +6,8 @@
       </div>
     </div>
     <div class="col-sm-6 call-to-action">
-      <h3>Annotate with anyone, anywhere</h3>
-      <p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Use it to discuss, collaborate, organize your research, or take personal notes.</p>
+      <h2>Annotate with anyone, anywhere</h2>
+      <p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Use Hypothes.is to discuss, collaborate, organize your research, or take personal notes.</p>
       <section class="installer">
         <!-- Chrome -->
         <span class="installer__section--chrome">

@@ -20,6 +20,10 @@ $sage_includes = [
   'lib/nav.php',                   // Custom nav modifications
   'lib/gallery.php',               // Custom [gallery] modifications
   'lib/extras.php',                // Custom functions
+  'templates/people.php',            // Team Section
+  'templates/press.php',             // Press Section
+  'templates/layout_shortcodes.php', // Hypothes.is Shortcodes
+  'templates/loop_shortcodes.php',   // Hypothes.is Loop Shortcodes
 ];
 
 foreach ($sage_includes as $file) {
