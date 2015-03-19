@@ -7,6 +7,14 @@ html, body {
   font-family: "lato", sans-serif;
 }
 
+body {
+  margin: 0 1em;
+}
+
+main {
+  margin-bottom: 40px;
+}
+
 p {
   font-weight: 300;
   font-size: 1.2em;
@@ -21,6 +29,10 @@ p {
       font-size: 1em;
     }
   }
+}
+
+.page-header {
+  display: none;
 }
 
 .primary-color {
@@ -46,21 +58,13 @@ name to .primary-color */
   }
 }
 
-/* Provides space at the bottom of the page */
-.hypo-space-at-bottom {
-  padding-bottom: 40px;
-}
 
-// Menus /////////////////////////////////
-header.navbar-default {
+// Menus
+.navbar-default {
   background-color: transparent;
   border: none;
   padding-top: 2em;
   padding-bottom: 2em;
-}
-
-.navbar-header {
-  padding-left: 1em;
 }
 
 .hypo-social-media {
@@ -83,30 +87,29 @@ header.navbar-default {
   padding-left: 0;
   padding-bottom: 30px;
 
-  a {
-    color: #777;
-    padding: 10px 15px;
-
-    &:hover {
-      color: #333
-    }
-  }
-
   li {
-    float: left;
+    display: inline-block;
+
+    a {
+      color: #777;
+      display: block;
+      padding: 15px;
+
+      &:focus, &:hover {
+        text-decoration: none;
+      }
+
+      &:hover {
+        color: #333
+      }
+    }
   }
 }
 
-@media (max-width: @screen-xs-max) {
-  #menu-footer {
-    li {
-      margin: 0;
-    }
 
-    /* Keep footer menu items horizontal on mobile. */
-    li {
-      float: left;
-    }
+@media (max-width: @screen-xs-max) {
+  #menu-footer li {
+    margin: 0;
   }
 
   img {
