@@ -18,6 +18,13 @@
         wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new Nav\SageNavWalker(), 'menu_class' => 'nav navbar-nav']);
       endif;
       ?>
+
+      <!-- Social Media -->
+      <div class="social-media pull-right">
+          <a href="https://github.com/hypothesis"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/hypothes_is"><i class="fa fa-twitter"></i></a>
+          <a href="http://hypothes.is/feed/"><i class="fa fa-rss"></i></a>
+      </div>
     </nav>
   </div>
 </header>
