@@ -1,6 +1,3 @@
-/* Custom stylings for the Hypothes.is website */
-
-// General ////////////////////////////////
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic);
 
 html, body {
@@ -12,7 +9,7 @@ body {
 }
 
 main {
-  margin-bottom: 40px;
+  margin-bottom: 88px;
 }
 
 p {
@@ -35,10 +32,6 @@ p {
   display: none;
 }
 
-.primary-color {
-  color: @brand-primary;
-}
-
 /* This old .redtext class appears in some pages and posts, so I've copied it
 over for now. Since this class is used on things like buttons, I've changed the 
 name to .primary-color */
@@ -46,7 +39,7 @@ name to .primary-color */
   color: @brand-primary;
 }
 
-.hypo-small {
+.small {
   font-size: .9em !important;
 }
 
@@ -58,8 +51,6 @@ name to .primary-color */
   }
 }
 
-
-// Menus
 .navbar-default {
   background-color: transparent;
   border: none;
@@ -67,7 +58,8 @@ name to .primary-color */
   padding-bottom: 2em;
 }
 
-.hypo-social-media {
+.social-media {
+  float: right;
   padding-top: 7px;
   font-size: 1.4em;
 
