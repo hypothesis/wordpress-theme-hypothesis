@@ -108,8 +108,8 @@
 <section id="features">
   <div class="row">
     <div class="col-sm-6">
-      <h3>Select</h3>
-      <p>Select text in PDFs and web pages.</p>
+      <h3>Highlight</h3>
+      <p>Highlight text in PDFs and web pages.</p>
     </div>
     <div class="col-sm-6">
       <img src="https://hypothes.is/wp-content/uploads/2015/02/Gorgias.jpg"
@@ -121,7 +121,7 @@
   <div class="row">
     <div class="col-sm-6 visible-xs-block">
       <h3>Annotate</h3>
-      <p>Make highlights or leave notes.</p>
+      <p>Make private notes for yourself, or share public annotations with others.</p>
     </div>
     <div class="col-sm-6">
       <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates2.jpg"
@@ -130,7 +130,7 @@
     </div>
     <div class="col-sm-6 hidden-xs">
       <h3>Annotate</h3>
-      <p>Make highlights or leave notes.</p>
+      <p>Make private notes for yourself, or share public annotations with others.</p>
     </div>
   </div>
 

@@ -28,7 +28,7 @@
                 <p class="small">
                   <span>'.get_post_meta( get_the_ID(), 'date', true ).'</span>
                 </p>
-                <p>'.get_post_meta( get_the_ID(), 'excerpt', true ).'</p>
+                <p><em>'.get_post_meta( get_the_ID(), 'excerpt', true ).'</em></p>
               </div>
               </div>
             </div>';
