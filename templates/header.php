@@ -4,7 +4,7 @@
   <!-- Temporary hiring banner -->
   <div style="padding-top: 10px; padding-bottom: 10px; min-height: 10px; margin-bottom: -20px; color: rgb(255, 255, 255); background-color: rgb(189, 28, 43);" class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <span>We're hiring for <a href="https://hypothes.is/jobs/#developer" style="color: rgb(255, 255, 255); text-decoration: underline;">front-end developer</a> and <a href="https://hypothes.is/jobs/#designer" style="color: rgb(255, 255, 255); text-decoration: underline;">designer</a> positions.</span>
+      <span>We're hiring <a href="https://hypothes.is/jobs/#developer" style="color: rgb(255, 255, 255); text-decoration: underline;">developers</a> and <a href="https://hypothes.is/jobs/#designer" style="color: rgb(255, 255, 255); text-decoration: underline;">designers</a>.</span>
     </div>
   </div>
   <!-- / Temporary hiring banner -->
