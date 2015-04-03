@@ -17,27 +17,18 @@
           </a>
         </span>
 
-        <!-- Safari -->
-        <!-- <span class="installer__section--safari">
-             <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" data-chromeext-button="">
-               <img class="installer__browser-logo--chrome" src="<?php bloginfo('template_url'); ?>/dist/images/browser-chrome-64x64.png" alt="">
-               Install Chrome Extension
-             </a>
-        </span> -->
-
-        <!-- Firefox -->
-        <!-- Uncomment this when the firefox extension is ready -->
-        <!-- <span class="installer__section--firefox hidden-xs">
-             <a class="btn btn-primary hidden-xs" href="#">
-               <img class="installer__browser-logo--firefox" src="<?php bloginfo('template_url'); ?>/dist/images/browser-firefox-64x64.png" alt="">
-               Install</a>
-        </span> -->
+        <!-- Bookmarklet -->
+        <span class="installer__section--bookmarklet">
+          <a class="btn btn-primary hidden-xs" href="#" data-toggle="modal" data-target="#bookmarklet">
+            Get Bookmarklet
+          </a>
+        </span>
 
         <em class="or hidden-xs">Or...</em>
 
         <!-- Via Widget -->
         <form class="via" onsubmit="url = document.getElementById('search').value; if (url != '') { window.location.href = 'https://via.hypothes.is/h/' + url; } return false;">
-          <div class="input-group" title="Insert a URL to annotate that page.">
+          <span class="input-group" title="Insert a URL to annotate that page.">
             <input id="search"
                    class="form-control"
                    type="text"
@@ -46,19 +37,16 @@
             <span class="input-group-btn" data-via-button="">
               <button class="btn btn-primary" type="submit">Annotate!</button>
             </span>
-          </div>
+          </span>
         </form>
       </section>
 
       <!-- Bookmarklet trigger modal -->
-      <p class="installer__section--bookmarklet">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> and a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">
-          bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
+      <p class="installer__section--bookmarklet">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
 
-      <p class="safari-only">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+      <p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
 
-      <p class="chrome-mobile-only visible-xs-block">There's also a <a href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek">Chrome extension</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
-
-      <p class="chrome-desktop-only hidden-xs">Or <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.
+      <p class="chrome-desktop-only hidden-xs">There's also a <a href="#" class="" data-toggle="modal" data-target="#bookmarklet">bookmarklet</a> or you can <a href="#" class="" data-toggle="modal" data-target="#addtoyoursite" data-addtosite-button="">add it to your website</a>.</p>
 
         <!-- Bookmarklet Modal -->
         <div class="modal fade" id="bookmarklet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -69,7 +57,7 @@
                 <h4 class="modal-title">Bookmarklet</h4>
               </div>
               <div class="modal-body">
-                <div class="installer__section--bookmarklet">
+                <div class="">
                   <a class="btn btn-primary btn-lg installer__button--draggable"
                      href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/app/embed.js');d.body.appendChild(s)})();"
                      onclick="alert('Drag me to the bookmarks bar');return false;"
@@ -94,8 +82,9 @@
               </div>
               <div class="modal-body">
                 <div class="installer__section--addtosite">
-                  <textarea rows="1" class="form-control">&lt;script async defer src="//hypothes.is/embed.js"&gt;&lt;/script&gt;</textarea>
+                  <p><input class="form-control" type="text" value='&lt;script async defer src="//hypothes.is/embed.js"&gt;&lt;/script&gt;'></input></p>
                   <p>Add the above script tag to your web site's HTML to load the Hypothes.is sidebar on your site.</p>
+                  <p>Alternatively, if you use WordPress, checkout the <a href="https://wordpress.org/plugins/hypothesis/">Hypothes.is WordPress plugin</a>.
                 </div><!-- /.installer__sectionbookmarklet -->
               </div><!-- /.modal-body -->
             </div><!-- /.modal-content -->
