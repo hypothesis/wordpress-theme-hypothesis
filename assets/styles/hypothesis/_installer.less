@@ -7,13 +7,17 @@ all controlled here. */
   display: inline-flex;
 }
 
-.nav-browser-firefox {
-  .installer {
-    display: block;
+.nav-browser-chrome {
+  .installer__section--bookmarklet {
+    display: none;
   }
 }
 
+/* Show bookmarklet for all browsers */
 .installer__section--bookmarklet {
+  display: block;
+  font-size: .9em !important;
+
   p {
     font-size: 16px;
   }
@@ -41,28 +45,18 @@ a.installer__button--draggable {
 }
 
 .via {
-  max-width: 100%;
-}
-
-.nav-browser-chrome {
-  .via {
-    width: 20em;
-  }
+  width: 20em;
 }
 
 @media (max-width: @screen-sm-min) {
-  .nav-browser-chrome {
-    .via {
-      width: 100%;
-    }
+  .via {
+    width: 100%;
   }
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-  .nav-browser-chrome {
-    .via {
-      width: 13.7em;
-    }
+  .via {
+    width: 13.7em;
   }
 
   /* Account for the fact that the bookmarklet message takes up extra verticle space */
@@ -73,46 +67,11 @@ a.installer__button--draggable {
   }
 }
 
-/* Unsupported browser message */
-.installer__unsupported {
-  display: block;
-  padding-top: .3em;
-}
-
-.safari-only {
-  display: none;
-}
-
-.nav-browser-safari .safari-only {
-  display: block;
-  padding-top: .3em;
-  font-size: .9em !important;
-}
-
-/* Hidde unsupported browser message for FireFox and Chrome */
-.nav-browser-chrome .installer__unsupported,
-.nav-browser-firefox .installer__unsupported { 
-  display: none; 
-}
-
 /* Hide all panels aside from the bookmarklet (for undetected browsers) */
 .installer__section--safari,
 .installer__section--chrome,
 .installer__section--firefox {
   display: none;
-}
-
-/* Hide the bookmarklet section for Chrome and Safari */
-.nav-browser-safari .installer__section--bookmarklet,
-.nav-browser-chrome .installer__section--bookmarklet {
-  display: none;
-}
-
-/* Show bookmarklet for all browsers */
-.installer__section--bookmarklet {
-  display: block;
-  padding-top: .3em;
-  font-size: .9em !important;
 }
 
 .nav-browser-safari .installer__section--safari,
@@ -141,14 +100,8 @@ a.installer__button--draggable {
 /* Shows/hides the "Or" text between extenstion install button and via widget. 
    If there is no extension to install we hide this text. */
 .or {
-  display: none;
-}
-
-.nav-browser-chrome {
-  .or {
-    display: inline-block;
-    margin: .7em;
-  }
+  display: inline-block;
+  margin: .7em;
 }
 
 /* Show message on mobile devices using Chrome about the Chrome extension.
