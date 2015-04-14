@@ -101,7 +101,7 @@
       <p>Highlight text in PDFs and web pages.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/02/Gorgias.jpg"
+      <img src="https://hypothes.is/wp-content/uploads/2015/04/Highlight.gif"
            class="img-rounded"
            alt="..." />
     </div>
@@ -113,7 +113,7 @@
       <p>Make private notes for yourself, or share public annotations with others.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates2.jpg"
+      <img src="https://hypothes.is/wp-content/uploads/2015/04/Annotate.gif"
            class="img-rounded"
            alt="..." />
     </div>
@@ -129,7 +129,7 @@
       <p>Have threaded conversations and get notifications when people reply.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/02/socrates3.jpg"
+      <img src="https://hypothes.is/wp-content/uploads/2015/04/reply.gif"
            class="img-rounded"
            alt="..." />
     </div>
