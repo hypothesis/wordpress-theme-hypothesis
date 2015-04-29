@@ -28,12 +28,10 @@
         endif;
         ?>
 
-        <!-- Social Media -->
-        <div class="social-media pull-right">
-            <a href="https://github.com/hypothesis"><i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/hypothes_is"><i class="fa fa-twitter"></i></a>
-            <a href="http://hypothes.is/feed/"><i class="fa fa-rss"></i></a>
-        </div>
+        <ul class="nav navbar-nav pull-right login">
+          <li><a href="https://hypothes.is/login">Login</a></li>
+          <li><a href="https://hypothes.is/register">Signup</a></li>
+        </ul>
       </nav>
     </div>
   </div>
