@@ -34,3 +34,12 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+// https://wordpress.org/support/topic/excluding-category-from-widget
+// Don't show certain categories in the categories widget.
+function exclude_widget_categories($args){
+  $exclude = "1,2,6,7,10"; // The IDs of the excluded categories
+  $args["exclude"] = $exclude;
+  return $args;
+}
+add_filter("widget_categories_args","exclude_widget_categories");
