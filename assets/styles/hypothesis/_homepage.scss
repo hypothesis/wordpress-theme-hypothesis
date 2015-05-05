@@ -22,13 +22,13 @@
   }
 }
 
-@media (min-width: @screen-md-min) {
+@media (min-width: $screen-md-min) {
   .row > div {
     padding: 1em 4em;
   }
 }
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   #features {
     padding-left: 20px;
 
@@ -60,7 +60,7 @@
   }
 }
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .jumbotron { 
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
   .jumbotron { 
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -101,7 +101,7 @@
   }
 }
 
-@media (min-width: @screen-lg-min) {
+@media (min-width: $screen-lg-min) {
   .jumbotron {
     p {
       font-size: 20px;

@@ -33,7 +33,7 @@ p {
 }
 
 .red {
-  color: @brand-primary;
+  color: $brand-primary;
 }
 
 .small {
@@ -96,7 +96,7 @@ p {
 }
 
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   #menu-footer li {
     margin: 0;
   }

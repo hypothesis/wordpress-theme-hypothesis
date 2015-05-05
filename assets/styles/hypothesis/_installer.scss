@@ -48,13 +48,13 @@ a.installer__button--draggable {
   width: 20em;
 }
 
-@media (max-width: @screen-sm-min) {
+@media (max-width: $screen-sm-min) {
   .via {
     width: 100%;
   }
 }
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .via {
     width: 13.7em;
   }
@@ -111,7 +111,7 @@ a.installer__button--draggable {
   display: none !important;
 }
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   .nav-browser-chrome {
     .chrome-mobile-only {
       display: block !important;
@@ -126,7 +126,7 @@ a.installer__button--draggable {
   display: none;
 }
 
-@media (min-width: @screen-xs-max) {
+@media (min-width: $screen-xs-max) {
   .nav-browser-chrome {
     .chrome-desktop-only {
       display: block !important;

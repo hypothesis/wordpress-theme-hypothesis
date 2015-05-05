@@ -2,7 +2,7 @@
    in the Hypothes.is theme.*/
 
 // Nav ///////////////////////////////////////
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   header {
     .navbar-nav {
       text-align: right;
@@ -75,7 +75,7 @@
     box-shadow: 5px 5px 40px -10px rgba(0, 0, 0, 0.1); 
 }
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   .picunit .caption {
       font-size: .8em;
       line-height: 1em;
@@ -83,7 +83,7 @@
   }
 }
 
-@media (min-width: @screen-xs-max) {
+@media (min-width: $screen-xs-max) {
   .picunit .caption {
       font-size: 1em;
       line-height: 1em;
@@ -101,7 +101,7 @@
 // numlist short code //////////////////////
 .numlist-number {
   padding-right: 1em;
-  color: @brand-primary;
+  color: $brand-primary;
   width: 8%;
   min-width: 55px;
 }

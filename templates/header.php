@@ -1,5 +1,3 @@
-<?php use Roots\Sage\Nav; ?>
-
 <header class="banner" role="banner">
   <!-- Temporary hiring banner -->
   <div style="padding-top: 10px; padding-bottom: 10px; min-height: 10px; margin-bottom: -20px; color: rgb(255, 255, 255); background-color: rgb(189, 28, 43);" class="navbar navbar-default navbar-static-top">
@@ -22,9 +20,9 @@
       </div>
 
       <nav class="collapse navbar-collapse" role="navigation">
-        <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new Nav\SageNavWalker(), 'menu_class' => 'nav navbar-nav']);
+      <?php
+      if (has_nav_menu('primary_navigation')) :
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
         endif;
         ?>
 

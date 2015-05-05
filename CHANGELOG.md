@@ -1,5 +1,19 @@
-### HEAD
-* Update to Bootstrap 3.3.4
+### 8.2.0: April 29th, 2015
+* Use Sass Bootstrap by default ([#1437](https://github.com/roots/sage/issues/1437))
+* Remove nav walker and Bootstrap navbar ([#1427](https://github.com/roots/sage/issues/1427))
+* Remove Bootstrap gallery ([#1421](https://github.com/roots/sage/issues/1421))
+* Remove hardcoded feed link ([#1426](https://github.com/roots/sage/issues/1426))
+* Move jQuery CDN feature to Soil ([#1422](https://github.com/roots/sage/issues/1422))
+* Bump `gulp-load-plugins` to 0.10.0 ([#1419](https://github.com/roots/sage/issues/1419))
+* Switch from [yargs](https://github.com/bcoe/yargs) to [minimist](https://github.com/substack/minimist) ([#1418](https://github.com/roots/sage/issues/1418))
+* Remove `$content_width` ([#1417](https://github.com/roots/sage/issues/1417))
+* Lowercase `X-UA-Compatible` ([#1409](https://github.com/roots/sage/issues/1409))
+* Remove mention of Google Analytics from the config ([#1384](https://github.com/roots/sage/issues/1384))
+
+### 8.1.1: March 31st, 2015
+* Remove pleeease dependency in favor of vanilla gulp-autoprefixer and gulp-minify-css ([#1402](https://github.com/roots/sage/issues/1402))
+* Fix `gulp --production` race condition ([#1398](https://github.com/roots/sage/issues/1398))
+* Update to Bootstrap 3.3.4 ([#1387](https://github.com/roots/sage/issues/1387))
 
 ### 8.1.0: March 13th, 2015
 * Move HTML5 Boilerplate's Google Analytics snippet to Soil ([#1382](https://github.com/roots/sage/issues/1382))
