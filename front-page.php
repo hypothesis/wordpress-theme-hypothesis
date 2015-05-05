@@ -12,7 +12,7 @@
         <!-- Chrome -->
         <span class="installer__section--chrome">
           <a class="btn btn-primary hidden-xs" href="https://chrome.google.com/webstore/detail/bjfhmglciegochdpefhhlphglcehbmek" onclick="chrome.webstore.install();return false;" data-chromeext-button="">
-            <img class="installer__browser-logo--chrome" src="<?php bloginfo('template_url'); ?>/dist/images/browser-chrome-64x64.png" alt="">
+            <img class="installer__browser-logo--chrome" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/browser-chrome-64x64.png" alt="">
             Install
           </a>
         </span>
@@ -101,7 +101,7 @@
       <p>Highlight text in PDFs and web pages.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/04/Highlight.gif"
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/highlight.gif"
            class="img-rounded"
            alt="..." />
     </div>
@@ -113,7 +113,7 @@
       <p>Make private notes for yourself, or share public annotations with others.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/04/Annotate.gif"
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/annotate.gif"
            class="img-rounded"
            alt="..." />
     </div>
@@ -129,7 +129,7 @@
       <p>Have threaded conversations and get notifications when people reply.</p>
     </div>
     <div class="col-sm-6">
-      <img src="https://hypothes.is/wp-content/uploads/2015/04/reply.gif"
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/reply.gif"
            class="img-rounded"
            alt="..." />
     </div>
