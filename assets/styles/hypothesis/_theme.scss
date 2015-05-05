@@ -6,13 +6,15 @@
   header {
     .navbar-nav {
       text-align: right;
-      margin-right: -3px;
     }
 
     .login {
       margin-top: -7px;
-      float: none !important;
     }
+  }
+
+  footer .navbar li {
+    display: inline-block;
   }
 }
 

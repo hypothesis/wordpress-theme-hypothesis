@@ -51,56 +51,35 @@ p {
 .navbar-default {
   background-color: transparent;
   border: none;
-  padding-top: 2em;
+  padding-top: .5em;
   padding-bottom: 2em;
 }
 
-.social-media {
-  float: right;
-  padding-top: 7px;
-  font-size: 1.4em;
+.nav > li > a {
+  color: $gray-light;
 
-  a {
-    color: #777;
-    padding: 3px;
+  &:focus, &:hover {
+    text-decoration: none;
+  }
 
-    &:hover {
-      color: #333;
-    }
+  &:hover {
+    color: $gray-dark;
   }
 }
 
-#menu-footer {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  padding-bottom: 30px;
+.social-media a {
+  color: #777;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px 15px;
 
-  li {
-    display: inline-block;
-
-    a {
-      color: #777;
-      display: block;
-      padding: 15px;
-
-      &:focus, &:hover {
-        text-decoration: none;
-      }
-
-      &:hover {
-        color: #333
-      }
-    }
+  &:hover {
+    color: #333;
   }
 }
-
 
 @media (max-width: $screen-xs-max) {
-  #menu-footer li {
-    margin: 0;
-  }
-
   img {
     max-width: 100%;
     height: auto;
