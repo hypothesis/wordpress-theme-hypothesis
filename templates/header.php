@@ -1,7 +1,7 @@
 <!-- Temporary hiring banner -->
 <header class="banner hiring" role="banner">
   <div class="container">
-    <span>We're hiring <a href="https://hypothes.is/jobs/#developer">developers</a> and <a href="https://hypothes.is/jobs/#designer">designers</a>.</span>
+    <span>We're hiring <a href="https://hypothes.is/jobs/#developer">developers</a>.</span>
   </div>
 </header>
 <!-- / Temporary hiring banner -->
