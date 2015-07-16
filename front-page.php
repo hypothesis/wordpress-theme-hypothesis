@@ -7,7 +7,7 @@
     </div>
     <div class="col-sm-6 call-to-action">
       <h2>Annotate with anyone, anywhere</h2>
-      <p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Use Hypothes.is to discuss, collaborate, organize your research, or take personal notes.</p>
+      <p><a href="https://hypothes.is/about/">Our mission</a> is to bring a new layer to the web. Use Hypothesis to discuss, collaborate, organize your research, or take personal notes.</p>
       <section class="installer">
         <!-- Chrome -->
         <span class="installer__section--chrome">
@@ -63,9 +63,9 @@
                      onclick="alert('Drag me to the bookmarks bar');return false;"
                      title="Drag me to the bookmarks bar"
                      data-bookmarklet-button="">Launch Hypothesis</a>
-                  <p><i class="fa fa-arrows"></i> Drag the button into your bookmarks bar then click it to launch the Hypothes.is application.
+                  <p><i class="fa fa-arrows"></i> Drag the button into your bookmarks bar then click it to launch the Hypothesis application.
                     Alternatively, right click and select "bookmark this link."</p>
-                  <p>To load Hypothes.is on a webpage or PDF, simply click on the bookmarklet in your bookmarks.</p>
+                  <p>To load Hypothesis on a webpage or PDF, simply click on the bookmarklet in your bookmarks.</p>
                 </div><!-- /.installer__sectionbookmarklet -->
               </div><!-- /.modal-body -->
             </div><!-- /.modal-content -->
@@ -78,13 +78,13 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add Hypothes.is to a web site</h4>
+                <h4 class="modal-title">Add Hypothesis to a web site</h4>
               </div>
               <div class="modal-body">
                 <div class="installer__section--addtosite">
                   <p><input class="form-control" type="text" value='&lt;script async defer src="//hypothes.is/embed.js"&gt;&lt;/script&gt;'></input></p>
-                  <p>Add the above script tag to your web site's HTML to load the Hypothes.is sidebar on your site.</p>
-                  <p>Alternatively, if you use WordPress, checkout the <a href="https://wordpress.org/plugins/hypothesis/">Hypothes.is WordPress plugin</a>.
+                  <p>Add the above script tag to your web site's HTML to load the Hypothesis sidebar on your site.</p>
+                  <p>Alternatively, if you use WordPress, checkout the <a href="https://wordpress.org/plugins/hypothesis/">Hypothesis WordPress plugin</a>.
                 </div><!-- /.installer__sectionbookmarklet -->
               </div><!-- /.modal-body -->
             </div><!-- /.modal-content -->
