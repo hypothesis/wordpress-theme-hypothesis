@@ -84,6 +84,8 @@
                 <div class="installer__section--addtosite">
                   <p><input class="form-control" type="text" value='&lt;script async defer src="//hypothes.is/embed.js"&gt;&lt;/script&gt;'></input></p>
                   <p>Add the above script tag to your web site's HTML to load the Hypothesis sidebar on your site.</p>
+                  <p>To show highlights by default, also add:</p>
+                  <p><input class="form-control" type="text" value='&lt;script&gt;window.hypothesisConfig=function(){return{showHighlights:true};&lt;/script&gt;'></input></p>
                   <p>Alternatively, if you use WordPress, checkout the <a href="https://wordpress.org/plugins/hypothesis/">Hypothesis WordPress plugin</a>.
                 </div><!-- /.installer__sectionbookmarklet -->
               </div><!-- /.modal-body -->
