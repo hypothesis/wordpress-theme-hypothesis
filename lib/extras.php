@@ -20,6 +20,8 @@ function body_class($classes) {
     $classes[] = 'sidebar-primary';
   }
 
+  $classes[] = 'body--white';
+
   return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');

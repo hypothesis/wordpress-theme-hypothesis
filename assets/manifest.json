@@ -3,13 +3,16 @@
     "main.js": {
       "files": [
         "scripts/main.js",
-        "scripts/plugins/homepage.js"
+        "scripts/plugins/homepage.js",
+        "vendor/hypothesis-shared/shared.js"
       ],
       "main": true
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "vendor/hypothesis-shared/shared.scss",
+        "vendor/hypothesis-shared/icomoon.css"
       ],
       "main": true
     },
