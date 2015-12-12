@@ -3,7 +3,7 @@
     "main.js": {
       "files": [
         "scripts/main.js",
-        "scripts/plugins/homepage.js"
+        "vendor/hypothesis-shared/shared.js"
       ],
       "main": true
     },
