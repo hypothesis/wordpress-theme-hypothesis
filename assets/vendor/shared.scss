@@ -1,0 +1,20 @@
+// SASS file containing styles for components shared
+// between the website and the blog
+
+// base
+@import 'variables.scss';
+@import 'elements.scss';
+@import 'util.scss';
+@import 'mixins/responsive.scss';
+
+// components
+@import 'header.scss';
+@import 'footer.scss';
+
+// body styling
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);
+
+.body--white {
+  background-color: white;
+  font-family: $font-family-site-sans;
+};
