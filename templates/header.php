@@ -25,7 +25,7 @@
       ?>
       <ul class="nav navbar-nav pull-right login">
         <li><a href="https://hypothes.is/login">Login</a></li>
-          <li><a href="https://hypothes.is/register">Sign up</a></li>
+          <li><a href="https://hypothes.is/signup">Sign up</a></li>
       </ul>
     </nav>
   </div>
