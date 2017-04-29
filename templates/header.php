@@ -1,11 +1,3 @@
-<!-- Temporary hiring banner -->
-<header class="banner hiring" role="banner">
-  <div class="container">
-    <span>We're <a href="https://hypothes.is/jobs/">hiring!</a></span>
-  </div>
-</header>
-<!-- / Temporary hiring banner -->
-
 <header class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
